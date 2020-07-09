@@ -15,5 +15,6 @@
 __pycache__/
 
 
-## Excel
+## Spreadsheets
 *.xlsx
+*.csv
