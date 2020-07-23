@@ -51,3 +51,87 @@ simp_rcol_names = {
     '¿Cuánto estaría dispuesto a pagar mensualmente por el uso de la plataforma descrita?': 'Disponibilidad de pago',
     'Si le ofrecieran una plataforma digital a un precio competitivo para facilitarle la gestión de su agenda de citas, cobros y seguimientos a pacientes, así como la posibilidad de llevar a cabo telec...': 'Regularidad de uso si tuviera plataforma'
 }
+
+
+
+
+
+'------------------------------------------------------------------------------------------'
+#########################
+## Analysis parameters ##
+#########################
+
+
+## Grouping platform names (Analysis 6)
+platforms_names = {
+    'Doctoralia': [
+        'doctoralia',
+        'dralia',
+        'doctoralis',
+        'doctorolia'
+    ],
+    'Zoom': [
+        'zoom',
+        'soom'
+    ],
+    'Huli': [
+        'huli'
+    ],
+    'Medikato': [
+        'medikato'
+    ],
+    'Elionor': [
+        'elionor',
+        'eleonor'
+    ],
+    'Doctor Anytime': [
+        'doctor anytime'
+    ],
+    'Nimbo': [
+        'nimbo'
+    ],
+    'Metlife': [
+        'metlife',
+        'metlife'
+    ],
+    'Kidoc': [
+        'kidoc',
+        'kidok'
+    ],
+    'Medsi': [
+        'medsi'
+    ],
+    'Clinic cloud': [
+        'clínic cloud'
+    ],
+    'Google calendar': [
+        'google calendar'
+    ],
+    'Whatsapp': [
+        'whatsapp',
+        'whats'
+    ],
+    'Skype': [
+        'skype',
+        'skipe'
+    ],
+    'Evernote': [
+        'evernote',
+    ],
+    'Plataforma Chopo': [
+        'chopo'
+    ],
+    'Ayuda secretaria': [
+        'secretaria'
+    ],
+    'Software hospital': [
+        'hospital',
+        'hosopital'
+    ],
+    'Personal': [
+        'propio',
+        'propia',
+        'personal',
+        'personalizada'
+    ],
+}
