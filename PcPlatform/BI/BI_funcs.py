@@ -16,11 +16,17 @@
 
 import pandas as pd
 
+import numpy as np
+
 import re
 
 from datetime import *
 
 import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+
+
+import math
 
 
 ## Ancillary modules
@@ -43,6 +49,8 @@ def add_week_num(row):
     Function to add week number as string
     """
 
+    res = 'No_val'
+
     week_num = str(datetime.isocalendar(row)[1])
 
     if len(week_num) == 2:
@@ -51,6 +59,33 @@ def add_week_num(row):
         res = str(datetime.isocalendar(row)[0]) + '-' + '0' + week_num
 
     return res
+
+
+
+## Create directory of doctors (based on proccesed dataset 'LISTADETALLADADELASCITAS.csv')
+
+def create_doctors_dir(df):
+    """
+    Create directory of doctors (based on proccesed dataset 'LISTADETALLADADELASCITAS.csv')
+    """
+
+    meds = df['NOMBRE DEL CLÍNICO'].unique()
+
+    meds_dict_ref = {}
+
+    for med in meds:
+
+        meds_dict_ref[med] = {}
+
+        m1 = df['NOMBRE DEL CLÍNICO'] == med
+        dfx = df.loc[m1, :]
+
+        meds_dict_ref[med]['Especialidad'] = list(dfx['ASUNTO_sinth'].unique())
+        meds_dict_ref[med]['Sitios'] = list(dfx['SITIO'].unique())
+
+
+    return meds_dict_ref
+
 
 
 
@@ -77,11 +112,20 @@ def dfa_clean(dfa):
 
         res = 0
 
-        for sp in specialties_ref:
-            for sp_t in specialties_ref[sp]:
-                if sp_t in row:
-                    res = sp
-                    break
+
+        ## Searching for speciality based on doctor
+        if row['NOMBRE DEL CLÍNICO'] in meds_dict_ref:
+            if len(meds_dict_ref[row['NOMBRE DEL CLÍNICO']]['Especialidad']) == 1:
+                res = meds_dict_ref[row['NOMBRE DEL CLÍNICO']]['Especialidad'][0]
+                return res
+
+        ## Searching for speciality based on related keywords if doctor based search was not successful
+        if res == 0:
+            for sp in specialties_ref:
+                for sp_t in specialties_ref[sp]:
+                    if sp_t in row['ASUNTO']:
+                        res = sp
+                        return res
 
         if res == 0:
             res = 'OTROS'
@@ -104,7 +148,7 @@ def dfa_clean(dfa):
     dfa.loc[:, c_cols] = dfa.loc[:, c_cols].fillna('NO_INFO')
     for col in c_cols:
 
-        dfa[col] = dfa[col].str.upper()
+        dfa[col] = dfa[col].str.upper().str.strip()
 
         ccf = [
             lambda x: re.sub('Á', 'A', x),
@@ -119,7 +163,7 @@ def dfa_clean(dfa):
 
 
     ## Clean ASUNTO column
-    dfa['ASUNTO_sinth'] = dfa['ASUNTO'].apply(Asunto_synth)
+    dfa['ASUNTO_sinth'] = dfa.apply(Asunto_synth, axis=1)
 
 
     ## Eliminating entries with appointment status different from "Completada"
@@ -132,7 +176,7 @@ def dfa_clean(dfa):
 
 
     ## Adding week number as string
-    dfa['Week_num'] = dfa.loc[:, 'FECHA'].apply(add_week_num)
+    dfa['Week_num'] = dfa['FECHA'].apply(add_week_num)
 
 
     return dfa
@@ -184,14 +228,13 @@ def count_appointments_specialities(dfa):
 
 
     ## Counting appointments and filling Null values
-    dfax = dfax.groupby(['Week_num', 'ASUNTO_sinth']).count().unstack().fillna('0')
+    dfax = dfax.groupby(['Week_num', 'ASUNTO_sinth']).count().unstack().fillna(0)
     dfax.columns = dfax.columns.droplevel()
-    # print(dfax)
-    # dfax.drop('(#, OTROS)', axis=1, inplace=True)
 
 
     ## Eliminating from analysis specialities that account for a participation smaller that the set treshold
     rc_sps = selecting_sps_over_treshold(dfax)
+    print(rc_sps)
     dfax.drop([nrc for nrc in dfax.columns if nrc not in rc_sps], axis=1, inplace=True)
 
 
@@ -223,5 +266,116 @@ def analysis_1_graph(dfax):
         height=500
     )
     fig.update_xaxes(type="category")
+
+    fig.show()
+
+
+
+
+
+'------------------------------------------------------------------------------------------'
+###############################################
+## Data analysis - Appointments - Analysis 2 ##
+###############################################
+
+
+## Counting number of confirmed appointments and percent change
+def data_processing_appointments_A2(dfa):
+    """
+    Counting number of confirmed appointments and percent change
+    """
+
+    dfax = dfa.copy()
+
+
+    rc = [
+        'ASUNTO_sinth',
+        '#',
+        'FECHA'
+    ]
+    dfax.drop([nrc for nrc in dfax.columns if nrc not in rc], axis=1, inplace=True)
+    dfax.set_index('FECHA', drop=True, inplace=True)
+
+    m1 = dfax.index < datetime(2020, 6, 1)
+    dfax = dfax.loc[m1, :]
+
+
+    dfax = dfax.groupby([dfax.index.year, dfax.index.quarter, 'ASUNTO_sinth']).count().unstack().fillna(0)
+
+    dfax.columns = dfax.columns.droplevel()
+
+    dfax.drop(['ALERGOLOGIA'], axis=1, inplace=True)
+
+
+    ## Creating percent change columns
+    for col in dfax.columns:
+        dfax.loc[:, col +'_pc'] = dfax[col].diff()/dfax[col].shift()*100
+        dfax.loc[:, col +'_pc'] = dfax[col +'_pc'].fillna(0)
+        dfax.loc[:, col +'_pc'] = dfax[col +'_pc'].replace([np.inf, -np.inf], 0)
+
+
+    ## Adding date as string
+    dfax['Date_str'] = dfax.index.get_level_values(0).astype(str) + ' - Q' + dfax.index.get_level_values(1).astype(str)
+
+
+    return dfax
+
+
+
+## Appointments analysis 2 graph
+def appointments_A2_graph(dfax):
+    """
+    Appointments analysis 2 graph
+    """
+
+    graphs = [col for col in dfax.columns if ('_pc' not in col) and ('_str' not in col)]
+
+    rows = math.ceil((len(graphs))/2)
+    cols = 2
+
+    fig = make_subplots(rows=rows, cols=cols,
+                        subplot_titles=tuple(graphs),
+                        specs=[[{"secondary_y": True}, {"secondary_y": True}],
+                              [{"secondary_y": True}, {"secondary_y": True}],
+                              [{"secondary_y": True}, {"secondary_y": True}],
+                              [{"secondary_y": True}, {"secondary_y": True}],
+                              [{"secondary_y": True}, {"secondary_y": True}],
+                              [{"secondary_y": True}, {"secondary_y": True}]]
+                       )
+
+    i = 1
+    j = 1
+    for graph in graphs:
+
+        fig.add_trace(
+            go.Bar(
+                x=dfax['Date_str'],
+                y=dfax[graph]
+            ),
+            secondary_y=False,
+            row=j, col=i
+        )
+
+        fig.add_trace(
+            go.Scatter(
+                x=dfax['Date_str'],
+                y=dfax[graph + '_pc']
+            ),
+            secondary_y=True,
+            row=j, col=i
+        )
+
+        i += 1
+        if i == 3:
+            i = 1
+            j += 1
+
+    fig.update_layout(
+        title = 'Todas las sucursales',
+        autosize=False,
+        width=1100,
+        height=2000
+    )
+
 
     fig.show()
