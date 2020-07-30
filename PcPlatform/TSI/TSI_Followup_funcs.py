@@ -13,9 +13,14 @@
 
 
 ## Python libraries
+
 import plotly.figure_factory as ff
 
+from datetime import *
+
+
 ## Ancillary modules
+
 from TSI_Followup_params import *
 
 
@@ -175,6 +180,11 @@ def format_df(df):
 
     ## Changing "% completado" column to a 100 base
     df['% completado'] = df['% completado']*100
+
+
+    ## Adding time to tasks
+    df.loc[:, 'Comienzo.1'] = df['Comienzo.1'].apply(lambda x: datetime(x.year, x.month, x.day, 1, 1))
+    df.loc[:, 'Fin.1'] = df['Fin.1'].apply(lambda x: datetime(x.year, x.month, x.day, 23, 59))
 
 
     return df
