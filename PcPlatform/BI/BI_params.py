@@ -14,7 +14,7 @@
 
 ## Data
 data_loc = 'Data/20200723'
-sales_data = 'LISTADELASVENTAS.csv'
+sales_data = 'GenerateBillingCSVRequest.csv'
 appointment_data = 'LISTADETALLADADELASCITAS.csv'
 
 
@@ -183,17 +183,6 @@ meds_dict_ref = {
                              }
 
 
-## Appointments data
-
-rc = [
-    'FECHA',
-    'ESTADO DE LA CITA',
-    'ASUNTO',
-    'NOMBRE DEL CLÍNICO',
-    'TÍTULO',
-    'SITIO'
-]
-
 specialties_ref = {
     'GINECOLOGIA': [
         'GINECOLOGIA',
@@ -240,5 +229,61 @@ specialties_ref = {
 }
 
 
+locations_ref = {
+    'BASILICA': [
+        'LABORATORIO- Basílica',
+        'Punto Clínico- Basílica'
+    ],
+    'COAPA': [
+        'LABORATORIO- Coapa',
+        'Punto Clínico- Coapa'
+    ],
+    'MARINA': [
+        'LABORATORIO- Marina',
+        'Punto Clinico- Marina'
+    ]
+}
+
+
+
+
+
+'------------------------------------------------------------------------------------------'
+##################################
+## Appointments data parameters ##
+##################################
+
+rca = [
+    'FECHA',
+    'ESTADO DE LA CITA',
+    'ASUNTO',
+    'NOMBRE DEL CLÍNICO',
+    'TÍTULO',
+    'SITIO'
+]
+
+
 ## Treshold to eliminate specialties
 sp_tsh = 0.025
+
+
+
+
+
+'------------------------------------------------------------------------------------------'
+###########################
+## Sales data parameters ##
+###########################
+
+rcs = [
+    'State',
+    'BillDate',
+    'Provider',
+    'SiteInfo',
+    'PaymentMethod',
+    'BilledBy',
+    'DescriptionES',
+    'Quantity',
+    'UnitPrice',
+    'Total'
+]
