@@ -18,6 +18,7 @@ import pandas as pd
 
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+import plotly.figure_factory as ff
 
 
 ## Ancillary modules
@@ -189,33 +190,36 @@ def A1_graph_data(df):
 
 
 
-## Creting A1 graph
+
+
+## Creating A1 graph
 def A1_graph(dfx):
     """
-    Creting A1 graph
     """
 
-    ## x-axis
-    x_axis = dfx.index
+    fig = go.Figure()
 
-    ## Bars
-    bars = dfx.columns
-
-    ## Create and display graph
-    fig = go.Figure(data=
-                    [go.Bar(name=bar, x=x_axis, y=dfx[bar], text=(dfx[bar]*100).astype(str).str[:5] + '%', textposition='auto') for bar in bars]
-                   )
+    for col in dfx.columns:
+        if col == 'NO':
+            color='rgb(204, 0, 0)'
+        else:
+            color='rgb(51, 204, 51)'
+        fig.add_trace(
+            go.Bar(
+                x=dfx.index,
+                y=dfx[col],
+                name=col,
+                text=(dfx[col]*100).astype(str).str[:5] + '%',
+                textposition='inside',
+                marker_color=color
+            )
+        )
 
     fig.update_layout(
-        title = 'Ha considerado ofrecer teleconsulta?',
-        xaxis_title = 'Especialista',
-        yaxis_title = 'Participación',
-        barmode='group',
-        # autosize=False,
-        # width=1500,
-        # height=500
+        title='Ha considerado ofrecer teleconsulta?',
+        xaxis_title = 'Especialidad',
+        yaxis_title = 'Participación'
     )
-    fig.update_xaxes(type="category")
 
     fig.show()
 
@@ -224,9 +228,9 @@ def A1_graph(dfx):
 
 
 '------------------------------------------------------------------------------------------'
-###################################################################
-## Analysis 2 - How common do you think it will be for patients? ##
-###################################################################
+################################################################################
+## Analysis 3 - Do you have either a telemedicine or administrative platform? ##
+################################################################################
 
 
 ## Creating graph data
@@ -251,26 +255,25 @@ def A3_graph_data(df):
     return dfx
 
 
+
 ## Creting A3 graphs
 def A3_graph(dfx):
     """
     Creting A3 graphs
     """
 
-    fig = go.Figure(
-        data=go.Heatmap(
-            z=dfx.values,
-            x=dfx.columns,
-            y=dfx.index,
-            # type='heatmap'
-            colorscale='Viridis'
-        )
+    fig = ff.create_annotated_heatmap(
+        dfx.values,
+        x=list(dfx.columns),
+        y=list(dfx.index),
+        annotation_text=dfx.applymap(lambda x: str(x*100)[:5] + '%').values
     )
 
     fig.update_layout(
-        title = 'Adopción de plataformas digitales por parte de los médicos',
+        # title = 'Adopción de plataformas digitales por parte de los médicos',
+        # annotations=annotations,
         xaxis_title = 'Cuenta con plataforma de teleconsultas?',
-        yaxis_title = 'Cuenta con plataforma de gestión?',
+        yaxis_title = 'Cuenta con plataforma de gestión?'
     )
 
     fig.show()
@@ -281,7 +284,7 @@ def A3_graph(dfx):
 
 '------------------------------------------------------------------------------------------'
 #######################################################
-## Analysis 3 - What platforms do you currently use? ##
+## Analysis 6 - What platforms do you currently use? ##
 #######################################################
 
 
@@ -319,6 +322,9 @@ def A6_graph_data(df):
 
         dfx1['Ref_match'] = dfx1['Qué plataforma de gestión?'].apply(lambda x: search_names_dict(x, platforms_names))
 
+        dfx1 = pd.DataFrame(dfx1['Ref_match'].value_counts())
+        dfx1.rename(columns={'Ref_match': 'Plataforma de gestión'}, inplace=True)
+
 
         return dfx1
 
@@ -346,15 +352,97 @@ def A6_graph_data(df):
 
         dfx2['Ref_match'] = dfx2['Qué plataforma de teleconsulta?'].apply(lambda x: search_names_dict(x, platforms_names))
 
+        dfx2 = pd.DataFrame(dfx2['Ref_match'].value_counts())
+        dfx2.rename(columns={'Ref_match': 'Plataforma de teleconsultas'}, inplace=True)
+
 
         return dfx2
 
 
     ## Main function
 
+    #### Counting the number of platforms mentioned (sanitized names)
     dfx1 = A6_graph1_data(df)
-
     dfx2 = A6_graph2_data(df)
 
+    #### Joining the results obtained
+    dfx = dfx1.join(dfx2)
+    dfx.fillna(0, inplace=True)
 
-    return dfx1, dfx2
+    # #### Calculating total
+    # dfx.loc['Total', :] = dfx.sum()
+
+
+    return dfx
+
+
+
+## Creating graph
+def A6_graph(dfx):
+    """
+    Creating graph
+    """
+
+    ## Creating figure
+    fig = go.Figure()
+
+    ## Craeting each bar for the graph
+    for col in dfx.columns:
+        fig.add_trace(
+            go.Bar(
+                x=dfx.index,
+                y=dfx[col],
+                name=col,
+                text=dfx[col],
+                textposition='outside'
+            )
+        )
+
+    ## Figure adjustments
+    fig.update_layout(
+        height=750,
+        width=1250,
+        title='Plataformas mencionados por los médicos',
+        xaxis_title = 'Plataforma',
+        yaxis_title = 'Médicos usuarios'
+    )
+
+    ## Displaying figure
+    fig.show()
+
+
+
+
+
+'------------------------------------------------------------------------------------------'
+#################################################################################
+## Analysis 7 - What are the attributes that you value the most in a platform? ##
+#################################################################################
+
+
+## Creating graph data
+def A7_graph_data(df):
+    """
+    Creating graph data
+    """
+
+    ## Copying main dataframe
+    dfx = df.copy()
+
+    ## Selecting only relevant columns
+    rc = [
+        '#',
+        'Especialidad',
+        'Funcionalidades relevantes'
+    ]
+    nrc = [col for col in dfx.columns if col not in rc]
+    dfx.drop(nrc, axis=1, inplace=True)
+
+    ## Converting atributes to list of attributes
+    dfx.loc[:, 'Funcionalidades relevantes'] = dfx['Funcionalidades relevantes'].apply(lambda x: x.split(sep=';'))
+
+    ## Exploding dataframe based on attributes and eliminating empty rows
+    dfx = dfx.explode('Funcionalidades relevantes')
+
+
+    return dfx
