@@ -83,7 +83,8 @@ def search_names_dict(row, ref_dict):
                 break
         if res != 'Otra':
             break
-
+        # else:
+        #     res=row
 
     return res
 
@@ -283,6 +284,136 @@ def A3_graph(dfx):
 
 
 '------------------------------------------------------------------------------------------'
+########################################################
+## Analysis 5 - How often would you use the platform? ##
+########################################################
+
+
+## Creating graph data
+def A5_graph_data(df):
+    """
+    Creating graph data
+    """
+
+    ## Copying main dataframe
+    dfx = df.copy()
+
+    ## Selecting only relevant columns
+    rc = [
+        '#',
+        'Especialidad',
+        'Regularidad de uso si tuviera plataforma'
+    ]
+    nrc = [col for col in dfx.columns if col not in rc]
+    dfx.drop(nrc, axis=1, inplace=True)
+
+    ## Grouping results
+    dfx = dfx.groupby(['Especialidad', 'Regularidad de uso si tuviera plataforma']).count().unstack()
+    dfx.columns = dfx.columns.droplevel()
+
+    ## Adding 'Ambos' row
+    dfx.loc['Ambos', :] = dfx.sum()
+
+    ## Converting all values to percentages
+    dfx['Sum'] = dfx.sum(axis=1)
+    for col in dfx.columns:
+        dfx[col] = dfx[col]/dfx['Sum']
+    dfx.drop(['Sum'], axis=1, inplace=True)
+
+
+    return dfx
+
+
+
+
+
+## Creating graph
+def A5_graph(dfx):
+    """
+    Creating graph
+    """
+
+    ## Creating figure
+    fig = go.Figure()
+
+    ## Craeting each bar for the graph
+    for col in dfx.columns:
+        fig.add_trace(
+            go.Bar(
+                y=dfx.index,
+                x=dfx[col],
+                name=col,
+                orientation='h',
+                text=(dfx[col]*100).astype(str).str[:5] + '%',
+                textposition='auto',
+                # text=dfx[col],
+                # textposition='outside'
+            )
+        )
+
+    ## Figure layout
+    fig.update_layout(
+        xaxis = dict(
+            showgrid=False,
+            showline=False,
+            showticklabels=False,
+            zeroline=False,
+            domain=[0.15, 1]
+        ),
+        yaxis = dict(
+            showgrid=False,
+            showline=False,
+            showticklabels=False,
+            zeroline=False
+        ),
+        barmode='stack',
+        showlegend=False,
+        title='Regularidad de uso de la plataforma'
+        # margin=dict(l=40, r=10, t=140, b=80),
+    )
+
+    ## Annotations
+    annotations = []
+
+    #### Labeling 'y' axis
+    for idx in dfx.index:
+        annotations.append(
+            dict(
+                xref='paper',
+                yref='y',
+                x=0.14,
+                y=idx,
+                xanchor='right',
+                text=str(idx),
+                showarrow=False,
+                align='right'
+            )
+        )
+
+    # for col in dfx.columns:
+    #     #### Labeling the first percentage of each bar (x_axis)
+    #     annotations.append(
+    #         dict(
+    #             xref='x',
+    #             yref='y',
+    #             x=dfx[col],
+    #             y=idx,
+    #             text='hola',
+    #             showarrow=False,
+    #         )
+    #     )
+
+    #### Aupdating figure with annotations
+    fig.update_layout(annotations=annotations)
+
+    ## Display figure
+    fig.show()
+
+
+
+
+
+'------------------------------------------------------------------------------------------'
 #######################################################
 ## Analysis 6 - What platforms do you currently use? ##
 #######################################################
@@ -441,8 +572,77 @@ def A7_graph_data(df):
     ## Converting atributes to list of attributes
     dfx.loc[:, 'Funcionalidades relevantes'] = dfx['Funcionalidades relevantes'].apply(lambda x: x.split(sep=';'))
 
-    ## Exploding dataframe based on attributes and eliminating empty rows
+    ## Exploding dataframe based on attributes and doing some cleaning
     dfx = dfx.explode('Funcionalidades relevantes')
+    dfx.loc[:, 'Funcionalidades relevantes'] = dfx['Funcionalidades relevantes'].apply(lambda x: x.strip())
+    dfx.loc[:, 'Funcionalidades relevantes'] = dfx['Funcionalidades relevantes'].apply(lambda x: search_names_dict(x, platform_features_options))
+    m1 = dfx['Funcionalidades relevantes'].isin(list(platform_features_options.keys()))
+    dfx = dfx.loc[m1, :]
+
+    ## Grouping values and adding total
+    dfx = dfx.groupby(['Especialidad', 'Funcionalidades relevantes']).count().unstack()
+    dfx.columns = dfx.columns.droplevel()
+    dfx.loc['Ambos', :] = dfx.sum()
 
 
-    return dfx
+    return dfx.T
+
+
+
+## Creating graph
+def A7_graph(dfx):
+    """
+    Creating graph
+    """
+
+
+    ## Function to add line breaks to long strings of text
+    def adding_breaks_to_text(txt_lst):
+        """
+        """
+
+        ## Parámeters
+        t = 22
+        cl = 0
+        new_lst = []
+
+        ## Modifying loop
+        for txt in txt_lst:
+            txt = txt.split(sep=' ')
+            for w in txt:
+                cl+=len(w)
+                if cl >= t:
+                    res=txt.index(w)
+                    cl = 0
+                    txt.insert(res, '<br>')
+            new_lst.append(' '.join(txt))
+            cl = 0
+
+        return new_lst
+
+
+    ## Creating figure
+    fig = go.Figure()
+
+    ## Adding bars to figure
+    for col in dfx.columns:
+        fig.add_trace(
+            go.Bar(
+                y=adding_breaks_to_text(dfx.index),
+                x=dfx[col],
+                name=col,
+                orientation='h',
+                text=dfx[col].astype(int),
+                textposition='inside'
+            )
+        )
+
+    ## Figure specifications
+    fig.update_layout(
+        height=1000,
+        title='Atributos de la plataforma relevantes para los médicos',
+        xaxis_title = 'Número de menciones'
+    )
+
+
+    fig.show()
