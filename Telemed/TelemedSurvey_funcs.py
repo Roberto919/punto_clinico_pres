@@ -16,6 +16,8 @@
 
 import pandas as pd
 
+import numpy as np
+
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import plotly.figure_factory as ff
@@ -202,9 +204,9 @@ def A1_graph(dfx):
 
     for col in dfx.columns:
         if col == 'NO':
-            color='rgb(204, 0, 0)'
+            color='rgb(222, 95, 70)'
         else:
-            color='rgb(51, 204, 51)'
+            color='rgb(92, 201, 154)'
         fig.add_trace(
             go.Bar(
                 x=dfx.index,
@@ -219,7 +221,8 @@ def A1_graph(dfx):
     fig.update_layout(
         title='Ha considerado ofrecer teleconsulta?',
         xaxis_title = 'Especialidad',
-        yaxis_title = 'Participación'
+        yaxis_title = 'Participación',
+        plot_bgcolor='rgb(255,255,255)'
     )
 
     fig.show()
@@ -273,8 +276,13 @@ def A3_graph(dfx):
     fig.update_layout(
         # title = 'Adopción de plataformas digitales por parte de los médicos',
         # annotations=annotations,
+        title={
+            'text': 'Uso de plataformas por parte de los médicos',
+            'y': 0.97
+        },
         xaxis_title = 'Cuenta con plataforma de teleconsultas?',
-        yaxis_title = 'Cuenta con plataforma de gestión?'
+        yaxis_title = 'Cuenta con plataforma de gestión?',
+        # height=750
     )
 
     fig.show()
@@ -336,8 +344,16 @@ def A5_graph(dfx):
     ## Creating figure
     fig = go.Figure()
 
+    ## Color RGB coordinates
+    color_rgb_start = np.array([213, 202, 235])
+    color_delta = np.array([30, 0, 20])
+
     ## Craeting each bar for the graph
     for col in dfx.columns:
+        #### Color that will be assigned to the bar
+        color = 'rgb' + str(tuple(color_rgb_start - color_delta*list(dfx.columns).index(col)))
+
+        #### Crating each bar
         fig.add_trace(
             go.Bar(
                 y=dfx.index,
@@ -346,6 +362,7 @@ def A5_graph(dfx):
                 orientation='h',
                 text=(dfx[col]*100).astype(str).str[:5] + '%',
                 textposition='auto',
+                marker_color=color
                 # text=dfx[col],
                 # textposition='outside'
             )
@@ -368,7 +385,8 @@ def A5_graph(dfx):
         ),
         barmode='stack',
         showlegend=False,
-        title='Regularidad de uso de la plataforma'
+        title='Regularidad de uso de la plataforma',
+        plot_bgcolor='rgb(255,255,255)'
         # margin=dict(l=40, r=10, t=140, b=80),
     )
 
@@ -535,7 +553,8 @@ def A6_graph(dfx):
         width=1250,
         title='Plataformas mencionados por los médicos',
         xaxis_title = 'Plataforma',
-        yaxis_title = 'Médicos usuarios'
+        yaxis_title = 'Médicos usuarios',
+        plot_bgcolor='rgb(255,255,255)'
     )
 
     ## Displaying figure
@@ -641,7 +660,8 @@ def A7_graph(dfx):
     fig.update_layout(
         height=1000,
         title='Atributos de la plataforma relevantes para los médicos',
-        xaxis_title = 'Número de menciones'
+        xaxis_title = 'Número de menciones',
+        plot_bgcolor='rgb(255,255,255)'
     )
 
 
