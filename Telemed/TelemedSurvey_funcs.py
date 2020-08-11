@@ -225,7 +225,8 @@ def A1_graph(dfx):
         plot_bgcolor='rgb(255,255,255)'
     )
 
-    fig.show()
+    # fig.show()
+    return fig
 
 
 
@@ -285,7 +286,8 @@ def A3_graph(dfx):
         # height=750
     )
 
-    fig.show()
+    # fig.show()
+    return fig
 
 
 
@@ -425,7 +427,8 @@ def A5_graph(dfx):
     fig.update_layout(annotations=annotations)
 
     ## Display figure
-    fig.show()
+    # fig.show()
+    return fig
 
 
 
@@ -558,7 +561,8 @@ def A6_graph(dfx):
     )
 
     ## Displaying figure
-    fig.show()
+    # fig.show()
+    return fig
 
 
 
@@ -665,4 +669,5 @@ def A7_graph(dfx):
     )
 
 
-    fig.show()
+    # fig.show()
+    return fig
