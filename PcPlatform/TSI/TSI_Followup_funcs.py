@@ -182,6 +182,12 @@ def format_df(df):
     df['% completado'] = df['% completado']*100
 
 
+    ## Eliminating tasks that don't have a start or end date
+    m1 = df['Comienzo.1'].notnull()
+    m2 = df['Fin.1'].notnull()
+    df = df.loc[(m1 & m2), :]
+
+
     ## Adding time to tasks
     df.loc[:, 'Comienzo.1'] = df['Comienzo.1'].apply(lambda x: datetime(x.year, x.month, x.day, 1, 1))
     df.loc[:, 'Fin.1'] = df['Fin.1'].apply(lambda x: datetime(x.year, x.month, x.day, 23, 59))
