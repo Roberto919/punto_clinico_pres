@@ -15,6 +15,7 @@
 ## Python libraries
 
 import plotly.figure_factory as ff
+import plotly.express as px
 
 from datetime import *
 
@@ -217,7 +218,7 @@ def mother_daughter_dfs(md_dict, df):
 
 
 ## Create Gantt chart based on dataframe
-def gantt_chart(md_dfs, mother_task):
+def gantt_chart_deprecated(md_dfs, mother_task):
     """
     Create Gantt chart based on dataframe
         args:
@@ -225,6 +226,56 @@ def gantt_chart(md_dfs, mother_task):
             mother_task (string): name of the mother task that will be explored with the gantt chart
         returns:
             - (print figure)
+    """
+
+
+    ## Selecting dataframe that will be converted into a gantt chart
+    df = md_dfs[mother_task]
+
+
+    ## Columns that will be considered and renamed for the gantt chart
+    rename_gant = []
+    for def_col in def_dict:
+        if (def_dict[def_col]['relevant']) & ('gantt_name' in def_dict[def_col]):
+            rename_gant.append(def_col)
+
+
+    ## Eliminating columns not relevant for gantt chart and renaming relevant columns
+    for col in df.columns:
+
+        if col not in rename_gant:
+            df.drop(col, inplace=True, axis=1)
+        else:
+            df.rename(columns={col: def_dict[col]['gantt_name']}, inplace=True)
+
+
+    ## Creating gantt chart
+    fig = ff.create_gantt(
+                df,
+                colors=['#333F44', '#93e4c1'],
+                index_col='Complete',
+                show_colorbar=True,
+                bar_width=0.2,
+                showgrid_x=True,
+                showgrid_y=True,
+                title=mother_task
+                )
+    fig.show()
+
+
+    return
+
+
+
+## Create Gantt chart based on dataframe
+def gantt_chart(md_dfs, mother_task):
+    """
+    Create Gantt chart based on dataframe
+        args:
+            md_dfs (dictionary): dictionary of dataframes filtered based on mother_daughter_dict
+            mother_task (string): name of the mother task that will be explored with the gantt chart
+        returns:
+            - (printed figure)
     """
 
 
