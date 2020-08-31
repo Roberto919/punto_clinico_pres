@@ -57,7 +57,7 @@ def main_script_func():
 
 
     #### Executing dashboard
-    dashboard_layout()
+    dashboard_layout_new()
 
 
 

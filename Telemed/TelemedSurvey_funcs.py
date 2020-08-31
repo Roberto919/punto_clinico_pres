@@ -222,7 +222,9 @@ def A1_graph(dfx):
         title='Ha considerado ofrecer teleconsulta?',
         xaxis_title = 'Especialidad',
         yaxis_title = 'Participación',
-        plot_bgcolor='rgb(255,255,255)'
+        plot_bgcolor='rgb(255,255,255)',
+        autosize=False,
+        height=350
     )
 
     # fig.show()
@@ -424,7 +426,11 @@ def A5_graph(dfx):
     #     )
 
     #### Aupdating figure with annotations
-    fig.update_layout(annotations=annotations)
+    fig.update_layout(
+        annotations=annotations,
+        autosize=False,
+        height=350
+        )
 
     ## Display figure
     # fig.show()
