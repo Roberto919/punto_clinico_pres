@@ -333,8 +333,9 @@ def data_processing_appointments_A2(dfa, loc='ALL'):
     dfax.drop([nrc for nrc in dfax.columns if nrc not in rc], axis=1, inplace=True)
     dfax.set_index('FECHA', drop=True, inplace=True)
 
-    m1 = dfax.index < datetime(2020, 6, 1)
-    dfax = dfax.loc[m1, :]
+    ## Filter to get rid of certain dates
+    # m1 = dfax.index < datetime(2020, 6, 1)
+    # dfax = dfax.loc[m1, :]
 
 
     dfax = dfax.groupby([dfax.index.year, dfax.index.quarter, 'ASUNTO_sinth']).count().unstack().fillna(0)

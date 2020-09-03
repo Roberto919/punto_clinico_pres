@@ -58,5 +58,9 @@ def_dict = {
     'Tarea_strip': {
         'relevant': True,
         'gantt_name': 'Task'
-    }
+    },
+    'RevRobf': {
+        'relevant': True,
+        'gantt_name': 'Complete'
+    },
 }

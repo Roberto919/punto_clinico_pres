@@ -13,7 +13,7 @@
 
 
 ## Data
-data_loc = 'Data/20200723'
+data_loc = 'Data/20200901'
 sales_data = 'GenerateBillingCSVRequest.csv'
 appointment_data = 'LISTADETALLADADELASCITAS.csv'
 
