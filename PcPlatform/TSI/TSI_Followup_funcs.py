@@ -155,32 +155,22 @@ def extract_md_dict(df):
 
 
 ## Formatting dataframe
-def format_df(df):
+def format_df(df, version='TSI'):
     """
     Formatting dataframe
         args:
-            df (dataframe)
+            df (dataframe): df that will be cleaned to leave only columns for the Gantt chart
+            version (string): specification of the type of document that will be processed
+                options:
+                    - "TSI": Advancements according to the provider
+                    - "Rob": Review of advancements according to Rob
+        returns:
+            df (dataframe): cleaned df
     """
 
 
     ## Creating column with cleaned tasks names
     df['Tarea_strip'] = df['Nombre de tarea'].str.strip()
-
-
-    ## Eliminating non relevant and non identified columns
-    n_rc = []
-    for col in df.columns:
-        if (col not in def_dict):
-            n_rc.append(col)
-        else:
-            if def_dict[col]['relevant'] == False:
-                n_rc.append(col)
-
-    df.drop(n_rc, inplace=True, axis=1)
-
-
-    ## Changing "% completado" column to a 100 base
-    df['% completado'] = df['% completado']*100
 
 
     ## Eliminating tasks that don't have a start or end date
@@ -192,6 +182,35 @@ def format_df(df):
     ## Adding time to tasks
     df.loc[:, 'Comienzo.1'] = df['Comienzo.1'].apply(lambda x: datetime(x.year, x.month, x.day, 1, 1))
     df.loc[:, 'Fin.1'] = df['Fin.1'].apply(lambda x: datetime(x.year, x.month, x.day, 23, 59))
+
+
+    ## Eliminating non relevant and non identified columns
+    n_rc = []
+    for col in df.columns:
+        if (col not in def_dict):
+            n_rc.append(col)
+        else:
+            if def_dict[col]['relevant'] == False:
+                n_rc.append(col)
+
+    if version=="TSI":
+        n_rc.append("RevRob")
+        ## Changing "% completado" column to a 100 base
+        df['% completado'] = df['% completado']*100
+    elif version=="Rob":
+        ## Adding column with Rob's review status
+        df['RevRobf'] = df['Fin.1'].apply(lambda x: "Atrasada" if x < datetime.now() else "Pendiente")
+        m1 = df['% completado'] == 1
+        df.loc[m1, 'RevRobf'] = "Terminada"
+        m1 = df['RevRob'] == 1
+        df.loc[m1, 'RevRobf'] = "Validada"
+
+        n_rc.append("% completado")
+        n_rc += ["% completado", "RevRob"]
+    else:
+        raise NameError('Invalid document')
+
+    df.drop(n_rc, inplace=True, axis=1)
 
 
     return df
@@ -268,12 +287,16 @@ def gantt_chart_deprecated(md_dfs, mother_task):
 
 
 ## Create Gantt chart based on dataframe
-def gantt_chart(md_dfs, mother_task):
+def gantt_chart(md_dfs, mother_task, version="TSI"):
     """
     Create Gantt chart based on dataframe
         args:
             md_dfs (dictionary): dictionary of dataframes filtered based on mother_daughter_dict
             mother_task (string): name of the mother task that will be explored with the gantt chart
+            version (string): specification of the type of document that will be processed
+                options:
+                    - "TSI": Advancements according to the provider
+                    - "Rob": Review of advancements according to Rob
         returns:
             - (printed figure)
     """
@@ -292,25 +315,42 @@ def gantt_chart(md_dfs, mother_task):
 
     ## Eliminating columns not relevant for gantt chart and renaming relevant columns
     for col in df.columns:
-
         if col not in rename_gant:
             df.drop(col, inplace=True, axis=1)
         else:
             df.rename(columns={col: def_dict[col]['gantt_name']}, inplace=True)
 
 
-    ## Creating gantt chart
-    fig = ff.create_gantt(
-                df,
-                colors=['#333F44', '#93e4c1'],
-                index_col='Complete',
-                show_colorbar=True,
-                bar_width=0.2,
-                showgrid_x=True,
-                showgrid_y=True,
-                title=mother_task
-                )
-    fig.show()
+    ## Creating figure depending on the document
+    if version == "TSI":
+        ## Creating gantt chart
+        fig = ff.create_gantt(
+                    df,
+                    colors=['#333F44', '#93e4c1'],
+                    index_col='Complete',
+                    show_colorbar=True,
+                    bar_width=0.2,
+                    showgrid_x=True,
+                    showgrid_y=True,
+                    title=mother_task
+                    )
+        fig.show()
+    elif version=="Rob":
+        ## Creating gantt chart
+        fig = px.timeline(
+            df,
+            y="Task",
+            x_start="Start",
+            x_end="Finish",
+            color="Complete",
+            color_discrete_map={
+                "Atrasada": "red",
+                "Pendiente": "orange",
+                "Terminada": "blue",
+                "Validada": "green"
+            }
+        )
+        fig.show()
 
 
     return
