@@ -106,8 +106,606 @@ def homologate_locations(row):
 
 
 
+## Function to assign a specialty to each of the rows
+def specialty_synth(row, source):
+    """
+    Function to assign a specialty to each of the rows
+        args:
+            row (dataframe's row): row with business' info.
+            source (string): name of source that is being processed
+                options:
+                    "appointments"
+                    "sales"
+        returns:
+            res (string): specialty associated with the service.
+    """
+    ## Rules to assign a specialty to the row
+    #### 1. Search for a keyword from the *specialties_ref* list in the "Description/matter" column.
+    ###### If step 1 does not give an answer ->
+    #### 2. Search based on the name of the doctor registered and select only if the doctor has only 1 specialty registered.
+    ###### If step 2 does not give an answer ->
+    #### 3. Assign "OTRA_ESP"
 
 
+    ## Assigning column name based on dataframe explored
+    if source == "appointments":
+        doctor_name_col = "NOMBRE DEL CLÍNICO"
+        treatement_description = "ASUNTO"
+    elif source == "sales":
+        doctor_name_col = "Provider"
+        treatement_description = "DescriptionES"
+    else:
+        raise ValueError('Undefined source selected')
+
+    ## Setting initial value of 'res' to 0
+    res = 0
+
+    ## Searching for speciality based on related keywords
+    for sp in specialties_ref:
+        for sp_t in specialties_ref[sp]:
+            if sp_t in row[treatement_description]:
+                res = sp
+                return res
+
+    ## Searching for speciality based on doctor if spacialty keyword based search was not successful
+    if res == 0:
+        if row[doctor_name_col] in meds_dict_ref:
+            if len(meds_dict_ref[row[doctor_name_col]]['Especialidad']) == 1:
+                res = meds_dict_ref[row[doctor_name_col]]['Especialidad'][0]
+                return res
+
+    if res == 0:
+        res = 'OTRA_ESP'
+        # res = row
+
+    return res
+
+
+
+## Function to assign a business line to each of the rows
+def business_line_synth(row, source):
+    """
+    Function to assign a business line to each of the rows
+        args:
+        returns:
+    """
+    ## Rules to assign a business line to each row
+    #### 1. Assign "LABORTORY" to every row that has the keyword "LABORATORIO" in the "site" column
+    ###### If this keyword is not found ->
+    #### 2. Assign a business line based on the appereance of a word in the *business_line_ref* present in the "Description/matter" column.
+    ###### If step 2 does not give an answer ->
+    #### 3. Assign "OTRAS"
+
+
+    ## Assigning column name based on dataframe explored
+    if source == "appointments":
+        doctor_name_col = "NOMBRE DEL CLÍNICO"
+        treatement_description = "ASUNTO"
+        site_info = "SITIO"
+    elif source == "sales":
+        doctor_name_col = "Provider"
+        treatement_description = "DescriptionES"
+        site_info = "SiteInfo"
+    else:
+        raise ValueError('Undefined source selected')
+
+    ## Setting initial value of 'res' to 0
+    res = 0
+
+    ## Identify laboratory procedures based on the precense of the word "LABORATORIO" in the column "SiteInfo"
+    if "LABORATORIO" in row[site_info]:
+        res = "LABORATORIO"
+        return res
+
+    ## Searching for speciality based on related keywords
+    for bl in business_line_ref:
+        for bl_t in business_line_ref[bl]:
+            if bl_t in row[treatement_description]:
+                res = bl
+                return res
+
+    ## Case when there was no match found
+    if res == 0:
+        res = 'OTRA_LN'
+
+    return res
+
+
+
+
+
+'------------------------------------------------------------------------------------------'
+###########
+##       ##
+## SALES ##
+##       ##
+###########
+'------------------------------------------------------------------------------------------'
+##############################################
+## Data analysis - Sales - Cleaning main df ##
+##############################################
+
+
+## Cleaning imported dataset
+def dfs_clean(dfs):
+    """
+    Cleaning imported dataset
+    """
+
+
+    ## Eliminating non relevant columns
+    dfs.drop([nrc for nrc in dfs.columns if nrc not in rcs], axis=1, inplace=True)
+
+
+    ## Eliminating invalid invalid tickets if selected
+    m1 = dfs['State'] != 'Inválida'
+    dfs = dfs.loc[m1, :]
+    dfs.drop(['State'], axis=1, inplace=True)
+
+
+    ## Parsing date column
+    dfs.loc[:, 'BillDate'] = pd.to_datetime(dfs['BillDate'], format='%Y-%m-%dT%H:%M:%S.%f')
+
+
+    ## Cleaning selected columns
+    c_cols = ['Provider', 'BilledBy', 'DescriptionES']
+    dfs.loc[:, c_cols] = dfs.loc[:, c_cols].fillna('NO_INFO')
+    for col in c_cols:
+
+        dfs.loc[:, col] = dfs[col].str.upper().str.strip()
+
+        ccf = [
+            lambda x: re.sub('Á', 'A', x),
+            lambda x: re.sub('É', 'E', x),
+            lambda x: re.sub('Í', 'I', x),
+            lambda x: re.sub('Ó', 'O', x),
+            lambda x: re.sub('Ú', 'U', x),
+            lambda x: re.sub(' , ', ', ', x),
+        ]
+
+        for fun in ccf:
+            dfs.loc[:, col] = dfs[col].apply(fun)
+
+
+    ## Adding index column
+    dfs.insert(0, '#', range(1, dfs.shape[0] + 1))
+
+
+    ## Adding week number as string
+    dfs.loc[:, 'Week_num'] = dfs['BillDate'].apply(add_week_num)
+
+
+    ## Finding corresponding speciality based on description
+    dfs['Especialidad_match'] = dfs.apply((lambda x: specialty_synth(x, 'sales')), axis=1)
+
+
+    ## Finding corresponding business line based on description
+    dfs['BusLine_match'] = dfs.apply((lambda x: business_line_synth(x, 'sales')), axis=1)
+
+
+    return dfs
+
+
+
+'------------------------------------------------------------------------------------------'
+########################################
+## Data analysis - Sales - Analysis 1 ##
+########################################
+
+
+## (Analysis 1.1) How have sales for each location behaved? (separating laboratory) - weekly basis
+def data_processing_sales_A1p1(dfs):
+    """
+    """
+
+
+    ## Copy of main dataframe
+    dfsx = dfs.copy()
+
+
+    ## Eliminating non relevant columns for the analysis
+    rc = [
+        'SiteInfo',
+        'Week_num',
+        'Total'
+    ]
+    dfsx.drop([nrc for nrc in dfsx.columns if nrc not in rc], axis=1, inplace=True)
+    dfsx.set_index('Week_num', drop=True, inplace=True)
+
+
+    ## Group results
+    dfsx = dfsx.groupby([dfsx.index, dfsx['SiteInfo']]).sum().unstack().fillna(0)
+    dfsx.columns = dfsx.columns.droplevel()
+
+
+    return dfsx
+
+
+
+## Creating and displaying figure related to analysis 1
+def graph_sales_A1(dfsx):
+
+    fig = go.Figure()
+
+    for col in dfsx.columns:
+        fig.add_trace(
+            go.Bar(
+                x = dfsx.index,
+                y = dfsx[col],
+                name = col,
+                text = dfsx[col].astype('str'),
+                textposition = 'inside',
+                texttemplate = '$%{value:,.1f}'
+            )
+        )
+
+    fig.update_layout(
+        title = 'Ingresos por sucursal (separando laboratorio)',
+        xaxis_title = 'Semana',
+        yaxis_title = 'Ingresos [$MXN]',
+        barmode='stack',
+        autosize=False,
+        width=8000,
+        height=1000
+    )
+    fig.update_xaxes(type="category")
+
+    fig.show()
+
+
+
+'------------------------------------------------------------------------------------------'
+########################################
+## Data analysis - Sales - Analysis 2 ##
+########################################
+
+
+## (Analysis 2.1) How have sales for each location behaved? (merging laboratory) - weekly basis
+def data_processing_sales_A2p1(dfs):
+    """
+    """
+
+
+    ## Copy of main dataframe
+    dfsx = dfs.copy()
+
+
+    ## Homologate all locations
+    dfsx['Loc_Hom'] = dfsx['SiteInfo'].apply(homologate_locations)
+
+
+    ## Eliminating non relevant columns for the analysis
+    rc = [
+        'Loc_Hom',
+        'Week_num',
+        'Total'
+    ]
+    dfsx.drop([nrc for nrc in dfsx.columns if nrc not in rc], axis=1, inplace=True)
+    dfsx.set_index('Week_num', drop=True, inplace=True)
+
+
+    ## Group results
+    dfsx = dfsx.groupby([dfsx.index, dfsx['Loc_Hom']]).sum().unstack().fillna(0)
+    dfsx.columns = dfsx.columns.droplevel()
+
+
+    return dfsx
+
+
+## Creating and displaying figure related to analysis 1
+def graph_sales_A2(dfsx):
+
+    fig = go.Figure()
+
+    for col in dfsx.columns:
+        fig.add_trace(
+            go.Bar(
+                x = dfsx.index,
+                y = dfsx[col],
+                name = col,
+                text = dfsx[col].astype('str'),
+                textposition = 'inside',
+                texttemplate = '$%{value:,.1f}'
+            )
+        )
+
+    fig.update_layout(
+        title = 'Ingresos por sucursal (juntando laboratorio)',
+        xaxis_title = 'Semana',
+        yaxis_title = 'Ingresos [$MXN]',
+        barmode='stack',
+        autosize=False,
+        width=8000,
+        height=1000
+    )
+    fig.update_xaxes(type="category")
+
+    fig.show()
+
+
+
+## (Analysis 2.2) How have sales for each location behaved? (merging laboratory) - monthly basis
+def data_processing_sales_A2p2(dfs):
+    """
+    (Analysis 2.2) How have sales for each location behaved? (merging laboratory) - monthly basis
+    """
+
+
+    ## Copy of main dataframe
+    dfsx = dfs.copy()
+
+
+    ## Homologate all locations
+    dfsx['Loc_Hom'] = dfsx['SiteInfo'].apply(homologate_locations)
+
+
+    ## Eliminating non relevant columns for the analysis
+    rc = [
+        'Loc_Hom',
+        'BillDate',
+        'Total'
+    ]
+    dfsx.drop([nrc for nrc in dfsx.columns if nrc not in rc], axis=1, inplace=True)
+    dfsx.set_index('BillDate', drop=True, inplace=True)
+
+
+    ## Group results
+    dfsx = dfsx.groupby([dfsx.index.year, dfsx.index.month, "Loc_Hom"]).sum().unstack().fillna(0)
+    dfsx.columns = dfsx.columns.droplevel()
+
+
+    return dfsx
+
+
+
+'------------------------------------------------------------------------------------------'
+########################################
+## Data analysis - Sales - Analysis 3 ##
+########################################
+
+
+## (Analysis 3) How have sales for each location separately behaved weekly? (merging laboratory)
+def data_processing_sales_A3(dfs):
+    """
+    """
+
+
+    ## Copy of main dataframe
+    dfsx = dfs.copy()
+
+
+    ## Homologate all locations
+    dfsx['Loc_Hom'] = dfsx['SiteInfo'].apply(homologate_locations)
+
+
+    ## Eliminating non relevant columns for the analysis
+    rc = [
+        'Loc_Hom',
+        'Week_num',
+        'Total'
+    ]
+    dfsx.drop([nrc for nrc in dfsx.columns if nrc not in rc], axis=1, inplace=True)
+    dfsx.set_index('Week_num', drop=True, inplace=True)
+
+
+    ## Group results
+    dfsx = dfsx.groupby([dfsx.index, dfsx['Loc_Hom']]).sum().unstack().fillna(0)
+    dfsx.columns = dfsx.columns.droplevel()
+
+
+    ## Creating percent change columns
+    for col in dfsx.columns:
+        dfsx.loc[:, col +'_pc'] = dfsx[col].diff()/dfsx[col].shift()*100
+        dfsx.loc[:, col +'_pc'] = dfsx[col +'_pc'].fillna(0)
+        dfsx.loc[:, col +'_pc'] = dfsx[col +'_pc'].replace([np.inf, -np.inf], 0)
+
+
+    return dfsx
+
+
+
+## Appointments analysis 2 graph
+def graph_sales_A3(dfsx):
+    """
+    Sales analysis 3 graph
+    """
+
+
+    ## Creating structure of nested lists with secondary axis statements
+    def sec_ax_statement_structure(graphs, cols):
+        """
+        Creating structure of nested lists with secondary axis statements
+        """
+        rl=[]
+        ary=[]
+        sec_ax_statement = {"secondary_y": True}
+
+        for r in range(0, rows):
+            for c in range(0, cols):
+                rl.append(sec_ax_statement)
+
+            ary.append(rl)
+            rl=[]
+
+        return ary
+
+
+
+    graphs = [col for col in dfsx.columns if ('_pc' not in col) and ('_str' not in col)]
+
+    rows = len(graphs)
+    cols = 1
+
+    fig = make_subplots(rows=rows, cols=cols,
+                        subplot_titles=tuple(graphs),
+                        specs=sec_ax_statement_structure(graphs, cols)
+                       )
+
+    i = 1
+    j = 1
+    for graph in graphs:
+
+        fig.add_trace(
+            go.Bar(
+                x=dfsx.index,
+                y=dfsx[graph]
+            ),
+            secondary_y=False,
+            row=j, col=i
+        )
+
+        fig.add_trace(
+            go.Scatter(
+                x=dfsx.index,
+                y=dfsx[graph + '_pc']
+            ),
+            secondary_y=True,
+            row=j, col=i
+        )
+
+        i += 1
+        if i == cols + 1:
+            i = 1
+            j += 1
+
+    fig.update_layout(
+        title = 'Ventas de cada ubicación',
+        autosize=False,
+        width=2000,
+        height=2000
+    )
+
+    fig.update_xaxes(type="category")
+
+
+    fig.show()
+
+
+
+'------------------------------------------------------------------------------------------'
+########################################
+## Data analysis - Sales - Analysis 4 ##
+########################################
+
+
+## (Analysis 4) How have sales behaved per location per business line?
+def data_processing_sales_A4(dfs):
+
+
+    ## Copy of main dataframe
+    dfsx = dfs.copy()
+
+
+    ## Homologate all locations
+    dfsx['Loc_Hom'] = dfsx['SiteInfo'].apply(homologate_locations)
+
+
+    ## Eliminating non relevant columns for the analysis
+    rc = [
+        "BillDate",
+        "Loc_Hom",
+        "BusLine_match",
+        "Total"
+    ]
+    dfsx.drop([nrc for nrc in dfsx.columns if nrc not in rc], axis=1, inplace=True)
+    dfsx.set_index('BillDate', drop=True, inplace=True)
+
+
+    ## Group results
+    dfsx = dfsx.groupby([dfsx.index.year, dfsx.index.month, "BusLine_match", "Loc_Hom"]).sum().unstack().unstack().fillna(0)
+    dfsx.columns = dfsx.columns.droplevel()
+
+
+    return dfsx
+
+
+
+'------------------------------------------------------------------------------------------'
+########################################
+## Data analysis - Sales - Analysis 5 ##
+########################################
+
+
+## (Analysis 5) How have sales behaved per location, per business line, per speciality?
+def data_processing_sales_A5(dfs):
+
+
+    ## Copy of main dataframe
+    dfsx = dfs.copy()
+
+
+    ## Homologate all locations
+    dfsx['Loc_Hom'] = dfsx['SiteInfo'].apply(homologate_locations)
+
+
+    ## Eliminating non relevant columns for the analysis
+    rc = [
+        "BillDate",
+        "Loc_Hom",
+        "BusLine_match",
+        "Especialidad_match",
+        "Total"
+    ]
+    dfsx.drop([nrc for nrc in dfsx.columns if nrc not in rc], axis=1, inplace=True)
+    dfsx.set_index('BillDate', drop=True, inplace=True)
+
+
+    ## Group results
+    dfsx = dfsx.groupby([dfsx.index.year, dfsx.index.month, "BusLine_match", "Especialidad_match", "Loc_Hom"]).sum().unstack().unstack().unstack().fillna(0)
+    dfsx.columns = dfsx.columns.droplevel()
+
+
+    return dfsx
+
+
+
+'------------------------------------------------------------------------------------------'
+########################################
+## Data analysis - Sales - Analysis 6 ##
+########################################
+
+
+## (Analysis 6) How have sales behaved per location, per business line, per speciality?
+def data_processing_sales_A6(dfs):
+
+
+    ## Copy of main dataframe
+    dfsx = dfs.copy()
+
+
+    ## Homologate all locations
+    dfsx['Loc_Hom'] = dfsx['SiteInfo'].apply(homologate_locations)
+
+
+    ## Eliminating non relevant columns for the analysis
+    rc = [
+        "BillDate",
+        "Loc_Hom",
+        "BusLine_match",
+        "Provider",
+        "Total"
+    ]
+    dfsx.drop([nrc for nrc in dfsx.columns if nrc not in rc], axis=1, inplace=True)
+    dfsx.set_index('BillDate', drop=True, inplace=True)
+
+
+    ## Group results
+    dfsx = dfsx.groupby([dfsx.index.year, dfsx.index.month, "BusLine_match", "Provider", "Loc_Hom"]).sum().unstack().unstack().unstack().fillna(0)
+    dfsx.columns = dfsx.columns.droplevel()
+
+
+    return dfsx
+
+
+
+
+
+'------------------------------------------------------------------------------------------'
+##################
+##              ##
+## APPOINTMENTS ##
+##              ##
+##################
 '------------------------------------------------------------------------------------------'
 #####################################################
 ## Data analysis - Appointments - Cleaning main df ##
@@ -119,36 +717,6 @@ def dfa_clean(dfa):
     """
     Cleaning imported dataframes - Appointments dataframe
     """
-
-
-    ## Function to clean ASUNTO column
-    """
-    Function to clean ASUNTO column
-    """
-    def Asunto_synth(row):
-
-        res = 0
-
-
-        ## Searching for speciality based on doctor
-        if row['NOMBRE DEL CLÍNICO'] in meds_dict_ref:
-            if len(meds_dict_ref[row['NOMBRE DEL CLÍNICO']]['Especialidad']) == 1:
-                res = meds_dict_ref[row['NOMBRE DEL CLÍNICO']]['Especialidad'][0]
-                return res
-
-        ## Searching for speciality based on related keywords if doctor based search was not successful
-        if res == 0:
-            for sp in specialties_ref:
-                for sp_t in specialties_ref[sp]:
-                    if sp_t in row['ASUNTO']:
-                        res = sp
-                        return res
-
-        if res == 0:
-            res = 'OTROS'
-            # res = row
-
-        return res
 
 
     ## Eliminating non relevant columns
@@ -180,7 +748,7 @@ def dfa_clean(dfa):
 
 
     ## Clean ASUNTO column
-    dfa.loc[:, 'ASUNTO_sinth'] = dfa.apply(Asunto_synth, axis=1)
+    dfa.loc[:, 'ASUNTO_sinth'] = dfa.apply((lambda x: specialty_synth(x, 'appointments')), axis=1)
 
 
     ## Eliminating entries with appointment status different from "Completada"
@@ -429,334 +997,6 @@ def graph_appointments_A2(dfax, loc='ALL'):
         width=1600,
         height=2000
     )
-
-
-    fig.show()
-
-
-
-
-
-'------------------------------------------------------------------------------------------'
-##############################################
-## Data analysis - Sales - Cleaning main df ##
-##############################################
-
-
-## Cleaning imported dataset
-def dfs_clean(dfs):
-    """
-    Cleaning imported dataset
-    """
-
-
-    ## Eliminating non relevant columns
-    dfs.drop([nrc for nrc in dfs.columns if nrc not in rcs], axis=1, inplace=True)
-
-
-    ## Eliminating invalid invalid tickets if selected
-    m1 = dfs['State'] != 'Inválida'
-    dfs = dfs.loc[m1, :]
-    dfs.drop(['State'], axis=1, inplace=True)
-
-
-    ## Parsing date column
-    dfs.loc[:, 'BillDate'] = pd.to_datetime(dfs['BillDate'], format='%Y-%m-%dT%H:%M:%S.%f')
-
-
-    ## Cleaning selected columns
-    c_cols = ['Provider', 'BilledBy', 'DescriptionES']
-    dfs.loc[:, c_cols] = dfs.loc[:, c_cols].fillna('NO_INFO')
-    for col in c_cols:
-
-        dfs.loc[:, col] = dfs[col].str.upper().str.strip()
-
-        ccf = [
-            lambda x: re.sub('Á', 'A', x),
-            lambda x: re.sub('É', 'E', x),
-            lambda x: re.sub('Í', 'I', x),
-            lambda x: re.sub('Ó', 'O', x),
-            lambda x: re.sub('Ú', 'U', x),
-        ]
-
-        for fun in ccf:
-            dfs.loc[:, col] = dfs[col].apply(fun)
-
-
-    ## Adding index column
-    dfs.insert(0, '#', range(1, dfs.shape[0] + 1))
-
-
-    ## Adding week number as string
-    dfs.loc[:, 'Week_num'] = dfs['BillDate'].apply(add_week_num)
-
-
-    return dfs
-
-
-
-
-
-'------------------------------------------------------------------------------------------'
-########################################
-## Data analysis - Sales - Analysis 1 ##
-########################################
-
-
-##
-def data_processing_sales_A1(dfs):
-    """
-    """
-
-
-    ## Copy of main dataframe
-    dfsx = dfs.copy()
-
-
-    ## Eliminating non relevant columns for the analysis
-    rc = [
-        'SiteInfo',
-        'Week_num',
-        'Total'
-    ]
-    dfsx.drop([nrc for nrc in dfsx.columns if nrc not in rc], axis=1, inplace=True)
-    dfsx.set_index('Week_num', drop=True, inplace=True)
-
-
-    ## Group results
-    dfsx = dfsx.groupby([dfsx.index, dfsx['SiteInfo']]).sum().unstack().fillna(0)
-    dfsx.columns = dfsx.columns.droplevel()
-
-
-    return dfsx
-
-
-
-## Creating and displaying figure related to analysis 1
-def graph_sales_A1(dfsx):
-
-    fig = go.Figure()
-
-    for col in dfsx.columns:
-        fig.add_trace(
-            go.Bar(
-                x = dfsx.index,
-                y = dfsx[col],
-                name = col,
-                text = dfsx[col].astype('str'),
-                textposition = 'inside',
-                texttemplate = '$%{value:,.1f}'
-            )
-        )
-
-    fig.update_layout(
-        title = 'Ingresos por sucursal (separando laboratorio)',
-        xaxis_title = 'Semana',
-        yaxis_title = 'Ingresos [$MXN]',
-        barmode='stack',
-        autosize=False,
-        width=8000,
-        height=1000
-    )
-    fig.update_xaxes(type="category")
-
-    fig.show()
-
-
-
-
-
-'------------------------------------------------------------------------------------------'
-########################################
-## Data analysis - Sales - Analysis 2 ##
-########################################
-
-
-##
-def data_processing_sales_A2(dfs):
-    """
-    """
-
-
-    ## Copy of main dataframe
-    dfsx = dfs.copy()
-
-
-    ## Homologate all locations
-    dfsx['Loc_Hom'] = dfsx['SiteInfo'].apply(homologate_locations)
-
-
-    ## Eliminating non relevant columns for the analysis
-    rc = [
-        'Loc_Hom',
-        'Week_num',
-        'Total'
-    ]
-    dfsx.drop([nrc for nrc in dfsx.columns if nrc not in rc], axis=1, inplace=True)
-    dfsx.set_index('Week_num', drop=True, inplace=True)
-
-
-    ## Group results
-    dfsx = dfsx.groupby([dfsx.index, dfsx['Loc_Hom']]).sum().unstack().fillna(0)
-    dfsx.columns = dfsx.columns.droplevel()
-
-
-    return dfsx
-
-
-
-## Creating and displaying figure related to analysis 1
-def graph_sales_A2(dfsx):
-
-    fig = go.Figure()
-
-    for col in dfsx.columns:
-        fig.add_trace(
-            go.Bar(
-                x = dfsx.index,
-                y = dfsx[col],
-                name = col,
-                text = dfsx[col].astype('str'),
-                textposition = 'inside',
-                texttemplate = '$%{value:,.1f}'
-            )
-        )
-
-    fig.update_layout(
-        title = 'Ingresos por sucursal (juntando laboratorio)',
-        xaxis_title = 'Semana',
-        yaxis_title = 'Ingresos [$MXN]',
-        barmode='stack',
-        autosize=False,
-        width=8000,
-        height=1000
-    )
-    fig.update_xaxes(type="category")
-
-    fig.show()
-
-
-
-
-
-'------------------------------------------------------------------------------------------'
-########################################
-## Data analysis - Sales - Analysis 3 ##
-########################################
-
-
-##
-def data_processing_sales_A3(dfs):
-    """
-    """
-
-
-    ## Copy of main dataframe
-    dfsx = dfs.copy()
-
-
-    ## Homologate all locations
-    dfsx['Loc_Hom'] = dfsx['SiteInfo'].apply(homologate_locations)
-
-
-    ## Eliminating non relevant columns for the analysis
-    rc = [
-        'Loc_Hom',
-        'Week_num',
-        'Total'
-    ]
-    dfsx.drop([nrc for nrc in dfsx.columns if nrc not in rc], axis=1, inplace=True)
-    dfsx.set_index('Week_num', drop=True, inplace=True)
-
-
-    ## Group results
-    dfsx = dfsx.groupby([dfsx.index, dfsx['Loc_Hom']]).sum().unstack().fillna(0)
-    dfsx.columns = dfsx.columns.droplevel()
-
-
-    ## Creating percent change columns
-    for col in dfsx.columns:
-        dfsx.loc[:, col +'_pc'] = dfsx[col].diff()/dfsx[col].shift()*100
-        dfsx.loc[:, col +'_pc'] = dfsx[col +'_pc'].fillna(0)
-        dfsx.loc[:, col +'_pc'] = dfsx[col +'_pc'].replace([np.inf, -np.inf], 0)
-
-
-    return dfsx
-
-
-
-## Appointments analysis 2 graph
-def graph_sales_A3(dfsx):
-    """
-    Sales analysis 3 graph
-    """
-
-
-    ## Creating structure of nested lists with secondary axis statements
-    def sec_ax_statement_structure(graphs, cols):
-        """
-        Creating structure of nested lists with secondary axis statements
-        """
-        rl=[]
-        ary=[]
-        sec_ax_statement = {"secondary_y": True}
-
-        for r in range(0, rows):
-            for c in range(0, cols):
-                rl.append(sec_ax_statement)
-
-            ary.append(rl)
-            rl=[]
-
-        return ary
-
-
-
-    graphs = [col for col in dfsx.columns if ('_pc' not in col) and ('_str' not in col)]
-
-    rows = len(graphs)
-    cols = 1
-
-    fig = make_subplots(rows=rows, cols=cols,
-                        subplot_titles=tuple(graphs),
-                        specs=sec_ax_statement_structure(graphs, cols)
-                       )
-
-    i = 1
-    j = 1
-    for graph in graphs:
-
-        fig.add_trace(
-            go.Bar(
-                x=dfsx.index,
-                y=dfsx[graph]
-            ),
-            secondary_y=False,
-            row=j, col=i
-        )
-
-        fig.add_trace(
-            go.Scatter(
-                x=dfsx.index,
-                y=dfsx[graph + '_pc']
-            ),
-            secondary_y=True,
-            row=j, col=i
-        )
-
-        i += 1
-        if i == cols + 1:
-            i = 1
-            j += 1
-
-    fig.update_layout(
-        title = 'Ventas de cada ubicación',
-        autosize=False,
-        width=2000,
-        height=2000
-    )
-
-    fig.update_xaxes(type="category")
 
 
     fig.show()

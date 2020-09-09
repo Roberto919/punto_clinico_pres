@@ -59,13 +59,7 @@ meds_dict_ref = {
  'GOMEZ GARCIA, THALIA STEPHANIE': {'Especialidad': ['GASTROENTEROLOGIA'],
                                      'Sitios': ['Punto Clínico- Coapa',
                                                 'Punto Clinico- Marina']},
- 'GOMEZ, ANTONY OMAR': {'Especialidad': ['GINECOLOGIA',
-                                         'MEDICINA GENERAL',
-                                         'OTROS',
-                                         'ENDOCRINOLOGIA',
-                                         'GASTROENTEROLOGIA',
-                                         'DERMATOLOGIA',
-                                         'OTORRINOLARINGOLOGIA'],
+ 'GOMEZ, ANTONY OMAR': {'Especialidad': ['MEDICINA GENERAL'],
                         'Sitios': ['Punto Clinico- Marina',
                                    'Punto Clínico- Coapa',
                                    'LABORATORIO- Marina']},
@@ -76,7 +70,7 @@ meds_dict_ref = {
                            'Sitios': ['Punto Clinico- Marina',
                                       'Punto Clínico- Basílica',
                                       'LABORATORIO- Basílica']},
- 'HERNANDEZ, YASELIN': {'Especialidad': ['OTROS'],
+ 'HERNANDEZ, YASELIN': {'Especialidad': ['OTRA_ESP'],
                         'Sitios': ['Punto Clínico- Basílica']},
  'IBARRA SALCE, RAUL': {'Especialidad': ['ENDOCRINOLOGIA'],
                          'Sitios': ['Punto Clinico- Marina']},
@@ -91,7 +85,7 @@ meds_dict_ref = {
                                'Sitios': ['Punto Clinico- Marina']},
  'MONTERO MARQUEZ , MIGUEL ANGEL': {'Especialidad': ['OTORRINOLARINGOLOGIA'],
                                      'Sitios': ['Punto Clínico- Coapa']},
- 'N\\A': {'Especialidad': ['OTROS',
+ 'N\\A': {'Especialidad': ['OTRA_ESP',
                            'UROLOGIA',
                            'GINECOLOGIA',
                            'GASTROENTEROLOGIA',
@@ -104,7 +98,7 @@ meds_dict_ref = {
                      'Punto Clinico- Marina',
                      'Punto Clínico- Coapa']},
  'PAGAZA RAMIREZ, RUBEN': {'Especialidad': ['MEDICINA GENERAL',
-                                             'OTROS',
+                                             'OTRA_ESP',
                                              'GINECOLOGIA'],
                             'Sitios': ['Punto Clínico- Basílica']},
  'PEREZ RIOS, BERTHA LUCIA': {'Especialidad': ['DERMATOLOGIA'],
@@ -139,10 +133,10 @@ meds_dict_ref = {
                                         'Punto Clinico- Marina']},
  'TREJO GONZALEZ, NORMA PATRICIA': {'Especialidad': ['GINECOLOGIA'],
                                     'Sitios': ['Punto Clínico- Coapa']},
- 'TUTT GONZALEZ, GIOVANNA': {'Especialidad': ['OTROS'],
+ 'TUTT GONZALEZ, GIOVANNA': {'Especialidad': ['OTRA_ESP'],
                              'Sitios': ['Punto Clinico- Marina']},
  'VAZQUEZ GALLARDO, GRISEL': {'Especialidad': ['GINECOLOGIA',
-                                               'OTROS',
+                                               'OTRA_ESP',
                                                'UROLOGIA'],
                               'Sitios': ['Punto Clínico- Coapa',
                                          'Punto Clinico- Marina']},
@@ -172,14 +166,21 @@ meds_dict_ref = {
                                                'Punto Clinico- Marina']},
  'MONTERO MARQUEZ , MIGUEL ANGEL': {'Especialidad': ['OTORRINOLARINGOLOGIA'],
                                     'Sitios': ['Punto Clínico- Coapa']},
- 'OCHOA, JESSICA': {'Especialidad': ['OTROS'],
+ 'OCHOA, JESSICA': {'Especialidad': ['OTRA_ESP'],
                     'Sitios': ['Punto Clinico- Marina']},
- 'SUPPORT      , MEDFAR': {'Especialidad': ['OTROS', 'GINECOLOGIA', 'UROLOGIA'],
+ 'SUPPORT      , MEDFAR': {'Especialidad': ['OTRA_ESP', 'GINECOLOGIA', 'UROLOGIA'],
                            'Sitios': ['Punto Clinico- Marina',
                                       'Punto Clínico- Basílica']},
  'ZAMORA GARCIA, ALBERTO': {'Especialidad': ['CARDIOLOGIA'],
-                            'Sitios': ['Punto Clínico- Coapa']}
-
+                            'Sitios': ['Punto Clínico- Coapa']},
+ 'MARCANO PILLKAHN, JOHANNA CAROLINA': {'Especialidad': ['GASTROENTEROLOGIA'],
+                            'Sitios': ['?']},
+ 'BURGOS ROJO CED. ESP. 11249003, OLIVIA QUETZALLI': {'Especialidad': ['GINECOLOGIA'],
+                            'Sitios': ['?']},
+ 'BUSTILLO DEL CUETO, EDUARDO': {'Especialidad': ['PEDIATRIA'],
+                            'Sitios': ['?']},
+ 'AVENDAÑO PEREZ, AURIA VIRIDIANA': {'Especialidad': ['GINECOLOGIA'],
+                            'Sitios': ['?']},
                              }
 
 
@@ -188,13 +189,25 @@ specialties_ref = {
         'GINECOLOGIA',
         'ENDOVAGINAL',
         'TRANSVAGINAL',
-        'GINECO'
+        'GINECO',
+        'CERVIX',
+        'VAGIN',
+        'DIU',
+        "OBSTETRIC",
+        "EMBARAZ",
+        "PROLACTIN",
+        "COLPOSCOPIA",
+        "PAPANICOLAOU"
         ],
     'DERMATOLOGIA': [
         'DERMATOLOGIA'
         ],
     'UROLOGIA': [
-        'UROLOGIA'
+        'UROLOGIA',
+        'PROST',
+        "RENAL",
+        "PENESCOPIA",
+        "ANDROSCOPIA"
         ],
     'PEDIATRIA': [
         'PEDIATRIA',
@@ -206,6 +219,8 @@ specialties_ref = {
         ],
     'OTORRINOLARINGOLOGIA': [
         'OTORRINOLARINGOLOGIA',
+        'OTORRINOLARINGO',
+        "CERUMEN"
         ],
     'GASTROENTEROLOGIA': [
         'GASTROENTEROLOGIA',
@@ -225,7 +240,13 @@ specialties_ref = {
         ],
     'ALERGOLOGIA': [
         'ALERGOLOGIA'
-        ]
+        ],
+    'NEUROLOGIA': [
+        'NEUROLOG'
+        ],
+    'PROCTOLOGIA': [
+        'PROCTOLOG'
+        ],
 }
 
 
@@ -241,6 +262,79 @@ locations_ref = {
     'MARINA': [
         'LABORATORIO- Marina',
         'Punto Clinico- Marina'
+    ]
+}
+
+
+business_line_ref = {
+    "CONSULTA": [
+        "CONSULTA MEDICA",
+        "CONSULTA ESPECIALISTA",
+        "CONSULTA DE",
+        "CONSULTA MEDICINA GENERAL",
+        "CONSULTA GENERAL",
+        "OTORRINOLARINGOLOGIA",
+        "CARDIOLOGIA",
+        "TELECONSULTA",
+        "DIETA",
+        "REVISION"
+    ],
+    "LABORATORIO": [
+        "CHECK UP",
+        "PERFIL TIROIDEO",
+        "BIOMETRIA HEMATICA",
+        "QUIMICA DE",
+        "HEMOGLOBINA",
+        "INSULINA",
+        "CULTIVO",
+        "EXAMEN",
+        "PRUEBA",
+        "COPROCULTIVO",
+        "AMILASA",
+        "VDRL",
+        "AMIBA",
+        "HORMONA",
+        "WINTROBE",
+        "GLUCOSA",
+        "PROLACTINA",
+        "TIEMPO DE",
+        "PERFIL",
+        "GRUPO SANGUINEO",
+        "VIRUS INMUNODEFICIENCIA",
+        "HIV",
+        "CITOLOGIA",
+        "ANTICUERPOS",
+        "ANTIGENO",
+        "PROGESTERONA",
+        "DEHIDROEPIANDROSTERONA",
+        "TRANSAMINASA"
+    ],
+    "ULTRASONIDO": [
+        "ULTRASON"
+    ],
+    "PROCEDIMIENTOS": [
+        "ELECTROFULGURACION",
+        "COLPOSCOPIA",
+        "PAPANICOLAOU",
+        "RASTREO",
+        "INFOGRAFIA",
+        "BIOPSIA",
+        "BIOPISA",
+        "APLICACION DE",
+        "TOMA",
+        "RETIRO",
+        "EXTRACCCION",
+        "INSERCION",
+        "ENVIADO A",
+        "CRIOTERAPIA",
+        "SCOPIA",
+        "CIRUGIA",
+        "INYECCION",
+        "ELECTROCARDIOGRAMA",
+        "EKG",
+        "ESFEROLISIS",
+        "CURACION",
+        "VERRUGA"
     ]
 }
 
