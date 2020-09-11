@@ -13,11 +13,16 @@
 
 
 ## Data
+
+#### Myle
 data_loc = 'Data/20200901'
 sales_data = 'GenerateBillingCSVRequest.csv'
 appointment_data = 'LISTADETALLADADELASCITAS.csv'
 
-
+#### Pharmacy
+data_loc = 'Data/20200908'
+sales_basilica = 'Historico_Ventas_Basilica.xlsx'
+appointment_data = 'LISTADETALLADADELASCITAS.csv'
 
 
 
