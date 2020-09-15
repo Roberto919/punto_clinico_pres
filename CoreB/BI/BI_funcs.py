@@ -393,7 +393,7 @@ def data_processing_sales_A2p1(dfs):
 
 
 ## Creating and displaying figure related to analysis 1
-def graph_sales_A2(dfsx):
+def graph_sales_A2p1(dfsx):
 
     fig = go.Figure()
 
@@ -454,7 +454,40 @@ def data_processing_sales_A2p2(dfs):
     dfsx.columns = dfsx.columns.droplevel()
 
 
+    ## Create new column with string representing date and setting it as index
+    dfsx['Date'] = dfsx.index.get_level_values(0).astype('str') + '-' + dfsx.index.get_level_values(1).astype('str')
+    dfsx.set_index('Date', drop=True, inplace=True)
+
+
     return dfsx
+
+
+
+## Creating and displaying figure related to analysis 1
+def graph_sales_A2p2(dfsx):
+
+    fig = go.Figure()
+
+    for col in dfsx.columns:
+        fig.add_trace(
+            go.Bar(
+                x = dfsx.index,
+                y = dfsx[col],
+                name = col,
+                text = dfsx[col].astype('str'),
+                textposition = 'inside',
+                texttemplate = '$%{value:.1f}'
+            )
+        )
+
+    fig.update_layout(
+        title = 'Ingresos mensuales por sucursal (juntando laboratorio)',
+        xaxis_title = 'Mes',
+        yaxis_title = 'Ingresos [$MXN]',
+    )
+
+    fig.show()
+
 
 
 
