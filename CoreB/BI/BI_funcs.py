@@ -454,12 +454,12 @@ def data_processing_sales_A2p2(dfs):
     dfsx.columns = dfsx.columns.droplevel()
 
 
+
     ## Create new column with string representing date and setting it as index
     dfsx['Date'] = dfsx.index.get_level_values(0).astype('str') + '-' + dfsx.index.get_level_values(1).astype('str')
     dfsx.set_index('Date', drop=True, inplace=True)
-
-
     return dfsx
+
 
 
 
@@ -487,6 +487,7 @@ def graph_sales_A2p2(dfsx):
     )
 
     fig.show()
+
 
 
 

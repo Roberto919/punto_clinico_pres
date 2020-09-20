@@ -15,7 +15,6 @@
 ## Python libraries
 
 import pandas as pd
-
 import numpy as np
 
 import plotly.graph_objects as go
@@ -193,42 +192,35 @@ def A1_graph_data(df):
 
 
 
-
-
-## Creating A1 graph
+## Creting A1 graph
 def A1_graph(dfx):
     """
+    Creting A1 graph
     """
 
-    fig = go.Figure()
+    ## x-axis
+    x_axis = dfx.index
 
-    for col in dfx.columns:
-        if col == 'NO':
-            color='rgb(222, 95, 70)'
-        else:
-            color='rgb(92, 201, 154)'
-        fig.add_trace(
-            go.Bar(
-                x=dfx.index,
-                y=dfx[col],
-                name=col,
-                text=(dfx[col]*100).astype(str).str[:5] + '%',
-                textposition='inside',
-                marker_color=color
-            )
-        )
+    ## Bars
+    bars = dfx.columns
+
+    ## Create and display graph
+    fig = go.Figure(data=
+                    [go.Bar(name=bar, x=x_axis, y=dfx[bar], text=(dfx[bar]*100).astype(str).str[:5] + '%', textposition='auto') for bar in bars]
+                   )
 
     fig.update_layout(
-        title='Ha considerado ofrecer teleconsulta?',
-        xaxis_title = 'Especialidad',
+        title = 'Ha considerado ofrecer teleconsulta?',
+        xaxis_title = 'Especialista',
         yaxis_title = 'Participación',
-        plot_bgcolor='rgb(255,255,255)',
-        autosize=False,
-        height=350
+        barmode='group',
+        # autosize=False,
+        # width=1500,
+        # height=500
     )
+    fig.update_xaxes(type="category")
 
-    # fig.show()
-    return fig
+    fig.show()
 
 
 
@@ -262,13 +254,13 @@ def A3_graph_data(df):
     return dfx
 
 
-
 ## Creting A3 graphs
 def A3_graph(dfx):
     """
     Creting A3 graphs
     """
 
+    
     fig = ff.create_annotated_heatmap(
         dfx.values,
         x=list(dfx.columns),
@@ -483,7 +475,6 @@ def A6_graph_data(df):
         dfx1 = pd.DataFrame(dfx1['Ref_match'].value_counts())
         dfx1.rename(columns={'Ref_match': 'Plataforma de gestión'}, inplace=True)
 
-
         return dfx1
 
 
@@ -513,12 +504,10 @@ def A6_graph_data(df):
         dfx2 = pd.DataFrame(dfx2['Ref_match'].value_counts())
         dfx2.rename(columns={'Ref_match': 'Plataforma de teleconsultas'}, inplace=True)
 
-
         return dfx2
 
 
     ## Main function
-
     #### Counting the number of platforms mentioned (sanitized names)
     dfx1 = A6_graph1_data(df)
     dfx2 = A6_graph2_data(df)
