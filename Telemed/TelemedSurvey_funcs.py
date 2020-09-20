@@ -15,9 +15,11 @@
 ## Python libraries
 
 import pandas as pd
+import numpy as np
 
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+import plotly.figure_factory as ff
 
 
 ## Ancillary modules
@@ -82,7 +84,8 @@ def search_names_dict(row, ref_dict):
                 break
         if res != 'Otra':
             break
-
+        # else:
+        #     res=row
 
     return res
 
@@ -224,9 +227,9 @@ def A1_graph(dfx):
 
 
 '------------------------------------------------------------------------------------------'
-###################################################################
-## Analysis 2 - How common do you think it will be for patients? ##
-###################################################################
+################################################################################
+## Analysis 3 - Do you have either a telemedicine or administrative platform? ##
+################################################################################
 
 
 ## Creating graph data
@@ -257,23 +260,173 @@ def A3_graph(dfx):
     Creting A3 graphs
     """
 
-    fig = go.Figure(
-        data=go.Heatmap(
-            z=dfx.values,
-            x=dfx.columns,
-            y=dfx.index,
-            # type='heatmap'
-            colorscale='Viridis'
-        )
+    
+    fig = ff.create_annotated_heatmap(
+        dfx.values,
+        x=list(dfx.columns),
+        y=list(dfx.index),
+        annotation_text=dfx.applymap(lambda x: str(x*100)[:5] + '%').values
     )
 
     fig.update_layout(
-        title = 'Adopción de plataformas digitales por parte de los médicos',
+        # title = 'Adopción de plataformas digitales por parte de los médicos',
+        # annotations=annotations,
+        title={
+            'text': 'Uso de plataformas por parte de los médicos',
+            'y': 0.97
+        },
         xaxis_title = 'Cuenta con plataforma de teleconsultas?',
         yaxis_title = 'Cuenta con plataforma de gestión?',
+        # height=750
     )
 
-    fig.show()
+    # fig.show()
+    return fig
+
+
+
+
+
+'------------------------------------------------------------------------------------------'
+########################################################
+## Analysis 5 - How often would you use the platform? ##
+########################################################
+
+
+## Creating graph data
+def A5_graph_data(df):
+    """
+    Creating graph data
+    """
+
+    ## Copying main dataframe
+    dfx = df.copy()
+
+    ## Selecting only relevant columns
+    rc = [
+        '#',
+        'Especialidad',
+        'Regularidad de uso si tuviera plataforma'
+    ]
+    nrc = [col for col in dfx.columns if col not in rc]
+    dfx.drop(nrc, axis=1, inplace=True)
+
+    ## Grouping results
+    dfx = dfx.groupby(['Especialidad', 'Regularidad de uso si tuviera plataforma']).count().unstack()
+    dfx.columns = dfx.columns.droplevel()
+
+    ## Adding 'Ambos' row
+    dfx.loc['Ambos', :] = dfx.sum()
+
+    ## Converting all values to percentages
+    dfx['Sum'] = dfx.sum(axis=1)
+    for col in dfx.columns:
+        dfx[col] = dfx[col]/dfx['Sum']
+    dfx.drop(['Sum'], axis=1, inplace=True)
+
+
+    return dfx
+
+
+
+
+
+## Creating graph
+def A5_graph(dfx):
+    """
+    Creating graph
+    """
+
+    ## Creating figure
+    fig = go.Figure()
+
+    ## Color RGB coordinates
+    color_rgb_start = np.array([213, 202, 235])
+    color_delta = np.array([30, 0, 20])
+
+    ## Craeting each bar for the graph
+    for col in dfx.columns:
+        #### Color that will be assigned to the bar
+        color = 'rgb' + str(tuple(color_rgb_start - color_delta*list(dfx.columns).index(col)))
+
+        #### Crating each bar
+        fig.add_trace(
+            go.Bar(
+                y=dfx.index,
+                x=dfx[col],
+                name=col,
+                orientation='h',
+                text=(dfx[col]*100).astype(str).str[:5] + '%',
+                textposition='auto',
+                marker_color=color
+                # text=dfx[col],
+                # textposition='outside'
+            )
+        )
+
+    ## Figure layout
+    fig.update_layout(
+        xaxis = dict(
+            showgrid=False,
+            showline=False,
+            showticklabels=False,
+            zeroline=False,
+            domain=[0.15, 1]
+        ),
+        yaxis = dict(
+            showgrid=False,
+            showline=False,
+            showticklabels=False,
+            zeroline=False
+        ),
+        barmode='stack',
+        showlegend=False,
+        title='Regularidad de uso de la plataforma',
+        plot_bgcolor='rgb(255,255,255)'
+        # margin=dict(l=40, r=10, t=140, b=80),
+    )
+
+    ## Annotations
+    annotations = []
+
+    #### Labeling 'y' axis
+    for idx in dfx.index:
+        annotations.append(
+            dict(
+                xref='paper',
+                yref='y',
+                x=0.14,
+                y=idx,
+                xanchor='right',
+                text=str(idx),
+                showarrow=False,
+                align='right'
+            )
+        )
+
+    # for col in dfx.columns:
+    #     #### Labeling the first percentage of each bar (x_axis)
+    #     annotations.append(
+    #         dict(
+    #             xref='x',
+    #             yref='y',
+    #             x=dfx[col],
+    #             y=idx,
+    #             text='hola',
+    #             showarrow=False,
+    #         )
+    #     )
+
+    #### Aupdating figure with annotations
+    fig.update_layout(
+        annotations=annotations,
+        autosize=False,
+        height=350
+        )
+
+    ## Display figure
+    # fig.show()
+    return fig
 
 
 
@@ -281,7 +434,7 @@ def A3_graph(dfx):
 
 '------------------------------------------------------------------------------------------'
 #######################################################
-## Analysis 3 - What platforms do you currently use? ##
+## Analysis 6 - What platforms do you currently use? ##
 #######################################################
 
 
@@ -319,6 +472,8 @@ def A6_graph_data(df):
 
         dfx1['Ref_match'] = dfx1['Qué plataforma de gestión?'].apply(lambda x: search_names_dict(x, platforms_names))
 
+        dfx1 = pd.DataFrame(dfx1['Ref_match'].value_counts())
+        dfx1.rename(columns={'Ref_match': 'Plataforma de gestión'}, inplace=True)
 
         return dfx1
 
@@ -346,15 +501,168 @@ def A6_graph_data(df):
 
         dfx2['Ref_match'] = dfx2['Qué plataforma de teleconsulta?'].apply(lambda x: search_names_dict(x, platforms_names))
 
+        dfx2 = pd.DataFrame(dfx2['Ref_match'].value_counts())
+        dfx2.rename(columns={'Ref_match': 'Plataforma de teleconsultas'}, inplace=True)
 
         return dfx2
 
 
     ## Main function
-
+    #### Counting the number of platforms mentioned (sanitized names)
     dfx1 = A6_graph1_data(df)
-
     dfx2 = A6_graph2_data(df)
 
+    #### Joining the results obtained
+    dfx = dfx1.join(dfx2)
+    dfx.fillna(0, inplace=True)
 
-    return dfx1, dfx2
+    # #### Calculating total
+    # dfx.loc['Total', :] = dfx.sum()
+
+
+    return dfx
+
+
+
+## Creating graph
+def A6_graph(dfx):
+    """
+    Creating graph
+    """
+
+    ## Creating figure
+    fig = go.Figure()
+
+    ## Craeting each bar for the graph
+    for col in dfx.columns:
+        fig.add_trace(
+            go.Bar(
+                x=dfx.index,
+                y=dfx[col],
+                name=col,
+                text=dfx[col],
+                textposition='outside'
+            )
+        )
+
+    ## Figure adjustments
+    fig.update_layout(
+        height=750,
+        width=1250,
+        title='Plataformas mencionados por los médicos',
+        xaxis_title = 'Plataforma',
+        yaxis_title = 'Médicos usuarios',
+        plot_bgcolor='rgb(255,255,255)'
+    )
+
+    ## Displaying figure
+    # fig.show()
+    return fig
+
+
+
+
+
+'------------------------------------------------------------------------------------------'
+#################################################################################
+## Analysis 7 - What are the attributes that you value the most in a platform? ##
+#################################################################################
+
+
+## Creating graph data
+def A7_graph_data(df):
+    """
+    Creating graph data
+    """
+
+    ## Copying main dataframe
+    dfx = df.copy()
+
+    ## Selecting only relevant columns
+    rc = [
+        '#',
+        'Especialidad',
+        'Funcionalidades relevantes'
+    ]
+    nrc = [col for col in dfx.columns if col not in rc]
+    dfx.drop(nrc, axis=1, inplace=True)
+
+    ## Converting atributes to list of attributes
+    dfx.loc[:, 'Funcionalidades relevantes'] = dfx['Funcionalidades relevantes'].apply(lambda x: x.split(sep=';'))
+
+    ## Exploding dataframe based on attributes and doing some cleaning
+    dfx = dfx.explode('Funcionalidades relevantes')
+    dfx.loc[:, 'Funcionalidades relevantes'] = dfx['Funcionalidades relevantes'].apply(lambda x: x.strip())
+    dfx.loc[:, 'Funcionalidades relevantes'] = dfx['Funcionalidades relevantes'].apply(lambda x: search_names_dict(x, platform_features_options))
+    m1 = dfx['Funcionalidades relevantes'].isin(list(platform_features_options.keys()))
+    dfx = dfx.loc[m1, :]
+
+    ## Grouping values and adding total
+    dfx = dfx.groupby(['Especialidad', 'Funcionalidades relevantes']).count().unstack()
+    dfx.columns = dfx.columns.droplevel()
+    dfx.loc['Ambos', :] = dfx.sum()
+
+
+    return dfx.T
+
+
+
+## Creating graph
+def A7_graph(dfx):
+    """
+    Creating graph
+    """
+
+
+    ## Function to add line breaks to long strings of text
+    def adding_breaks_to_text(txt_lst):
+        """
+        """
+
+        ## Parámeters
+        t = 22
+        cl = 0
+        new_lst = []
+
+        ## Modifying loop
+        for txt in txt_lst:
+            txt = txt.split(sep=' ')
+            for w in txt:
+                cl+=len(w)
+                if cl >= t:
+                    res=txt.index(w)
+                    cl = 0
+                    txt.insert(res, '<br>')
+            new_lst.append(' '.join(txt))
+            cl = 0
+
+        return new_lst
+
+
+    ## Creating figure
+    fig = go.Figure()
+
+    ## Adding bars to figure
+    for col in dfx.columns:
+        fig.add_trace(
+            go.Bar(
+                y=adding_breaks_to_text(dfx.index),
+                x=dfx[col],
+                name=col,
+                orientation='h',
+                text=dfx[col].astype(int),
+                textposition='inside'
+            )
+        )
+
+    ## Figure specifications
+    fig.update_layout(
+        height=1000,
+        title='Atributos de la plataforma relevantes para los médicos',
+        xaxis_title = 'Número de menciones',
+        plot_bgcolor='rgb(255,255,255)'
+    )
+
+
+    # fig.show()
+    return fig

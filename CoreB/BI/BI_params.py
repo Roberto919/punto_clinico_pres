@@ -20,9 +20,9 @@ sales_data = 'GenerateBillingCSVRequest.csv'
 appointment_data = 'LISTADETALLADADELASCITAS.csv'
 
 #### Pharmacy
-data_loc = 'Data/20200908'
-sales_basilica = 'Historico_Ventas_Basilica.xlsx'
-appointment_data = 'LISTADETALLADADELASCITAS.csv'
+# data_loc = 'Data/20200908'
+# sales_basilica = 'Historico_Ventas_Basilica.xlsx'
+# appointment_data = 'LISTADETALLADADELASCITAS.csv'
 
 
 
@@ -65,7 +65,9 @@ meds_dict_ref = {
                                      'Sitios': ['Punto Clínico- Coapa',
                                                 'Punto Clinico- Marina']},
  'GOMEZ, ANTONY OMAR': {'Especialidad': ['MEDICINA GENERAL'],
-                        'Sitios': ['Punto Clinico- Marina']},
+                        'Sitios': ['Punto Clinico- Marina',
+                                   'Punto Clínico- Coapa',
+                                   'LABORATORIO- Marina']},
  'HERNANDEZ MARTINEZ, ORLANDO JOSE': {'Especialidad': ['UROLOGIA'],
                                       'Sitios': ['Punto Clinico- Marina',
                                                  'Punto Clínico- Basílica']},
