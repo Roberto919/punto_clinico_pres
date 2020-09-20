@@ -62,6 +62,31 @@ simp_rcol_names = {
 #########################
 
 
+platform_features_options = {
+    'Creación automática de videoconferencias con clientes para teleconsultas': [
+        'Creación automática de videoconferencias con clientes para teleconsultas',
+        'Creación automática de videoconferencias con clientes',
+        'Creación automática de videoconferencias'
+    ],
+    'Envío y recepción de documentos con cliente (e.g. resultados de estudios, recetas médicas)': [
+        'Envío y recepción de documentos con cliente (e.g. resultados de estudios, recetas médicas)',
+        'Envío y recepción de documentos con cliente (estudios, recetas médicas)',
+    ],
+    'Administración de citas': [
+        'Administración de citas',
+    ],
+    'Gestión de pagos': [
+        'Gestión de pagos',
+    ],
+    'Despliegue de encuestas de satisfacción de clientes': [
+        'Despliegue de encuestas de satisfacción de clientes',
+    ],
+    'Aplicación de promociones de descuento para clientes': [
+        'Aplicación de promociones de descuento para clientes',
+    ]
+}
+
+
 ## Grouping platform names (Analysis 6)
 platforms_names = {
     'Doctoralia': [
