@@ -461,8 +461,6 @@ def data_processing_sales_A2p2(dfs):
     return dfsx
 
 
-
-
 ## Creating and displaying figure related to analysis 1
 def graph_sales_A2p2(dfsx):
 
