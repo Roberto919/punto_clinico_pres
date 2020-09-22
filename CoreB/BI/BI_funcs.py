@@ -658,8 +658,46 @@ def data_processing_sales_A4(dfs):
 ########################################
 
 
-## (Analysis 5) How have sales behaved per location, per business line, per speciality?
+## (Analysis 5) How have sales behaved per location, per speciality?
 def data_processing_sales_A5(dfs):
+
+
+    ## Copy of main dataframe
+    dfsx = dfs.copy()
+
+
+    ## Homologate all locations
+    dfsx['Loc_Hom'] = dfsx['SiteInfo'].apply(homologate_locations)
+
+
+    ## Eliminating non relevant columns for the analysis
+    rc = [
+        "BillDate",
+        "Loc_Hom",
+        "Especialidad_match",
+        "Total"
+    ]
+    dfsx.drop([nrc for nrc in dfsx.columns if nrc not in rc], axis=1, inplace=True)
+    dfsx.set_index('BillDate', drop=True, inplace=True)
+
+
+    ## Group results
+    dfsx = dfsx.groupby([dfsx.index.year, dfsx.index.month, "Especialidad_match", "Loc_Hom"]).sum().unstack().unstack().fillna(0)
+    dfsx.columns = dfsx.columns.droplevel()
+
+
+    return dfsx
+
+
+
+'------------------------------------------------------------------------------------------'
+########################################
+## Data analysis - Sales - Analysis 6 ##
+########################################
+
+
+## (Analysis 6) How have sales behaved per location, per speciality, per business line?
+def data_processing_sales_A6(dfs):
 
 
     ## Copy of main dataframe
@@ -693,12 +731,12 @@ def data_processing_sales_A5(dfs):
 
 '------------------------------------------------------------------------------------------'
 ########################################
-## Data analysis - Sales - Analysis 6 ##
+## Data analysis - Sales - Analysis 7 ##
 ########################################
 
 
-## (Analysis 6) How have sales behaved per location, per business line, per speciality?
-def data_processing_sales_A6(dfs):
+## (Analysis 7) How have sales behaved per location, provider, per business line, per speciality?
+def data_processing_sales_A7(dfs):
 
 
     ## Copy of main dataframe
