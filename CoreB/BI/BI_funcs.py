@@ -474,7 +474,7 @@ def graph_sales_A2p2(dfsx):
                 name = col,
                 text = dfsx[col].astype('str'),
                 textposition = 'inside',
-                texttemplate = '$%{value:.1f}'
+                texttemplate = '$%{value:.2s}'
             )
         )
 
@@ -482,6 +482,11 @@ def graph_sales_A2p2(dfsx):
         title = 'Ingresos mensuales por sucursal (juntando laboratorio)',
         xaxis_title = 'Mes',
         yaxis_title = 'Ingresos [$MXN]',
+        yaxis_tickprefix = "$",
+    )
+
+    fig.update_xaxes(
+        dtick="M1"
     )
 
     fig.show()
