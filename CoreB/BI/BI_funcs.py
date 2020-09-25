@@ -174,7 +174,7 @@ def business_line_synth(row, source):
     ###### If this keyword is not found ->
     #### 2. Assign a business line based on the appereance of a word in the *business_line_ref* present in the "Description/matter" column.
     ###### If step 2 does not give an answer ->
-    #### 3. Assign "OTRAS"
+    #### 3. Assign "OTRA_LN"
 
 
     ## Assigning column name based on dataframe explored
