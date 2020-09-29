@@ -70,20 +70,20 @@ def create_doctors_dir(df):
 
     meds = df['NOMBRE DEL CLÍNICO'].unique()
 
-    meds_dict_ref = {}
+    colabs_dict_ref = {}
 
     for med in meds:
 
-        meds_dict_ref[med] = {}
+        colabs_dict_ref[med] = {}
 
         m1 = df['NOMBRE DEL CLÍNICO'] == med
         dfx = df.loc[m1, :]
 
-        meds_dict_ref[med]['Especialidad'] = list(dfx['ASUNTO_sinth'].unique())
-        meds_dict_ref[med]['Sitios'] = list(dfx['SITIO'].unique())
+        colabs_dict_ref[med]['Especialidad'] = list(dfx['ASUNTO_sinth'].unique())
+        colabs_dict_ref[med]['Sitios'] = list(dfx['SITIO'].unique())
 
 
-    return meds_dict_ref
+    return colabs_dict_ref
 
 
 
@@ -149,9 +149,9 @@ def specialty_synth(row, source):
 
     ## Searching for speciality based on doctor if spacialty keyword based search was not successful
     if res == 0:
-        if row[doctor_name_col] in meds_dict_ref:
-            if len(meds_dict_ref[row[doctor_name_col]]['Especialidad']) == 1:
-                res = meds_dict_ref[row[doctor_name_col]]['Especialidad'][0]
+        if row[doctor_name_col] in colabs_dict_ref:
+            if len(colabs_dict_ref[row[doctor_name_col]]['Especialidad']) == 1:
+                res = colabs_dict_ref[row[doctor_name_col]]['Especialidad'][0]
                 return res
 
     if res == 0:
