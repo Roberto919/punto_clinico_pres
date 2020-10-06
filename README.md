@@ -1,6 +1,16 @@
 # Punto Clínico
 **Author: Rob**
 
+---
+
+# Seguimiento de Desarrollo de Plataforma Digital
+
+Xxx
+
+---
+
+# Seguimiento de Métricas de Negocio (BI)
+
 ## ⏬ Descarga de datos de Myle
 
 ### La información procesada proveniente de Myle fue descargada siguiendo estos pasos:
