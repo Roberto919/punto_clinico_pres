@@ -70,1028 +70,1317 @@ def_dict = {
 ## List of followup activities
 followup_dev_activities = {
     "0": {
-        "Proyecto consultorios": {
-            "Revisada": 0
+        "Seed - Proyecto consultorios": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "1": {
-        "Inicio": {
-            "Revisada": 0
+        "Proyecto consultorios - Inicio": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "2": {
-        "Diseño pantallas": {
-            "Revisada": 0
+        "Proyecto consultorios - Diseño pantallas": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "3": {
-        "Personalización menú superior": {
-            "Revisada": 0
+        "Proyecto consultorios - Analisis": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "4": {
-        "Diseño de lateral izquierdo-buscador": {
-            "Revisada": 0
+        "Proyecto consultorios - Desarrollo": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "5": {
-        "Calendario de vista por mes con colores con acciones": {
-            "Revisada": 0
+        "Proyecto consultorios - Pruebas": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "6": {
-        "Calendario de vista por día": {
-            "Revisada": 0
+        "Proyecto consultorios - Liberación": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "7": {
-        "Lista de pacientes": {
-            "Revisada": 0
+        "Proyecto consultorios - Fin": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "8": {
-        "Lista de Médicos": {
-            "Revisada": 0
+        "Diseño pantallas - Personalización menú superior": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "9": {
-        "Criterios de impresión": {
-            "Revisada": 0
+        "Diseño pantallas - Diseño de lateral izquierdo-buscador": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "10": {
-        "Calendario de vista por semana": {
-            "Revisada": 0
+        "Diseño pantallas - Calendario de vista por mes con colores con acciones": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "11": {
-        "Alta rapida de pacientes-buscador": {
-            "Revisada": 0
+        "Diseño pantallas - Calendario de vista por día": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "12": {
-        "Busqueda avanzada, filtros de citas": {
-            "Revisada": 0
+        "Diseño pantallas - Lista de pacientes": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "13": {
-        "Detalles de citas:Alta, Consulta, Actualización": {
-            "Revisada": 0
+        "Diseño pantallas - Lista de Médicos": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "14": {
-        "Expediente clinico paciente": {
-            "Revisada": 0
+        "Diseño pantallas - Criterios de impresión": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "15": {
-        "Encabezado expediente clinico": {
-            "Revisada": 0
+        "Diseño pantallas - Calendario de vista por semana": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "16": {
-        "Lateral expediente clinico(iconos)": {
-            "Revisada": 0
+        "Diseño pantallas - Alta rapida de pacientes-buscador": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "17": {
-        "Pantalla Datos demograficos": {
-            "Revisada": 0
+        "Diseño pantallas - Busqueda avanzada, filtros de citas": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "18": {
-        "Pantalla Contactos": {
-            "Revisada": 0
+        "Diseño pantallas - Detalles de citas:Alta, Consulta, Actualización": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "19": {
-        "Pantalla Profesional a cargo": {
-            "Revisada": 0
+        "Diseño pantallas - Expediente clinico paciente": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "20": {
-        "Pantalla Relaciones": {
-            "Revisada": 0
+        "Diseño pantallas - Historia clinica del paciente": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "21": {
-        "Agenda rapida de cita del paciente": {
-            "Revisada": 0
+        "Diseño pantallas - Sección de Resumen medico": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "22": {
-        "Pantalla lateral izquierda, Historial de citas": {
-            "Revisada": 0
+        "Expediente clinico paciente - Encabezado expediente clinico": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "23": {
-        "Pantalla Cita-Detalle de consulta": {
-            "Revisada": 0
+        "Expediente clinico paciente - Lateral expediente clinico(iconos)": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "24": {
-        "Pantalla Cita-Mensajeria": {
-            "Revisada": 0
+        "Expediente clinico paciente - Pantalla Datos demograficos": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "25": {
-        "Pantalla Cita-Tarea": {
-            "Revisada": 0
+        "Expediente clinico paciente - Pantalla Contactos": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "26": {
-        "Pantalla Cita-Recordatorio": {
-            "Revisada": 0
+        "Expediente clinico paciente - Pantalla Profesional a cargo": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "27": {
-        "Pantalla Cita-Comunicaciones": {
-            "Revisada": 0
+        "Expediente clinico paciente - Pantalla Relaciones": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "28": {
-        "Pantalla Cita-Cargos a paciente": {
-            "Revisada": 0
+        "Expediente clinico paciente - Agenda rapida de cita del paciente": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "29": {
-        "Pantalla de administrar documentos": {
-            "Revisada": 0
+        "Expediente clinico paciente - Pantalla lateral izquierda, Historial de citas": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "30": {
-        "Pantalla de carga de documentos": {
-            "Revisada": 0
+        "Expediente clinico paciente - Pantalla Cita-Detalle de consulta": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "31": {
-        "Historia clinica del paciente": {
-            "Revisada": 0
+        "Expediente clinico paciente - Pantalla Cita-Mensajeria": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "32": {
-        "Encabezado de la historia clinica": {
-            "Revisada": 0
+        "Expediente clinico paciente - Pantalla Cita-Tarea": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "33": {
-        "Sección de Resumen medico": {
-            "Revisada": 0
+        "Expediente clinico paciente - Pantalla Cita-Recordatorio": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "34": {
-        "Pantalla de Historial medico": {
-            "Revisada": 0
+        "Expediente clinico paciente - Pantalla Cita-Comunicaciones": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "35": {
-        "Pantalla lateral izquierda, Antecedentes y diagnosticos": {
-            "Revisada": 0
+        "Expediente clinico paciente - Pantalla Cita-Cargos a paciente": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "36": {
-        "Pantalla de Alergias e intolerancia": {
-            "Revisada": 0
+        "Expediente clinico paciente - Pantalla de administrar documentos": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "37": {
-        "Pantalla Habitos sociales": {
-            "Revisada": 0
+        "Expediente clinico paciente - Pantalla de carga de documentos": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "38": {
-        "Pantalla Alertas y necesidades especiales": {
-            "Revisada": 0
+        "Historia clinica del paciente - Encabezado de la historia clinica": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "39": {
-        "Pantalla antecedentes familiares": {
-            "Revisada": 0
+        "Sección de Resumen medico - Pantalla de Historial medico": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "40": {
-        "Pantalla Inmunizaciones": {
-            "Revisada": 0
+        "Sección de Resumen medico - Pantalla lateral izquierda, Antecedentes y diagnosticos": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "41": {
-        "Pantalla Medicamentos activos": {
-            "Revisada": 0
+        "Sección de Resumen medico - Pantalla de Alergias e intolerancia": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "42": {
-        "Pantalla signos vitales": {
-            "Revisada": 0
+        "Sección de Resumen medico - Pantalla Habitos sociales": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "43": {
-        "Control de escala de dolor": {
-            "Revisada": 0
+        "Sección de Resumen medico - Pantalla Alertas y necesidades especiales": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "44": {
-        "Pantalla de aprobacion de historia clinica": {
-            "Revisada": 0
+        "Sección de Resumen medico - Pantalla antecedentes familiares": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "45": {
-        "Notas de Evolución": {
-            "Revisada": 0
+        "Sección de Resumen medico - Pantalla Inmunizaciones": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "46": {
-        "Pantalla de motivo de consulta": {
-            "Revisada": 0
+        "Sección de Resumen medico - Pantalla Medicamentos activos": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "47": {
-        "Pantalla de Principio, Evolución, Estado": {
-            "Revisada": 0
+        "Sección de Resumen medico - Pantalla signos vitales": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "48": {
-        "Pantalla de Exploración": {
-            "Revisada": 0
+        "Sección de Resumen medico - Control de escala de dolor": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "49": {
-        "Pantalla de notas manuscritas (cámara)": {
-            "Revisada": 0
+        "Sección de Resumen medico - Pantalla de aprobacion de historia clinica": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "50": {
-        "Pantalla de imágenes": {
-            "Revisada": 0
+        "Sección de Resumen medico - Notas de Evolución": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "51": {
-        "Pantalla de otras notas": {
-            "Revisada": 0
+        "Sección de Resumen medico - Evaluación": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "52": {
-        "Evaluación": {
-            "Revisada": 0
+        "Sección de Resumen medico - Plan": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "53": {
-        "Pantalla de Antecedentes y diagnosticos": {
-            "Revisada": 0
+        "Sección de Resumen medico - Comunicaciones": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "54": {
-        "Plan": {
-            "Revisada": 0
+        "Notas de Evolución - Pantalla de motivo de consulta": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "55": {
-        "Pantalla de recetas": {
-            "Revisada": 0
+        "Notas de Evolución - Pantalla de Principio, Evolución, Estado": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "56": {
-        "Pantalla de solicitud de examen": {
-            "Revisada": 0
+        "Notas de Evolución - Pantalla de Exploración": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "57": {
-        "Pantalla de solicitud de interconsulta": {
-            "Revisada": 0
+        "Notas de Evolución - Pantalla de notas manuscritas (cámara)": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "58": {
-        "Pantalla de seguimiento y plan": {
-            "Revisada": 0
+        "Notas de Evolución - Pantalla de imágenes": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "59": {
-        "Pantalla de comunicaciones-Nuevo recordatorio": {
-            "Revisada": 0
+        "Notas de Evolución - Pantalla de otras notas": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "60": {
-        "Pantalla de comunicaciones-Nuevo mensaje": {
-            "Revisada": 0
+        "Evaluación - Pantalla de Antecedentes y diagnosticos": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "61": {
-        "Pantalla nuevo cargo": {
-            "Revisada": 0
+        "Plan - Pantalla de recetas": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "62": {
-        "Comunicaciones": {
-            "Revisada": 0
+        "Plan - Pantalla de solicitud de examen": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "63": {
-        "Pantalla bandeja comunicaciones": {
-            "Revisada": 0
+        "Plan - Pantalla de solicitud de interconsulta": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "64": {
-        "Pantalla Recordatorios": {
-            "Revisada": 0
+        "Plan - Pantalla de seguimiento y plan": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "65": {
-        "Pantalla de recordatorio": {
-            "Revisada": 0
+        "Plan - Pantalla de comunicaciones-Nuevo recordatorio": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "66": {
-        "Pantalla de mensajes": {
-            "Revisada": 0
+        "Plan - Pantalla de comunicaciones-Nuevo mensaje": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "67": {
-        "Pantalla Mensajes-Enviados": {
-            "Revisada": 0
+        "Plan - Pantalla nuevo cargo": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "68": {
-        "Pantalla Mensajes-Borrador": {
-            "Revisada": 0
+        "Comunicaciones - Pantalla bandeja comunicaciones": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "69": {
-        "Pantalla Mensajes-Archivo": {
-            "Revisada": 0
+        "Comunicaciones - Pantalla Recordatorios": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "70": {
-        "Pantalla Mensajes-Basura": {
-            "Revisada": 0
+        "Comunicaciones - Pantalla de mensajes": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "71": {
-        "Pantalla Tareas": {
-            "Revisada": 0
+        "Comunicaciones - Pantalla Tareas": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "72": {
-        "Pantalla Tareas-Enviados": {
-            "Revisada": 0
+        "Comunicaciones - Nuevas pantallas": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "73": {
-        "Pantalla Tareas-Borrador": {
-            "Revisada": 0
+        "Pantalla Recordatorios - Pantalla de recordatorio": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "74": {
-        "Pantalla Tareas-Archivo": {
-            "Revisada": 0
+        "Pantalla de mensajes - Pantalla Mensajes-Enviados": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "75": {
-        "Pantalla Tareas-Basura": {
-            "Revisada": 0
+        "Pantalla de mensajes - Pantalla Mensajes-Borrador": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "76": {
-        "Nuevas pantallas": {
-            "Revisada": 0
+        "Pantalla de mensajes - Pantalla Mensajes-Archivo": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "77": {
-        "Apertura de horarios": {
-            "Revisada": 0
+        "Pantalla de mensajes - Pantalla Mensajes-Basura": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "78": {
-        "Creación de horarios": {
-            "Revisada": 0
+        "Pantalla Tareas - Pantalla Tareas-Enviados": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "79": {
-        "Resultados": {
-            "Revisada": 0
+        "Pantalla Tareas - Pantalla Tareas-Borrador": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "80": {
-        "Pantalla de comunicaciones - nueva tarea": {
-            "Revisada": 0
+        "Pantalla Tareas - Pantalla Tareas-Archivo": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "81": {
-        "Portafolios": {
-            "Revisada": 0
+        "Pantalla Tareas - Pantalla Tareas-Basura": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "82": {
-        "Analisis": {
-            "Revisada": 0
+        "Nuevas pantallas - Apertura de horarios": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "83": {
-        "Análisis de usuarios": {
-            "Revisada": 0
+        "Nuevas pantallas - Creación de horarios": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "84": {
-        "Análisis de roles seguridad": {
-            "Revisada": 0
+        "Nuevas pantallas - Resultados": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "85": {
-        "Análisis de politicas de seguridad": {
-            "Revisada": 0
+        "Nuevas pantallas - Pantalla de comunicaciones - nueva tarea": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "86": {
-        "Análisis de sucursales": {
-            "Revisada": 0
+        "Nuevas pantallas - Portafolios": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "87": {
-        "Análisis de figuras tributarias": {
-            "Revisada": 0
+        "Analisis - Análisis de usuarios": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "88": {
-        "Análisis de especialidades": {
-            "Revisada": 0
+        "Analisis - Análisis de roles seguridad": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "89": {
-        "Análisis de pacientes": {
-            "Revisada": 0
+        "Analisis - Análisis de politicas de seguridad": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "90": {
-        "Análisis de lista de precios": {
-            "Revisada": 0
+        "Analisis - Análisis de sucursales": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "91": {
-        "Análisis de Nemóticos": {
-            "Revisada": 0
+        "Analisis - Análisis de figuras tributarias": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "92": {
-        "Análisis de tipos de servicios": {
-            "Revisada": 0
+        "Analisis - Análisis de especialidades": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "93": {
-        "Análisis de Servicios": {
-            "Revisada": 0
+        "Analisis - Análisis de pacientes": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "94": {
-        "Análisis de Medicamentos e insumos": {
-            "Revisada": 0
+        "Analisis - Análisis de lista de precios": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "95": {
-        "Análisis de proveedor": {
-            "Revisada": 0
+        "Analisis - Análisis de Nemóticos": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "96": {
-        "Análisis de consultorios": {
-            "Revisada": 0
+        "Analisis - Análisis de tipos de servicios": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "97": {
-        "Análisis de tipo de recurrencia": {
-            "Revisada": 0
+        "Analisis - Análisis de Servicios": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "98": {
-        "Análisis de agendas": {
-            "Revisada": 0
+        "Analisis - Análisis de Medicamentos e insumos": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "99": {
-        "Análisis de Doctores": {
-            "Revisada": 0
+        "Analisis - Análisis de proveedor": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "100": {
-        "Análisis de instituciones de referencia": {
-            "Revisada": 0
+        "Analisis - Análisis de consultorios": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "101": {
-        "Análisis de Historia clinica": {
-            "Revisada": 0
+        "Analisis - Análisis de tipo de recurrencia": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "102": {
-        "Análisis de notas clinicas": {
-            "Revisada": 0
+        "Analisis - Análisis de agendas": {
+            "Revisada": 0,
+            "Notas": "-"
+        }
+    },
+    "103": {
+        "Analisis - Análisis de Doctores": {
+            "Revisada": 0,
+            "Notas": "-"
+        }
+    },
+    "104": {
+        "Analisis - Análisis de instituciones de referencia": {
+            "Revisada": 0,
+            "Notas": "-"
+        }
+    },
+    "105": {
+        "Analisis - Análisis de Historia clinica": {
+            "Revisada": 0,
+            "Notas": "-"
+        }
+    },
+    "106": {
+        "Analisis - Análisis de notas clinicas": {
+            "Revisada": 0,
+            "Notas": "-"
+        }
+    },
+    "107": {
+        "Analisis - Análisis de Expediente de documentos": {
+            "Revisada": 0,
+            "Notas": "-"
+        }
+    },
+    "108": {
+        "Analisis - Análisis de politicas de descuentos": {
+            "Revisada": 0,
+            "Notas": "-"
+        }
+    },
+    "109": {
+        "Analisis - Análisis de Orden de servicio": {
+            "Revisada": 0,
+            "Notas": "-"
+        }
+    },
+    "110": {
+        "Analisis - Análisis de generación de venta": {
+            "Revisada": 0,
+            "Notas": "-"
+        }
+    },
+    "111": {
+        "Analisis - Análisis de facturación": {
+            "Revisada": 0,
+            "Notas": "-"
+        }
+    },
+    "112": {
+        "Analisis - Análisis de cuentas por cobrar": {
+            "Revisada": 0,
+            "Notas": "-"
+        }
+    },
+    "113": {
+        "Analisis - Análisis de turnos": {
+            "Revisada": 0,
+            "Notas": "-"
+        }
+    },
+    "114": {
+        "Analisis - Análisis de Cajas": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "115": {
-        "Análisis de Expediente de documentos": {
-            "Revisada": 0
+        "Analisis - Analisis de cajeros": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "116": {
-        "Análisis de politicas de descuentos": {
-            "Revisada": 0
+        "Analisis - Analisis de cotizaciones": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "117": {
-        "Análisis de Orden de servicio": {
-            "Revisada": 0
+        "Analisis - Análisis de teleconsultas": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "118": {
-        "Análisis de generación de venta": {
-            "Revisada": 0
+        "Analisis - Análisis de reportes": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "119": {
-        "Análisis de facturación": {
-            "Revisada": 0
+        "Analisis - Análisis de encuesta de satisfacción y reportes": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "120": {
-        "Análisis de cuentas por cobrar": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Nueva nota": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "121": {
-        "Análisis de turnos": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Problemas activos": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "122": {
-        "Análisis de Cajas": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Historial médico": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "123": {
-        "Analisis de cajeros": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Historial quirúrgico": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "124": {
-        "Analisis de cotizaciones": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Historial psiquiátrico": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "125": {
-        "Análisis de teleconsultas": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Historial Gineco-Obstétrico": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "126": {
-        "Análisis de reportes": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Medicamentos activos": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "127": {
-        "Análisis de encuesta de satisfacción y reportes": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Alergias e intolerancias": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "128": {
-        "Desarrollo": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Hábitos sociales": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "129": {
-        "Implementación modulo de seguridad": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Alertas y necesidades especiales": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "130": {
-        "Implementacion de figuras tributarias": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Inmunizaciones": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "131": {
-        "Implementación de especialidades": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Antecedentes familiares": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "132": {
-        "Implementación catalogos varios define paciente": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Nueva nota": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "133": {
-        "Implementación de lista de precios": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Problemas activos": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "134": {
-        "Implementación de Nemóticos": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Historial médico": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "135": {
-        "Implementación de tipos de servicios": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Historial quirúrgico": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "136": {
-        "Implementación de servicios": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Historial psiquiátrico": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "137": {
-        "Implementación de Medicamentos e insumos": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Historial Gineco-Obstétrico": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "138": {
-        "Implementación de proveedor": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Medicamentos activos": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "139": {
-        "Implementación de tipo de recurrencia": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Alergias e intolerancias": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "140": {
-        "Implementación de catalogos de doctores": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Hábitos sociales": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "141": {
-        "Implementación de instituciones de referencia": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Alertas y necesidades especiales": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "142": {
-        "Implementación de pacientes": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Inmunizaciones": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "143": {
-        "Implementación de consultorios": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Antecedentes familiares": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "144": {
-        "Apertura de horarios": {
-            "Revisada": 0
+        "Análisis de notas clinicas - Comentarios de Historia Clínica (para todos)": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "145": {
-        "Creación de horarios": {
-            "Revisada": 0
+        "Desarrollo - Implementación modulo de seguridad": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "146": {
-        "Implementación de agenda": {
-            "Revisada": 0
+        "Desarrollo - Implementacion de figuras tributarias": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "147": {
-        "Búsqueda de pacientes": {
-            "Revisada": 0
+        "Desarrollo - Implementación de especialidades": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "148": {
-        "Detalle de pacientes": {
-            "Revisada": 0
+        "Desarrollo - Implementación catalogos varios define paciente": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "149": {
-        "3 doctores por tipo de agenda": {
-            "Revisada": 0
+        "Desarrollo - Implementación de lista de precios": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "150": {
-        "Diaria": {
-            "Revisada": 0
+        "Desarrollo - Implementación de Nemóticos": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "151": {
-        "Semanal": {
-            "Revisada": 0
+        "Desarrollo - Implementación de tipos de servicios": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "152": {
-        "Mensual": {
-            "Revisada": 0
+        "Desarrollo - Implementación de servicios": {
+            "Revisada": 0,
+            "Notas": "-"
+        }
+    },
+    "153": {
+        "Desarrollo - Implementación de Medicamentos e insumos": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "154": {
-        "Refrescar": {
-            "Revisada": 0
+        "Desarrollo - Implementación de proveedor": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "155": {
-        "Lista de pacientes por atender": {
-            "Revisada": 0
+        "Desarrollo - Implementación de tipo de recurrencia": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "156": {
-        "Lista de médicos registrados.": {
-            "Revisada": 0
+        "Desarrollo - Implementación de catalogos de doctores": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "157": {
-        "Impresión": {
-            "Revisada": 0
+        "Desarrollo - Implementación de instituciones de referencia": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "158": {
-        "Asignación de citas": {
-            "Revisada": 0
+        "Desarrollo - Implementación de pacientes": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "159": {
-        "Selección del Dr.": {
-            "Revisada": 0
+        "Desarrollo - Implementación de consultorios": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "160": {
-        "Selección del día de consulta de disponibilidad": {
-            "Revisada": 0
+        "Desarrollo - Apertura de horarios": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "161": {
-        "Mostrar disponibilidad y seleccionar un horario": {
-            "Revisada": 0
+        "Desarrollo - Creación de horarios": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "162": {
-        "Actualizar la agenda y Google Calendar": {
-            "Revisada": 0
+        "Desarrollo - Implementación de agenda": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "163": {
-        "Ingresar datos del paciente": {
-            "Revisada": 0
+        "Desarrollo - Implementación servicio ambulatorio": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "164": {
-        "Alta de un nuevo paciente": {
-            "Revisada": 0
+        "Desarrollo - Implementación de notas médicas": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "165": {
-        "Implementación servicio ambulatorio": {
-            "Revisada": 0
+        "Desarrollo - Implementación de notas clinicas": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "166": {
-        "Implementación de notas médicas": {
-            "Revisada": 0
+        "Desarrollo - Implementación de expedientes de documentos": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "167": {
-        "Nueva nota": {
-            "Revisada": 0
+        "Desarrollo - Implementación de politicas de descuento": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "168": {
-        "Problemas activos": {
-            "Revisada": 0
+        "Desarrollo - Implementación de orden de servicio": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "169": {
-        "Historial médico": {
-            "Revisada": 0
+        "Desarrollo - Implementación de generación de venta": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "170": {
-        "Historial quirúrgico": {
-            "Revisada": 0
+        "Desarrollo - Implementación de facturación": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "171": {
-        "Historial psiquiátrico": {
-            "Revisada": 0
+        "Desarrollo - Implementación de cuentas por cobrar": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "172": {
-        "Historial Gineco-Obstétrico": {
-            "Revisada": 0
+        "Desarrollo - Implementación de turnos": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "173": {
-        "Medicamentos activos": {
-            "Revisada": 0
+        "Desarrollo - Implementación de cajeros": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "174": {
-        "Alergias e intolerancias": {
-            "Revisada": 0
+        "Desarrollo - Implementación de Cajas": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "175": {
-        "Hábitos sociales": {
-            "Revisada": 0
+        "Desarrollo - Implementación de cotizaciones": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "176": {
-        "Alertas y necesidades especiales": {
-            "Revisada": 0
+        "Desarrollo - Implementacion de teleconsultas": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "177": {
-        "Inmunizaciones": {
-            "Revisada": 0
+        "Desarrollo - Implementación de reportes": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "178": {
-        "Antecedentes familiares": {
-            "Revisada": 0
+        "Desarrollo - Integración de encuentas de satisfacción": {
+            "Revisada": 0,
+            "Notas": "-"
+        }
+    },
+    "179": {
+        "Desarrollo - Integracion de modulos": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "180": {
-        "Historial médico": {
-            "Revisada": 0
+        "Implementación de agenda - Búsqueda de pacientes": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "181": {
-        "Historial quirúrgico": {
-            "Revisada": 0
+        "Implementación de agenda - Detalle de pacientes": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "182": {
-        "Historial psiquiátrico": {
-            "Revisada": 0
+        "Implementación de agenda - 3 doctores por tipo de agenda": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "183": {
-        "Historial Gineco-Obstétrico": {
-            "Revisada": 0
+        "Implementación de agenda - Botones": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "184": {
-        "Medicamentos activos": {
-            "Revisada": 0
+        "Implementación de agenda - Asignación de citas": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "185": {
-        "Alergias e intolerancias": {
-            "Revisada": 0
+        "Implementación de agenda - Alta de un nuevo paciente": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "186": {
-        "Hábitos sociales": {
-            "Revisada": 0
+        "3 doctores por tipo de agenda - Diaria": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "187": {
-        "Alertas y necesidades especiales": {
-            "Revisada": 0
+        "3 doctores por tipo de agenda - Semanal": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "188": {
-        "Inmunizaciones": {
-            "Revisada": 0
+        "3 doctores por tipo de agenda - Mensual": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "189": {
-        "Antecedentes familiares": {
-            "Revisada": 0
+        "Botones - Refrescar": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "190": {
-        "Implementación de notas clinicas": {
-            "Revisada": 0
+        "Botones - Lista de pacientes por atender": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "191": {
-        "Notas de evolución": {
-            "Revisada": 0
+        "Botones - Lista de médicos registrados.": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "192": {
-        "Implementación de expedientes de documentos": {
-            "Revisada": 0
+        "Botones - Impresión": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "193": {
-        "Implementación de politicas de descuento": {
-            "Revisada": 0
+        "Asignación de citas - Selección del Dr.": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "194": {
-        "Implementación de orden de servicio": {
-            "Revisada": 0
+        "Asignación de citas - Selección del día de consulta de disponibilidad": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "195": {
-        "Implementación de generación de venta": {
-            "Revisada": 0
+        "Asignación de citas - Mostrar disponibilidad y seleccionar un horario": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "196": {
-        "Implementación de facturación": {
-            "Revisada": 0
+        "Asignación de citas - Actualizar la agenda y Google Calendar": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "197": {
-        "Implementación de cuentas por cobrar": {
-            "Revisada": 0
+        "Asignación de citas - Ingresar datos del paciente": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "198": {
-        "Implementación de turnos": {
-            "Revisada": 0
+        "Comentarios de Historia Clínica (para todos) - Historial médico": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "199": {
-        "Implementación de cajeros": {
-            "Revisada": 0
+        "Comentarios de Historia Clínica (para todos) - Historial quirúrgico": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "200": {
-        "Implementación de Cajas": {
-            "Revisada": 0
+        "Comentarios de Historia Clínica (para todos) - Historial psiquiátrico": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "201": {
-        "Implementación de cotizaciones": {
-            "Revisada": 0
+        "Comentarios de Historia Clínica (para todos) - Historial Gineco-Obstétrico": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "202": {
-        "Implementacion de teleconsultas": {
-            "Revisada": 0
+        "Comentarios de Historia Clínica (para todos) - Medicamentos activos": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "203": {
-        "Implementación de reportes": {
-            "Revisada": 0
+        "Comentarios de Historia Clínica (para todos) - Alergias e intolerancias": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "204": {
-        "Integración de encuentas de satisfacción": {
-            "Revisada": 0
+        "Comentarios de Historia Clínica (para todos) - Hábitos sociales": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "205": {
-        "Integracion de modulos": {
-            "Revisada": 0
+        "Comentarios de Historia Clínica (para todos) - Alertas y necesidades especiales": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "206": {
-        "Pruebas": {
-            "Revisada": 0
+        "Comentarios de Historia Clínica (para todos) - Inmunizaciones": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "207": {
-        "Generación de casos de uso y pruebas unitarias": {
-            "Revisada": 0
+        "Comentarios de Historia Clínica (para todos) - Antecedentes familiares": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "208": {
-        "Revisión interna": {
-            "Revisada": 0
+        "Implementación de notas clinicas - Notas de evolución": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "209": {
-        "Integración y despliegue": {
-            "Revisada": 0
+        "Pruebas - Generación de casos de uso y pruebas unitarias": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "210": {
-        "Pruebas Integrales": {
-            "Revisada": 0
+        "Pruebas - Revisión interna": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "211": {
-        "Matriz de pruebas": {
-            "Revisada": 0
+        "Pruebas - Integración y despliegue": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "212": {
-        "Ajustes": {
-            "Revisada": 0
+        "Pruebas - Pruebas Integrales": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "213": {
-        "Hoja de Implementación": {
-            "Revisada": 0
+        "Pruebas - Matriz de pruebas": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "214": {
-        "Liberación": {
-            "Revisada": 0
+        "Pruebas - Ajustes": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "215": {
-        "Generar solicitud de migración": {
-            "Revisada": 0
+        "Pruebas - Hoja de Implementación": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "216": {
-        "Liberación": {
-            "Revisada": 0
+        "Liberación - Generar solicitud de migración": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "217": {
-        "Validación productiva": {
-            "Revisada": 0
+        "Liberación - Liberación": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     },
     "218": {
-        "Fin": {
-            "Revisada": 0
+        "Liberación - Validación productiva": {
+            "Revisada": 0,
+            "Notas": "-"
         }
     }
 }

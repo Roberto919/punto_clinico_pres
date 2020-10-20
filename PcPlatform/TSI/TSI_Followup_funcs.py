@@ -19,6 +19,10 @@ import plotly.express as px
 
 from datetime import *
 
+import json
+
+import pprint as pp
+
 
 ## Ancillary modules
 
@@ -32,6 +36,22 @@ from TSI_Followup_params import *
 ################
 ## Functions ##
 ################
+
+
+## Pretty print a dictionary and preserving special characters
+def json_dump_dict(dictionary):
+    """
+    Pretty print a dictionary and preserving special characters
+        args:
+            dictionary (dictionary): dict that will be pretty printed
+        returns:
+            -
+    """
+
+    print(json.dumps(dictionary, indent=4, ensure_ascii=False).encode("utf8").decode())
+
+    return
+
 
 
 ## Counting number of preceding white spaces in a string
@@ -74,7 +94,7 @@ def mother_daughter_list(sh_list):
 
     ## Formulation of mother-daughter list
     for val in sh_list:
-        print(val)
+        # print(val)
 
         spc_n = count_spaces(val)
 
@@ -93,6 +113,10 @@ def mother_daughter_list(sh_list):
             md_list.append(tag_dict[spc_n].strip() + sep + val.strip())
 
             spc_o = spc_n
+
+    pp.pprint(tag_dict)
+
+    pp.pprint(md_list)
 
 
     return md_list
