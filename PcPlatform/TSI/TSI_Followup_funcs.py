@@ -114,9 +114,9 @@ def mother_daughter_list(sh_list):
 
             spc_o = spc_n
 
-    pp.pprint(tag_dict)
+    # pp.pprint(tag_dict)
 
-    pp.pprint(md_list)
+    # pp.pprint(md_list)
 
 
     return md_list
@@ -375,6 +375,34 @@ def gantt_chart(md_dfs, mother_task, version="TSI"):
             }
         )
         fig.show()
+
+
+    return
+
+
+
+## Print dictionary of all activities based on md_dict
+def print_activities_dict(md_dict):
+    """
+    Print dictionary of all activities based on md_dict
+        args:
+            md_dict (dictionary): dictionary with a relation of the mother activity and all of its daughter activities
+        returns:
+            -
+    """
+
+
+    ## Cycling through the mother-daughter dict and storing info in dictionary
+    i = 1
+    res_dict = {}
+    for mother in md_dict:
+        for daughter in md_dict[mother]:
+            res_dict[i] = {str(mother) + " - " + str(daughter): {"Revisada": 0, "Notas": "-"}}
+            i += 1
+
+
+    ## Printing json
+    json_dump_dict(res_dict)
 
 
     return
