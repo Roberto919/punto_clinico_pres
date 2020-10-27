@@ -422,6 +422,3 @@ def followup_dict(df):
 
     ## Printing json
     json_dump_dict(res_dict)
-
-
-    # return res_dict
