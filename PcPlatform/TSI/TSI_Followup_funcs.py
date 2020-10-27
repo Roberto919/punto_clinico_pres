@@ -164,17 +164,32 @@ def extract_md_dict(df):
             md_dict (dictionary): dictionary with a relation of the mother activity and all of its daughter activities
     """
 
+
     ## Getting list of all activities with hierarchical espaces
     activities = list(df["Nombre de tarea"])
 
+
     ## Extracting mother-daughter relation of activities as a list
     md_list = mother_daughter_list(activities)
+
+
+    ## Append column with mother-daughter tasks names.
+    df["md_names"] = md_list
+
+
+    ## Reviewing if the new column has only unique values
+    rev = df["md_names"].value_counts()
+    if len(rev[rev != 1]) == 0:
+        print("All mother-daughter names are unique")
+    else:
+        print("Problem with the mother-daughter: not all are unique")
+
 
     ## Extracting mother-daughter relation of activities as a dict
     md_dict = mother_daughter_dict(md_list)
 
 
-    return md_dict
+    return md_dict, df
 
 
 
@@ -382,27 +397,31 @@ def gantt_chart(md_dfs, mother_task, version="TSI"):
 
 
 ## Print dictionary of all activities based on md_dict
-def print_activities_dict(md_dict):
+def followup_dict(df):
     """
     Print dictionary of all activities based on md_dict
         args:
-            md_dict (dictionary): dictionary with a relation of the mother activity and all of its daughter activities
+            df (dataframe): df with all the info to update dictionary.
         returns:
-            -
+            res_dict (dictionary): relation of mother-daughter tasks with followup contents.
     """
 
 
-    ## Cycling through the mother-daughter dict and storing info in dictionary
-    i = 1
-    res_dict = {}
-    for mother in md_dict:
-        for daughter in md_dict[mother]:
-            res_dict[i] = {str(mother) + " - " + str(daughter): {"Revisada": 0, "Notas": "-"}}
-            i += 1
+    ## Copying and adjusting dataframe to leave only relevant information.
+    dfx = df.copy()
+    dfx.set_index("md_names", inplace=True)
+    # dfx.drop(["Comienzo", "Fin", "Comienzo.1", "Fin.1", "Predecesoras", "Nombre de tarea", "Duración", "% completado"], axis=1, inplace=True)
+    dfx = dfx.loc[:, ["No.", "RevRob", "Notas_Rob"]]
+
+
+    ## Creating dictionary with definitions.
+    res_dict = dfx.to_dict(orient="index")
+
+    # pp.pprint(res_dict)
 
 
     ## Printing json
     json_dump_dict(res_dict)
 
 
-    return
+    # return res_dict
