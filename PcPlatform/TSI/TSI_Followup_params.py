@@ -67,7 +67,11 @@ def_dict = {
 
 
 
-## List of followup activities
+## List of followup activities.
+#### Code related to revisions' status:
+###### 0.0 -> not reviewed yet.
+###### 0.5 -> reviewed but not clear if its functioning well.
+###### 1.0 -> reviewed and validated that its working properly.
 followup_dev_activities = {
     "Seed --> Proyecto consultorios": {
         "No.": 1,
@@ -81,68 +85,68 @@ followup_dev_activities = {
     },
     "Proyecto consultorios --> Diseño pantallas": {
         "No.": 3,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Todavía no están listas todas las secciones del diseño de pantallas."
     },
     "Diseño pantallas --> Personalización menú superior": {
         "No.": 4,
-        "RevRob": 1.0,
-        "Notas_Rob": "El menú contiene el logo de Punto Clínico, los colores correctos y las entradas adecuadas."
+        "RevRob": 0.5,
+        "Notas_Rob": "- [ ] En Configuración/Catálogos/ hay dos entradas relacionadas con proveedores que no sé si sean redundantes. - [X] El botón Pacientes parece que no hace nada         "
     },
     "Diseño pantallas --> Diseño de lateral izquierdo-buscador": {
         "No.": 5,
         "RevRob": 1.0,
-        "Notas_Rob": "El buscador permite buscar las entradas correctas. Se puede buscar por nombre, teléfono y demás."
+        "Notas_Rob": "- [X] El buscador si filtra por nombres correctamente. - [X] El buscador filtra por número telefónico correctamente (parcial o completo). - [X] También se puede buscar por número de expediente.         "
     },
     "Diseño pantallas --> Calendario de vista por mes con colores con acciones": {
         "No.": 6,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "- [ ] Según yo no hay colores en este calendario. - [X] Los botones día de este calendario funcionan bien. - [ ] No se muestran las citas y colores asocuados a la semana.         "
     },
     "Diseño pantallas --> Calendario de vista por día": {
         "No.": 7,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "- [X] El calendario cambia de color cuando se realizan acciones. - [ ] Ver calendarios de distintos médicos al mismo tiempo. - [X] Los espcios cancelados ya se pueden reutilizar.  - [ ] Parece que hay un bug en el que de repente se divide la pantalla de un médico 'undefined'- [ ] (Bug) Cuando están en un calendario vista por semana y cambias de médico se ve raro el calendario.        "
     },
     "Diseño pantallas --> Lista de pacientes": {
         "No.": 8,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "No está claro a qué se refieren con la lista de pacientes."
     },
     "Diseño pantallas --> Lista de Médicos": {
         "No.": 9,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "No está claro a lo que se refieren con este concepto."
     },
     "Diseño pantallas --> Criterios de impresión": {
         "No.": 10,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "No está claro a lo que se refieren con este concepto."
     },
     "Diseño pantallas --> Calendario de vista por semana": {
         "No.": 11,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "- [X] La vista por semana sí muestra las distintas citas con colores y demás.        "
     },
     "Diseño pantallas --> Alta rapida de pacientes-buscador": {
         "No.": 12,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "- [X] La funcionalidad sí opera correctamente- [ ] Tarda mucho en que se carguen los resultados del calendario.- [X] Ya solo se despliegan los horarios laborales en lugar de todos.- [X] Las citas canceladas ya aparecen aquí.        "
     },
     "Diseño pantallas --> Busqueda avanzada, filtros de citas": {
         "No.": 13,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "No está claro a lo que se refieren con este concepto."
     },
     "Diseño pantallas --> Detalles de citas:Alta, Consulta, Actualización": {
         "No.": 14,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "- [X] Cuando se le da click a una cita sí se abre correctamente.- [ ] Se había solicitado que se agreguen leyendas debajo del nombre del paciente.        "
     },
     "Diseño pantallas --> Expediente clinico paciente": {
         "No.": 15,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "- [X] Se observó la funcionalidad de las distintas pantallas del expediente        "
     },
     "Expediente clinico paciente --> Encabezado expediente clinico": {
         "No.": 16,
@@ -226,8 +230,8 @@ followup_dev_activities = {
     },
     "Diseño pantallas --> Historia clinica del paciente": {
         "No.": 32,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "No estoy seguro de la diferencia entre el historial y el expediente clínico."
     },
     "Historia clinica del paciente --> Encabezado de la historia clinica": {
         "No.": 33,
@@ -236,8 +240,8 @@ followup_dev_activities = {
     },
     "Diseño pantallas --> Sección de Resumen medico": {
         "No.": 34,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "- [X] Se probaron y revisaron las funcionalidades de esta sección con el Dr. Said.        "
     },
     "Sección de Resumen medico --> Pantalla de Historial medico": {
         "No.": 35,
@@ -246,58 +250,58 @@ followup_dev_activities = {
     },
     "Sección de Resumen medico --> Pantalla lateral izquierda, Antecedentes y diagnosticos": {
         "No.": 36,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "- [X] Se probaron y revisaron las funcionalidades de esta sección con el Dr. Said.        "
     },
     "Sección de Resumen medico --> Pantalla de Alergias e intolerancia": {
         "No.": 37,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "- [ ] Se solicitó que se activaran algunas alarmas relacionadas con intolerancias.        "
     },
     "Sección de Resumen medico --> Pantalla Habitos sociales": {
         "No.": 38,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "- [X] Se probaron y revisaron las funcionalidades de esta sección con el Dr. Said.        "
     },
     "Sección de Resumen medico --> Pantalla Alertas y necesidades especiales": {
         "No.": 39,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "- [ ] Se solicitó que se activaran algunas alarmas relacionadas con intolerancias.        "
     },
     "Sección de Resumen medico --> Pantalla antecedentes familiares": {
         "No.": 40,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "- [X] Se probaron y revisaron las funcionalidades de esta sección con el Dr. Said.        "
     },
     "Sección de Resumen medico --> Pantalla Inmunizaciones": {
         "No.": 41,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "- [ ] Se había solicitado que se cambiaran 'cc' por 'ml'. No se ha podido verificar que sea así.        "
     },
     "Sección de Resumen medico --> Pantalla Medicamentos activos": {
         "No.": 42,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "- [ ] Se habían solicitado varios cambios que al parecer todavía no están todos.        "
     },
     "Sección de Resumen medico --> Pantalla signos vitales": {
         "No.": 43,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "- [X] Se probaron y revisaron las funcionalidades de esta sección con el Dr. Said.        "
     },
     "Sección de Resumen medico --> Control de escala de dolor": {
         "No.": 44,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "- [X] Se probaron y revisaron las funcionalidades de esta sección con el Dr. Said.        "
     },
     "Sección de Resumen medico --> Pantalla de aprobacion de historia clinica": {
         "No.": 45,
         "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "Notas_Rob": "No seguro a qué se refieren."
     },
     "Sección de Resumen medico --> Notas de Evolución": {
         "No.": 46,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Faltan algunas cosillas."
     },
     "Notas de Evolución --> Pantalla de motivo de consulta": {
         "No.": 47,
@@ -1224,163 +1228,188 @@ followup_dev_activities = {
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Implementación de notas clinicas --> Restitución y envío de facturas por mail": {
+    "Implementación de notas clinicas --> Facturación por grupo de servicio": {
         "No.": 232,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Desarrollo --> Implementación de cuentas por cobrar": {
+    "Implementación de notas clinicas --> Restitución y envío de facturas por mail": {
         "No.": 233,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Desarrollo --> Implementación de turnos": {
+    "Desarrollo --> Implementación de cuentas por cobrar": {
         "No.": 234,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Desarrollo --> Implementación de cajeros": {
+    "Desarrollo --> Implementación de turnos": {
         "No.": 235,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Desarrollo --> Implementación de Cajas": {
+    "Desarrollo --> Implementación de cajeros": {
         "No.": 236,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Implementación de Cajas --> Definición": {
+    "Desarrollo --> Implementación de Cajas": {
         "No.": 237,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Implementación de Cajas --> Apertura": {
+    "Implementación de Cajas --> Definición": {
         "No.": 238,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Implementación de Cajas --> Asignación": {
+    "Implementación de Cajas --> Apertura": {
         "No.": 239,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Implementación de Cajas --> Movimientos de cobro": {
+    "Implementación de Cajas --> Asignación": {
         "No.": 240,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Implementación de Cajas --> Retiros de efectivo": {
+    "Implementación de Cajas --> Movimientos de cobro": {
         "No.": 241,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Implementación de Cajas --> Corte de caja": {
+    "Implementación de Cajas --> Retiros de efectivo": {
         "No.": 242,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Desarrollo --> Implementación de cotizaciones": {
+    "Implementación de Cajas --> Corte de caja": {
         "No.": 243,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Implementación de cotizaciones --> Lista de precios": {
+    "Desarrollo --> Implementación de cotizaciones": {
         "No.": 244,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Implementación de cotizaciones --> Cotizaciones": {
+    "Implementación de cotizaciones --> Lista de precios": {
         "No.": 245,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Implementación de cotizaciones --> Creación de paquetes": {
+    "Implementación de cotizaciones --> Cotizaciones": {
         "No.": 246,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Desarrollo --> Implementacion de teleconsultas": {
+    "Implementación de cotizaciones --> Creación de paquetes": {
         "No.": 247,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Desarrollo --> Implementación de reportes": {
+    "Desarrollo --> Implementacion de teleconsultas": {
         "No.": 248,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Desarrollo --> Integración de encuentas de satisfacción": {
+    "Desarrollo --> Implementación de reportes": {
         "No.": 249,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Desarrollo --> Integracion de modulos": {
+    "Implementación de reportes --> Productividad": {
         "No.": 250,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Proyecto consultorios --> Pruebas": {
+    "Implementación de reportes --> Pagos": {
         "No.": 251,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Pruebas --> Generación de casos de uso y pruebas unitarias": {
+    "Implementación de reportes --> Auditoria": {
         "No.": 252,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Pruebas --> Revisión interna": {
+    "Implementación de reportes --> Ingresos": {
         "No.": 253,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Pruebas --> Integración y despliegue": {
+    "Desarrollo --> Integración de encuentas de satisfacción": {
         "No.": 254,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Pruebas --> Pruebas Integrales": {
+    "Desarrollo --> Integracion de modulos": {
         "No.": 255,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Pruebas --> Matriz de pruebas": {
+    "Proyecto consultorios --> Pruebas": {
         "No.": 256,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Pruebas --> Ajustes": {
+    "Pruebas --> Generación de casos de uso y pruebas unitarias": {
         "No.": 257,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Pruebas --> Hoja de Implementación": {
+    "Pruebas --> Revisión interna": {
         "No.": 258,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Proyecto consultorios --> Liberación": {
+    "Pruebas --> Integración y despliegue": {
         "No.": 259,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Liberación --> Generar solicitud de migración": {
+    "Pruebas --> Pruebas Integrales": {
         "No.": 260,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Liberación --> Liberación": {
+    "Pruebas --> Matriz de pruebas": {
         "No.": 261,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Liberación --> Validación productiva": {
+    "Pruebas --> Ajustes": {
         "No.": 262,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     },
-    "Proyecto consultorios --> Fin": {
+    "Pruebas --> Hoja de Implementación": {
         "No.": 263,
+        "RevRob": 0.0,
+        "Notas_Rob": "-"
+    },
+    "Proyecto consultorios --> Liberación": {
+        "No.": 264,
+        "RevRob": 0.0,
+        "Notas_Rob": "-"
+    },
+    "Liberación --> Generar solicitud de migración": {
+        "No.": 265,
+        "RevRob": 0.0,
+        "Notas_Rob": "-"
+    },
+    "Liberación --> Liberación": {
+        "No.": 266,
+        "RevRob": 0.0,
+        "Notas_Rob": "-"
+    },
+    "Liberación --> Validación productiva": {
+        "No.": 267,
+        "RevRob": 0.0,
+        "Notas_Rob": "-"
+    },
+    "Proyecto consultorios --> Fin": {
+        "No.": 268,
         "RevRob": 0.0,
         "Notas_Rob": "-"
     }
