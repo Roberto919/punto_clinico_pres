@@ -141,12 +141,17 @@ followup_dev_activities = {
     "Diseño pantallas --> Detalles de citas:Alta, Consulta, Actualización": {
         "No.": 14,
         "RevRob": 0.5,
-        "Notas_Rob": "- [X] Cuando se le da click a una cita sí se abre correctamente.- [ ] Se había solicitado que se agreguen leyendas debajo del nombre del paciente.        "
+        "Notas_Rob": "\
+- [X] Cuando se le da click a una cita sí se abre correctamente.\
+- [ ] Se había solicitado que se agreguen leyendas debajo del nombre del paciente.\
+        "
     },
     "Diseño pantallas --> Expediente clinico paciente": {
         "No.": 15,
         "RevRob": 1.0,
-        "Notas_Rob": "- [X] Se observó la funcionalidad de las distintas pantallas del expediente        "
+        "Notas_Rob": "\
+- [X] Se observó la funcionalidad de las distintas pantallas del expediente\
+        "
     },
     "Expediente clinico paciente --> Encabezado expediente clinico": {
         "No.": 16,
@@ -241,61 +246,83 @@ followup_dev_activities = {
     "Diseño pantallas --> Sección de Resumen medico": {
         "No.": 34,
         "RevRob": 1.0,
-        "Notas_Rob": "- [X] Se probaron y revisaron las funcionalidades de esta sección con el Dr. Said.        "
+        "Notas_Rob": "\
+- [X] Se probaron y revisaron las funcionalidades de esta sección con el Dr. Said.\
+        "
     },
     "Sección de Resumen medico --> Pantalla de Historial medico": {
         "No.": 35,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "\
+- [X] La pantalla sí muestra los elementos del historial médico.\
+        "
     },
     "Sección de Resumen medico --> Pantalla lateral izquierda, Antecedentes y diagnosticos": {
         "No.": 36,
         "RevRob": 1.0,
-        "Notas_Rob": "- [X] Se probaron y revisaron las funcionalidades de esta sección con el Dr. Said.        "
+        "Notas_Rob": "\
+- [X] Se probaron y revisaron las funcionalidades de esta sección con el Dr. Said.\
+        "
     },
     "Sección de Resumen medico --> Pantalla de Alergias e intolerancia": {
         "No.": 37,
         "RevRob": 0.5,
-        "Notas_Rob": "- [ ] Se solicitó que se activaran algunas alarmas relacionadas con intolerancias.        "
+        "Notas_Rob": "\
+- [ ] Se solicitó que se activaran algunas alarmas relacionadas con intolerancias.\
+        "
     },
     "Sección de Resumen medico --> Pantalla Habitos sociales": {
         "No.": 38,
         "RevRob": 1.0,
-        "Notas_Rob": "- [X] Se probaron y revisaron las funcionalidades de esta sección con el Dr. Said.        "
+        "Notas_Rob": "\
+- [X] Se probaron y revisaron las funcionalidades de esta sección con el Dr. Said.\
+        "
     },
     "Sección de Resumen medico --> Pantalla Alertas y necesidades especiales": {
         "No.": 39,
         "RevRob": 0.5,
-        "Notas_Rob": "- [ ] Se solicitó que se activaran algunas alarmas relacionadas con intolerancias.        "
+        "Notas_Rob": "\
+- [ ] Se solicitó que se activaran algunas alarmas relacionadas con intolerancias.\
+        "
     },
     "Sección de Resumen medico --> Pantalla antecedentes familiares": {
         "No.": 40,
         "RevRob": 1.0,
-        "Notas_Rob": "- [X] Se probaron y revisaron las funcionalidades de esta sección con el Dr. Said.        "
+        "Notas_Rob": "\
+- [X] Se probaron y revisaron las funcionalidades de esta sección con el Dr. Said.\
+        "
     },
     "Sección de Resumen medico --> Pantalla Inmunizaciones": {
         "No.": 41,
         "RevRob": 0.5,
-        "Notas_Rob": "- [ ] Se había solicitado que se cambiaran 'cc' por 'ml'. No se ha podido verificar que sea así.        "
+        "Notas_Rob": "\
+- [ ] Se había solicitado que se cambiaran 'cc' por 'ml'. No se ha podido verificar que sea así.\
+        "
     },
     "Sección de Resumen medico --> Pantalla Medicamentos activos": {
         "No.": 42,
         "RevRob": 0.5,
-        "Notas_Rob": "- [ ] Se habían solicitado varios cambios que al parecer todavía no están todos.        "
+        "Notas_Rob": "\
+- [ ] Se habían solicitado varios cambios que al parecer todavía no están todos.\
+        "
     },
     "Sección de Resumen medico --> Pantalla signos vitales": {
         "No.": 43,
         "RevRob": 1.0,
-        "Notas_Rob": "- [X] Se probaron y revisaron las funcionalidades de esta sección con el Dr. Said.        "
+        "Notas_Rob": "\
+- [X] Se probaron y revisaron las funcionalidades de esta sección con el Dr. Said.\
+        "
     },
     "Sección de Resumen medico --> Control de escala de dolor": {
         "No.": 44,
         "RevRob": 1.0,
-        "Notas_Rob": "- [X] Se probaron y revisaron las funcionalidades de esta sección con el Dr. Said.        "
+        "Notas_Rob": "\
+- [X] Se probaron y revisaron las funcionalidades de esta sección con el Dr. Said.\
+        "
     },
     "Sección de Resumen medico --> Pantalla de aprobacion de historia clinica": {
         "No.": 45,
-        "RevRob": 0.0,
+        "RevRob": 0.5,
         "Notas_Rob": "No seguro a qué se refieren."
     },
     "Sección de Resumen medico --> Notas de Evolución": {
@@ -305,68 +332,94 @@ followup_dev_activities = {
     },
     "Notas de Evolución --> Pantalla de motivo de consulta": {
         "No.": 47,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "\
+- [X] La pantalla se activa correctamente\
+        "
     },
     "Notas de Evolución --> Pantalla de Principio, Evolución, Estado": {
         "No.": 48,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "\
+- [X] La pantalla se activa correctamente\
+        "
     },
     "Notas de Evolución --> Pantalla de Exploración": {
         "No.": 49,
         "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "Notas_Rob": "\
+- [X] La pantalla se activa correctamente\
+        "
     },
     "Notas de Evolución --> Pantalla de notas manuscritas (cámara)": {
         "No.": 50,
         "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "Notas_Rob": "\
+- [X] La pantalla se activa correctamente y la camara sí se activa\
+        "
     },
     "Notas de Evolución --> Pantalla de imágenes": {
         "No.": 51,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "\
+- [X] La pantalla se activa correctamente\
+        "
     },
     "Notas de Evolución --> Pantalla de otras notas": {
         "No.": 52,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "\
+- [X] La pantalla se activa correctamente\
+        "
     },
     "Sección de Resumen medico --> Evaluación": {
         "No.": 53,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "\
+- [X] Se probaron y revisaron las funcionalidades de esta sección con el Dr. Said.\
+        "
     },
     "Evaluación --> Pantalla de Antecedentes y diagnosticos": {
         "No.": 54,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "\
+- [ ] Se solicitó el cambio menor de eliminar 'Historial Gineco-Obstetricio'\
+        "
     },
     "Sección de Resumen medico --> Plan": {
         "No.": 55,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "\
+- [X] Se probaron y revisaron las funcionalidades de esta sección con el Dr. Said.\
+        "
     },
     "Plan --> Pantalla de recetas": {
         "No.": 56,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "\
+- [ ] Una vez que se le da recetar al medicamento hay que agregar la posibilidad de que se pueda modificar la receta. No se podrá hacer después de picar 'Aprobar'.\
+- [ ] Agregar opción de poder modificar las notas médicas del paciente después de 'Aprobadas'.\
+        "
     },
     "Plan --> Pantalla de solicitud de examen": {
         "No.": 57,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "\
+- [ ] Modificar etiqueta 'Razón'→ 'Estudio'.\
+- [ ] Agregar botón para imprimir solicitudes de examen y enviar por correo.\
+        "
     },
     "Plan --> Pantalla de solicitud de interconsulta": {
         "No.": 58,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "No estoy seguro qué es esto"
     },
     "Plan --> Pantalla de seguimiento y plan": {
         "No.": 59,
         "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "Notas_Rob": "\
+- [ ] La pantalla se activa correctamente\
+        "
     },
     "Plan --> Pantalla de comunicaciones-Nuevo recordatorio": {
         "No.": 60,
@@ -385,8 +438,8 @@ followup_dev_activities = {
     },
     "Sección de Resumen medico --> Comunicaciones": {
         "No.": 63,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Está pendiente por revisar con el Dr. Said."
     },
     "Comunicaciones --> Pantalla bandeja comunicaciones": {
         "No.": 64,
@@ -810,13 +863,17 @@ followup_dev_activities = {
     },
     "Implementación de agenda --> Búsqueda de pacientes": {
         "No.": 148,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "\
+- [X] La búsqueda de pacientes se puede hacer correctamente.\
+        "
     },
     "Implementación de agenda --> Detalle de pacientes": {
         "No.": 149,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "\
+- [X] Los detalles del paciente se ven bien.\
+        "
     },
     "Implementación de agenda --> 3 doctores por tipo de agenda": {
         "No.": 150,
@@ -885,8 +942,11 @@ followup_dev_activities = {
     },
     "Asignación de citas --> Actualizar la agenda y Google Calendar": {
         "No.": 163,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "\
+- [ ] Revisión con Adrián pero todavía faltan notificaciones a cliente.\
+- [X] El google calendar del doctor sí se actualizó.\
+        "
     },
     "Asignación de citas --> Ingresar datos del paciente": {
         "No.": 164,
