@@ -155,83 +155,86 @@ followup_dev_activities = {
     },
     "Expediente clinico paciente --> Encabezado expediente clinico": {
         "No.": 16,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "\
+- [ ] Solicitamos cambio para ver historial de citas del paciente\
+- [ ] Solicitamos cambio para ver resumen\
+        "
     },
-    "Expediente clinico paciente --> Lateral expediente clinico(iconos)": {
+    "Expediente clinico paciente --> Lateral expediente clinico (iconos)": {
         "No.": 17,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrian"
     },
     "Expediente clinico paciente --> Pantalla Datos demograficos": {
         "No.": 18,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrian"
     },
     "Expediente clinico paciente --> Pantalla Contactos": {
         "No.": 19,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrian"
     },
     "Expediente clinico paciente --> Pantalla Profesional a cargo": {
         "No.": 20,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrian"
     },
     "Expediente clinico paciente --> Pantalla Relaciones": {
         "No.": 21,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrian"
     },
     "Expediente clinico paciente --> Agenda rapida de cita del paciente": {
         "No.": 22,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrian; es la lupa."
     },
     "Expediente clinico paciente --> Pantalla lateral izquierda, Historial de citas": {
         "No.": 23,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrian."
     },
     "Expediente clinico paciente --> Pantalla Cita-Detalle de consulta": {
         "No.": 24,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrian."
     },
     "Expediente clinico paciente --> Pantalla Cita-Mensajeria": {
         "No.": 25,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se revisó con Adrian. Hay que ver si se cambia algo."
     },
     "Expediente clinico paciente --> Pantalla Cita-Tarea": {
         "No.": 26,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se revisó con Adrian. Hay que ver si se cambia algo."
     },
     "Expediente clinico paciente --> Pantalla Cita-Recordatorio": {
         "No.": 27,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se revisó con Adrian. Hay que ver si se cambia algo."
     },
     "Expediente clinico paciente --> Pantalla Cita-Comunicaciones": {
         "No.": 28,
         "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "Notas_Rob": "Se revisó con Adrian. Hay que ver si se cambia algo."
     },
     "Expediente clinico paciente --> Pantalla Cita-Cargos a paciente": {
         "No.": 29,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrian."
     },
     "Expediente clinico paciente --> Pantalla de administrar documentos": {
         "No.": 30,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se revisó con Adrian. Se intetó cargar una radiografía como ejemplo pero falló."
     },
     "Expediente clinico paciente --> Pantalla de carga de documentos": {
         "No.": 31,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se intentó hacer un ejemplo y falló."
     },
     "Diseño pantallas --> Historia clinica del paciente": {
         "No.": 32,
@@ -915,18 +918,18 @@ followup_dev_activities = {
     },
     "Implementación de agenda --> Botones": {
         "No.": 154,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrian."
     },
     "Botones --> Refrescar": {
         "No.": 155,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrian."
     },
     "Botones --> Lista de pacientes por atender": {
         "No.": 156,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrian."
     },
     "Botones --> Lista de médicos registrados.": {
         "No.": 157,
