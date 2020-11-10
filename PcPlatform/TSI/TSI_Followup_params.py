@@ -240,8 +240,8 @@ followup_dev_activities = {
     },
     "Historia clinica del paciente --> Encabezado de la historia clinica": {
         "No.": 33,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Revisado y está bien."
     },
     "Diseño pantallas --> Sección de Resumen medico": {
         "No.": 34,
@@ -322,8 +322,8 @@ followup_dev_activities = {
     },
     "Sección de Resumen medico --> Pantalla de aprobacion de historia clinica": {
         "No.": 45,
-        "RevRob": 0.5,
-        "Notas_Rob": "No seguro a qué se refieren."
+        "RevRob": 1.0,
+        "Notas_Rob": "Revisión con Adrián."
     },
     "Sección de Resumen medico --> Notas de Evolución": {
         "No.": 46,
@@ -346,14 +346,14 @@ followup_dev_activities = {
     },
     "Notas de Evolución --> Pantalla de Exploración": {
         "No.": 49,
-        "RevRob": 0.0,
+        "RevRob": 1.0,
         "Notas_Rob": "\
 - [X] La pantalla se activa correctamente\
         "
     },
     "Notas de Evolución --> Pantalla de notas manuscritas (cámara)": {
         "No.": 50,
-        "RevRob": 0.0,
+        "RevRob": 1.0,
         "Notas_Rob": "\
 - [X] La pantalla se activa correctamente y la camara sí se activa\
         "
@@ -416,25 +416,25 @@ followup_dev_activities = {
     },
     "Plan --> Pantalla de seguimiento y plan": {
         "No.": 59,
-        "RevRob": 0.0,
+        "RevRob": 1.0,
         "Notas_Rob": "\
-- [ ] La pantalla se activa correctamente\
+- [X] La pantalla se activa correctamente\
         "
     },
     "Plan --> Pantalla de comunicaciones-Nuevo recordatorio": {
         "No.": 60,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se debería eliminar según doctor Said; podemos desactivarlo."
     },
     "Plan --> Pantalla de comunicaciones-Nuevo mensaje": {
         "No.": 61,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Dr. Said."
     },
     "Plan --> Pantalla nuevo cargo": {
         "No.": 62,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se pidieron cambios."
     },
     "Sección de Resumen medico --> Comunicaciones": {
         "No.": 63,
@@ -443,113 +443,129 @@ followup_dev_activities = {
     },
     "Comunicaciones --> Pantalla bandeja comunicaciones": {
         "No.": 64,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Comunicaciones --> Pantalla Recordatorios": {
         "No.": 65,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "\
+- [ ] El Dr. Said comentó que no deberían haber recordatorios.\
+"
     },
     "Pantalla Recordatorios --> Pantalla de recordatorio": {
         "No.": 66,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "\
+- [ ] El Dr. Said comentó que no deberían haber recordatorios.\
+"
     },
     "Comunicaciones --> Pantalla de mensajes": {
         "No.": 67,
         "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "Notas_Rob": "\
+- [X] Se revisó con el Dr. Said y funciona bien.\
+"
     },
     "Pantalla de mensajes --> Pantalla Mensajes-Enviados": {
         "No.": 68,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Pantalla de mensajes --> Pantalla Mensajes-Borrador": {
         "No.": 69,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Pantalla de mensajes --> Pantalla Mensajes-Archivo": {
         "No.": 70,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Pantalla de mensajes --> Pantalla Mensajes-Basura": {
         "No.": 71,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Comunicaciones --> Pantalla Tareas": {
         "No.": 72,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "\
+- [ ] Se deberían eliminar las tareas según Dr. Said.\
+"
     },
     "Pantalla Tareas --> Pantalla Tareas-Enviados": {
         "No.": 73,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "\
+- [ ] Se deberían eliminar las tareas según Dr. Said.\
+"
     },
     "Pantalla Tareas --> Pantalla Tareas-Borrador": {
         "No.": 74,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "\
+- [ ] Se deberían eliminar las tareas según Dr. Said.\
+"
     },
     "Pantalla Tareas --> Pantalla Tareas-Archivo": {
         "No.": 75,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "\
+- [ ] Se deberían eliminar las tareas según Dr. Said.\
+"
     },
     "Pantalla Tareas --> Pantalla Tareas-Basura": {
         "No.": 76,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "\
+- [ ] Se deberían eliminar las tareas según Dr. Said.\
+"
     },
     "Comunicaciones --> Nuevas pantallas": {
         "No.": 77,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Nuevas pantallas --> Apertura de horarios": {
         "No.": 78,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Nuevas pantallas --> Creación de horarios": {
         "No.": 79,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Nuevas pantallas --> Resultados": {
         "No.": 80,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Revisé con Adrián pero no llegamo a conclusión."
     },
     "Nuevas pantallas --> Pantalla de comunicaciones - nueva tarea": {
         "No.": 81,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Nuevas pantallas --> Portafolios": {
         "No.": 82,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se omitió según Adrian."
     },
     "Proyecto consultorios --> Analisis": {
         "No.": 83,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Según Adrián no es relevante para las estadísticas."
     },
     "Analisis --> Análisis de usuarios": {
         "No.": 84,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "No estamos seguros."
     },
     "Analisis --> Análisis de roles seguridad": {
         "No.": 85,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Está pendiente de nuestro lado acabarlo."
     },
     "Analisis --> Análisis de politicas de seguridad": {
         "No.": 86,
@@ -773,93 +789,95 @@ followup_dev_activities = {
     },
     "Desarrollo --> Implementación modulo de seguridad": {
         "No.": 130,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Desarrollo --> Implementacion de figuras tributarias": {
         "No.": 131,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se revisó con Adrián pero no estamos seguros."
     },
     "Desarrollo --> Implementación de especialidades": {
         "No.": 132,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Desarrollo --> Implementación catalogos varios define paciente": {
         "No.": 133,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Desarrollo --> Implementación de lista de precios": {
         "No.": 134,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Desarrollo --> Implementación de Nemóticos": {
         "No.": 135,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se revisó con Adrían pero no estamos seguros."
     },
     "Desarrollo --> Implementación de tipos de servicios": {
         "No.": 136,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Desarrollo --> Implementación de servicios": {
         "No.": 137,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Desarrollo --> Implementación de Medicamentos e insumos": {
         "No.": 138,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián; insumos están con medicamentos."
     },
     "Desarrollo --> Implementación de proveedor": {
         "No.": 139,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Desarrollo --> Implementación de tipo de recurrencia": {
         "No.": 140,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se revisó con Adrián; pero no nos acordamos."
     },
     "Desarrollo --> Implementación de catalogos de doctores": {
         "No.": 141,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Desarrollo --> Implementación de instituciones de referencia": {
         "No.": 142,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Desarrollo --> Implementación de pacientes": {
         "No.": 143,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "\
+- [ ] Tengo dudas acerca del funcionamiento del botón de pacientes.\
+"
     },
     "Desarrollo --> Implementación de consultorios": {
         "No.": 144,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se revisó con Adrián. Lista en detalles de la cita. Al parecer no es relevante. Se omitió al parecer."
     },
     "Desarrollo --> Apertura de horarios": {
         "No.": 145,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Desarrollo --> Creación de horarios": {
         "No.": 146,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Desarrollo --> Implementación de agenda": {
         "No.": 147,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Implementación de agenda --> Búsqueda de pacientes": {
         "No.": 148,
@@ -877,23 +895,23 @@ followup_dev_activities = {
     },
     "Implementación de agenda --> 3 doctores por tipo de agenda": {
         "No.": 150,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Lo están viendo ahorita."
     },
     "3 doctores por tipo de agenda --> Diaria": {
         "No.": 151,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "En desarrollo."
     },
     "3 doctores por tipo de agenda --> Semanal": {
         "No.": 152,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "En desarrollo."
     },
     "3 doctores por tipo de agenda --> Mensual": {
         "No.": 153,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "En desarrollo."
     },
     "Implementación de agenda --> Botones": {
         "No.": 154,
