@@ -572,13 +572,13 @@ followup_dev_activities = {
     },
     "Analisis --> Análisis de politicas de seguridad": {
         "No.": 86,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Están creandose perfiles. Están acabando el trabajo. Revisar el viernes 13 de Nov."
     },
     "Analisis --> Análisis de sucursales": {
         "No.": 87,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Podremos revisarlos el viernes 13."
     },
     "Analisis --> Análisis de figuras tributarias": {
         "No.": 88,
@@ -602,8 +602,8 @@ followup_dev_activities = {
     },
     "Analisis --> Análisis de Nemóticos": {
         "No.": 92,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "No estamos seguros"
     },
     "Analisis --> Análisis de tipos de servicios": {
         "No.": 93,
@@ -632,8 +632,8 @@ followup_dev_activities = {
     },
     "Analisis --> Análisis de tipo de recurrencia": {
         "No.": 98,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "No estámos seguros."
     },
     "Analisis --> Análisis de agendas": {
         "No.": 99,
@@ -662,73 +662,73 @@ followup_dev_activities = {
     },
     "Análisis de notas clinicas --> Nueva nota": {
         "No.": 104,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Análisis de notas clinicas --> Problemas activos": {
         "No.": 105,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Análisis de notas clinicas --> Historial médico": {
         "No.": 106,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Análisis de notas clinicas --> Historial quirúrgico": {
         "No.": 107,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Análisis de notas clinicas --> Historial psiquiátrico": {
         "No.": 108,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián. Implícito en quirúrgico."
     },
     "Análisis de notas clinicas --> Historial Gineco-Obstétrico": {
         "No.": 109,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Análisis de notas clinicas --> Medicamentos activos": {
         "No.": 110,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Análisis de notas clinicas --> Alergias e intolerancias": {
         "No.": 111,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián; ya se implementaron las alertas."
     },
     "Análisis de notas clinicas --> Hábitos sociales": {
         "No.": 112,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Análisis de notas clinicas --> Alertas y necesidades especiales": {
         "No.": 113,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Análisis de notas clinicas --> Inmunizaciones": {
         "No.": 114,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Análisis de notas clinicas --> Antecedentes familiares": {
         "No.": 115,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Analisis --> Análisis de Expediente de documentos": {
         "No.": 116,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Analisis --> Análisis de politicas de descuentos": {
         "No.": 117,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Analisis --> Análisis de Orden de servicio": {
         "No.": 118,
@@ -752,8 +752,8 @@ followup_dev_activities = {
     },
     "Analisis --> Análisis de turnos": {
         "No.": 122,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Parece que no son necesarios."
     },
     "Analisis --> Análisis de Cajas": {
         "No.": 123,
@@ -772,8 +772,8 @@ followup_dev_activities = {
     },
     "Analisis --> Análisis de teleconsultas": {
         "No.": 126,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Analisis --> Análisis de reportes": {
         "No.": 127,
@@ -782,8 +782,8 @@ followup_dev_activities = {
     },
     "Analisis --> Análisis de encuesta de satisfacción y reportes": {
         "No.": 128,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Todavía no está lista."
     },
     "Proyecto consultorios --> Desarrollo": {
         "No.": 129,
@@ -933,33 +933,33 @@ followup_dev_activities = {
     },
     "Botones --> Lista de médicos registrados.": {
         "No.": 157,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Botones --> Impresión": {
         "No.": 158,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de agenda --> Asignación de citas": {
         "No.": 159,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Asignación de citas --> Selección del Dr.": {
         "No.": 160,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Asignación de citas --> Selección del día de consulta de disponibilidad": {
         "No.": 161,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Asignación de citas --> Mostrar disponibilidad y seleccionar un horario": {
         "No.": 162,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Asignación de citas --> Actualizar la agenda y Google Calendar": {
         "No.": 163,
@@ -971,13 +971,15 @@ followup_dev_activities = {
     },
     "Asignación de citas --> Ingresar datos del paciente": {
         "No.": 164,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de agenda --> Alta de un nuevo paciente": {
         "No.": 165,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "\
+- [ ] Se vio un pequeño error cuando, en detalles de cita, se crea un nuevo paciente, después se selecciona un almacenado (al que le quieres agendar), el sistema guarda el pasado.\
+        "
     },
     "Desarrollo --> Implementación servicio ambulatorio": {
         "No.": 166,
@@ -991,63 +993,63 @@ followup_dev_activities = {
     },
     "Implementación de notas médicas --> Nueva nota": {
         "No.": 168,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Problemas activos": {
         "No.": 169,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Historial médico": {
         "No.": 170,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Historial quirúrgico": {
         "No.": 171,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Historial psiquiátrico": {
         "No.": 172,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Historial Gineco-Obstétrico": {
         "No.": 173,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Medicamentos activos": {
         "No.": 174,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Alergias e intolerancias": {
         "No.": 175,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Hábitos sociales": {
         "No.": 176,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Alertas y necesidades especiales": {
         "No.": 177,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Inmunizaciones": {
         "No.": 178,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Antecedentes familiares": {
         "No.": 179,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Comentarios de Historia Clínica (para todos)": {
         "No.": 180,
@@ -1056,63 +1058,63 @@ followup_dev_activities = {
     },
     "Comentarios de Historia Clínica (para todos) --> Historial médico": {
         "No.": 181,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comentarios de Historia Clínica (para todos) --> Historial quirúrgico": {
         "No.": 182,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comentarios de Historia Clínica (para todos) --> Historial psiquiátrico": {
         "No.": 183,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comentarios de Historia Clínica (para todos) --> Historial Gineco-Obstétrico": {
         "No.": 184,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comentarios de Historia Clínica (para todos) --> Medicamentos activos": {
         "No.": 185,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comentarios de Historia Clínica (para todos) --> Alergias e intolerancias": {
         "No.": 186,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comentarios de Historia Clínica (para todos) --> Hábitos sociales": {
         "No.": 187,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comentarios de Historia Clínica (para todos) --> Alertas y necesidades especiales": {
         "No.": 188,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comentarios de Historia Clínica (para todos) --> Inmunizaciones": {
         "No.": 189,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comentarios de Historia Clínica (para todos) --> Antecedentes familiares": {
         "No.": 190,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Desarrollo --> Implementación de notas clinicas": {
         "No.": 191,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas clinicas --> Notas de evolución": {
         "No.": 192,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Notas de evolución --> Motivo de consulta": {
         "No.": 193,
@@ -1156,8 +1158,8 @@ followup_dev_activities = {
     },
     "Evaluación --> Problemas activos": {
         "No.": 201,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Notas de evolución --> Receta": {
         "No.": 202,
@@ -1176,38 +1178,38 @@ followup_dev_activities = {
     },
     "Notas de evolución --> Comunicaciones": {
         "No.": 205,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comunicaciones --> Recordatorio": {
         "No.": 206,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comunicaciones --> Mensaje": {
         "No.": 207,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comunicaciones --> Tarea": {
         "No.": 208,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comunicaciones --> Buzón de comunicaciones": {
         "No.": 209,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Notas de evolución --> Cargos": {
         "No.": 210,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Desarrollo --> Implementación de expedientes de documentos": {
         "No.": 211,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de expedientes de documentos --> Capturar el archivo que contiene el docto": {
         "No.": 212,
@@ -1231,8 +1233,8 @@ followup_dev_activities = {
     },
     "Desarrollo --> Implementación de politicas de descuento": {
         "No.": 216,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Desarrollo --> Implementación de orden de servicio": {
         "No.": 217,
@@ -1391,8 +1393,8 @@ followup_dev_activities = {
     },
     "Desarrollo --> Implementacion de teleconsultas": {
         "No.": 248,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Habíamos sugerido unas mejoras menores (que el médico pudiera ir anotando cosas)."
     },
     "Desarrollo --> Implementación de reportes": {
         "No.": 249,
