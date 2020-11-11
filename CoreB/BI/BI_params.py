@@ -15,7 +15,7 @@
 ## Data
 
 #### Myle
-data_loc = 'Data/20200922'
+data_loc = 'Data/20201111'
 sales_data = 'GenerateBillingCSVRequest.csv'
 appointment_data = 'LISTADETALLADADELASCITAS.csv'
 
@@ -821,7 +821,11 @@ locations_ref = {
     'MARINA': [
         'LABORATORIO- Marina',
         'Punto Clinico- Marina'
-    ]
+    ],
+    'TLALPAN_LA_JOYA': [
+        'LABORATORIO- Tlalpan La Joya',
+        'Punto Clínico- Tlalpan La Joya'
+    ],
 }
 
 
