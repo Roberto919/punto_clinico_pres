@@ -75,13 +75,13 @@ def_dict = {
 followup_dev_activities = {
     "Seed --> Proyecto consultorios": {
         "No.": 1,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "En proceso"
     },
     "Proyecto consultorios --> Inicio": {
         "No.": 2,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "En proceso"
     },
     "Proyecto consultorios --> Diseño pantallas": {
         "No.": 3,
@@ -465,7 +465,7 @@ followup_dev_activities = {
     },
     "Comunicaciones --> Pantalla de mensajes": {
         "No.": 67,
-        "RevRob": 0.0,
+        "RevRob": 1.0,
         "Notas_Rob": "\
 - [X] Se revisó con el Dr. Said y funciona bien.\
 "
@@ -587,78 +587,78 @@ followup_dev_activities = {
     },
     "Analisis --> Análisis de especialidades": {
         "No.": 89,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Revisión con Adrián"
     },
     "Analisis --> Análisis de pacientes": {
         "No.": 90,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Revisión con Adrián"
     },
     "Analisis --> Análisis de lista de precios": {
         "No.": 91,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Revisión con Adrián"
     },
     "Analisis --> Análisis de Nemóticos": {
         "No.": 92,
-        "RevRob": 0.5,
-        "Notas_Rob": "No estamos seguros"
+        "RevRob": 1.0,
+        "Notas_Rob": "Asociación de claves con elementos de la plataforma."
     },
     "Analisis --> Análisis de tipos de servicios": {
         "No.": 93,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Revisión con Adrián; se basó en catálogo que nosotros mandamos."
     },
     "Analisis --> Análisis de Servicios": {
         "No.": 94,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Revisión con Adrián"
     },
     "Analisis --> Análisis de Medicamentos e insumos": {
         "No.": 95,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Revisión con Adrián; falta cargar catálogo; ¿quién lo carga?"
     },
     "Analisis --> Análisis de proveedor": {
         "No.": 96,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Revisión con Adrián; solo falta cargar nosotros los proveedores."
     },
     "Analisis --> Análisis de consultorios": {
         "No.": 97,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "No fue implementada. Ahorita no se utiliza."
     },
     "Analisis --> Análisis de tipo de recurrencia": {
         "No.": 98,
         "RevRob": 0.5,
-        "Notas_Rob": "No estámos seguros."
+        "Notas_Rob": "No estámos seguros pero parece que no es relevante."
     },
     "Analisis --> Análisis de agendas": {
         "No.": 99,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Pensamos que el tema de creación de horarios es muy complicado."
     },
     "Analisis --> Análisis de Doctores": {
         "No.": 100,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Revisión con Adrián la configuración de médicos y los guardados."
     },
     "Analisis --> Análisis de instituciones de referencia": {
         "No.": 101,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Revisión con Adrián"
     },
     "Analisis --> Análisis de Historia clinica": {
         "No.": 102,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Revisión con Adrián"
     },
     "Analisis --> Análisis de notas clinicas": {
         "No.": 103,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Revisión con Adrián"
     },
     "Análisis de notas clinicas --> Nueva nota": {
         "No.": 104,
