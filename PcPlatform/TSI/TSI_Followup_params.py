@@ -218,8 +218,8 @@ followup_dev_activities = {
     },
     "Expediente clinico paciente --> Pantalla Cita-Comunicaciones": {
         "No.": 28,
-        "RevRob": 0.0,
-        "Notas_Rob": "Se revisó con Adrian. Hay que ver si se cambia algo."
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrian."
     },
     "Expediente clinico paciente --> Pantalla Cita-Cargos a paciente": {
         "No.": 29,
@@ -582,8 +582,8 @@ followup_dev_activities = {
     },
     "Analisis --> Análisis de figuras tributarias": {
         "No.": 88,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Analisis --> Análisis de especialidades": {
         "No.": 89,
@@ -737,13 +737,13 @@ followup_dev_activities = {
     },
     "Analisis --> Análisis de generación de venta": {
         "No.": 119,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Analisis --> Análisis de facturación": {
         "No.": 120,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Analisis --> Análisis de cuentas por cobrar": {
         "No.": 121,
@@ -777,13 +777,13 @@ followup_dev_activities = {
     },
     "Analisis --> Análisis de reportes": {
         "No.": 127,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se pidieron algunos cambios menores"
     },
     "Analisis --> Análisis de encuesta de satisfacción y reportes": {
         "No.": 128,
         "RevRob": 0.5,
-        "Notas_Rob": "Todavía no está lista."
+        "Notas_Rob": "La encuesta de satisfacción tal como está no funciona. Hay que después modificar funcionalidad para que se mande la encuesta vía WA al paciente."
     },
     "Proyecto consultorios --> Desarrollo": {
         "No.": 129,
@@ -1248,18 +1248,18 @@ followup_dev_activities = {
     },
     "Desarrollo --> Implementación de facturación": {
         "No.": 219,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Implementación de facturación --> Diseño de la factura": {
         "No.": 220,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Implementación de facturación --> Creación de los catálogos del SAT": {
         "No.": 221,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Implementación de facturación --> Prueba de comunicaciones con proveedor": {
         "No.": 222,
@@ -1268,23 +1268,23 @@ followup_dev_activities = {
     },
     "Implementación de facturación --> Armado de la cadena a timbrar": {
         "No.": 223,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Implementación de facturación --> Interpretación de la cadena recibida del timbrado": {
         "No.": 224,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Implementación de facturación --> Prueba de timbrado": {
         "No.": 225,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Implementación de facturación --> Creación de las estructuras del PDF y XML": {
         "No.": 226,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Implementación de facturación --> Pruebas de redondeo": {
         "No.": 227,
@@ -1293,18 +1293,18 @@ followup_dev_activities = {
     },
     "Implementación de facturación --> Pruebas de factura global": {
         "No.": 228,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Pruebas de factura global --> Con descuentos": {
         "No.": 229,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Pruebas de factura global --> Sin descuentos": {
         "No.": 230,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Implementación de notas clinicas --> Cancelación de facturas": {
         "No.": 231,
@@ -1318,8 +1318,8 @@ followup_dev_activities = {
     },
     "Implementación de notas clinicas --> Restitución y envío de facturas por mail": {
         "No.": 233,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Desarrollo --> Implementación de cuentas por cobrar": {
         "No.": 234,
@@ -1358,18 +1358,18 @@ followup_dev_activities = {
     },
     "Implementación de Cajas --> Movimientos de cobro": {
         "No.": 241,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Implementación de Cajas --> Retiros de efectivo": {
         "No.": 242,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Esta funcionalidad presentó problemas menores"
     },
     "Implementación de Cajas --> Corte de caja": {
         "No.": 243,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Esta funcionalidad presentó problemas menores"
     },
     "Desarrollo --> Implementación de cotizaciones": {
         "No.": 244,
@@ -1398,33 +1398,33 @@ followup_dev_activities = {
     },
     "Desarrollo --> Implementación de reportes": {
         "No.": 249,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se está buscando la posibilidad de hacer más ejecutivos los reportes."
     },
     "Implementación de reportes --> Productividad": {
         "No.": 250,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisaron en reunión con todos."
     },
     "Implementación de reportes --> Pagos": {
         "No.": 251,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisaron en reunión con todos."
     },
     "Implementación de reportes --> Auditoria": {
         "No.": 252,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisaron en reunión con todos."
     },
     "Implementación de reportes --> Ingresos": {
         "No.": 253,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisaron en reunión con todos."
     },
     "Desarrollo --> Integración de encuentas de satisfacción": {
         "No.": 254,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisaron en reunión con todos."
     },
     "Desarrollo --> Integracion de modulos": {
         "No.": 255,
