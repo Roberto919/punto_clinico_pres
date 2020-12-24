@@ -75,13 +75,13 @@ def_dict = {
 followup_dev_activities = {
     "Seed --> Proyecto consultorios": {
         "No.": 1,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "En proceso"
     },
     "Proyecto consultorios --> Inicio": {
         "No.": 2,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "En proceso"
     },
     "Proyecto consultorios --> Diseño pantallas": {
         "No.": 3,
@@ -218,8 +218,8 @@ followup_dev_activities = {
     },
     "Expediente clinico paciente --> Pantalla Cita-Comunicaciones": {
         "No.": 28,
-        "RevRob": 0.0,
-        "Notas_Rob": "Se revisó con Adrian. Hay que ver si se cambia algo."
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrian."
     },
     "Expediente clinico paciente --> Pantalla Cita-Cargos a paciente": {
         "No.": 29,
@@ -465,7 +465,7 @@ followup_dev_activities = {
     },
     "Comunicaciones --> Pantalla de mensajes": {
         "No.": 67,
-        "RevRob": 0.0,
+        "RevRob": 1.0,
         "Notas_Rob": "\
 - [X] Se revisó con el Dr. Said y funciona bien.\
 "
@@ -572,178 +572,178 @@ followup_dev_activities = {
     },
     "Analisis --> Análisis de politicas de seguridad": {
         "No.": 86,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Están creandose perfiles. Están acabando el trabajo. Revisar el viernes 13 de Nov."
     },
     "Analisis --> Análisis de sucursales": {
         "No.": 87,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Podremos revisarlos el viernes 13."
     },
     "Analisis --> Análisis de figuras tributarias": {
         "No.": 88,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Analisis --> Análisis de especialidades": {
         "No.": 89,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Revisión con Adrián"
     },
     "Analisis --> Análisis de pacientes": {
         "No.": 90,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Revisión con Adrián"
     },
     "Analisis --> Análisis de lista de precios": {
         "No.": 91,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Revisión con Adrián"
     },
     "Analisis --> Análisis de Nemóticos": {
         "No.": 92,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Asociación de claves con elementos de la plataforma."
     },
     "Analisis --> Análisis de tipos de servicios": {
         "No.": 93,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Revisión con Adrián; se basó en catálogo que nosotros mandamos."
     },
     "Analisis --> Análisis de Servicios": {
         "No.": 94,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Revisión con Adrián"
     },
     "Analisis --> Análisis de Medicamentos e insumos": {
         "No.": 95,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Revisión con Adrián; falta cargar catálogo; ¿quién lo carga?"
     },
     "Analisis --> Análisis de proveedor": {
         "No.": 96,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Revisión con Adrián; solo falta cargar nosotros los proveedores."
     },
     "Analisis --> Análisis de consultorios": {
         "No.": 97,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "No fue implementada. Ahorita no se utiliza."
     },
     "Analisis --> Análisis de tipo de recurrencia": {
         "No.": 98,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "No estámos seguros pero parece que no es relevante."
     },
     "Analisis --> Análisis de agendas": {
         "No.": 99,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Pensamos que el tema de creación de horarios es muy complicado."
     },
     "Analisis --> Análisis de Doctores": {
         "No.": 100,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Revisión con Adrián la configuración de médicos y los guardados."
     },
     "Analisis --> Análisis de instituciones de referencia": {
         "No.": 101,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Revisión con Adrián"
     },
     "Analisis --> Análisis de Historia clinica": {
         "No.": 102,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Revisión con Adrián"
     },
     "Analisis --> Análisis de notas clinicas": {
         "No.": 103,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Revisión con Adrián"
     },
     "Análisis de notas clinicas --> Nueva nota": {
         "No.": 104,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Análisis de notas clinicas --> Problemas activos": {
         "No.": 105,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Análisis de notas clinicas --> Historial médico": {
         "No.": 106,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Análisis de notas clinicas --> Historial quirúrgico": {
         "No.": 107,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Análisis de notas clinicas --> Historial psiquiátrico": {
         "No.": 108,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián. Implícito en quirúrgico."
     },
     "Análisis de notas clinicas --> Historial Gineco-Obstétrico": {
         "No.": 109,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Análisis de notas clinicas --> Medicamentos activos": {
         "No.": 110,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Análisis de notas clinicas --> Alergias e intolerancias": {
         "No.": 111,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián; ya se implementaron las alertas."
     },
     "Análisis de notas clinicas --> Hábitos sociales": {
         "No.": 112,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Análisis de notas clinicas --> Alertas y necesidades especiales": {
         "No.": 113,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Análisis de notas clinicas --> Inmunizaciones": {
         "No.": 114,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Análisis de notas clinicas --> Antecedentes familiares": {
         "No.": 115,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Analisis --> Análisis de Expediente de documentos": {
         "No.": 116,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Analisis --> Análisis de politicas de descuentos": {
         "No.": 117,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Analisis --> Análisis de Orden de servicio": {
         "No.": 118,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Analisis --> Análisis de generación de venta": {
         "No.": 119,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Analisis --> Análisis de facturación": {
         "No.": 120,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Analisis --> Análisis de cuentas por cobrar": {
         "No.": 121,
@@ -752,43 +752,43 @@ followup_dev_activities = {
     },
     "Analisis --> Análisis de turnos": {
         "No.": 122,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Parece que no son necesarios."
     },
     "Analisis --> Análisis de Cajas": {
         "No.": 123,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Analisis --> Analisis de cajeros": {
         "No.": 124,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Analisis --> Analisis de cotizaciones": {
         "No.": 125,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Analisis --> Análisis de teleconsultas": {
         "No.": 126,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Analisis --> Análisis de reportes": {
         "No.": 127,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se pidieron algunos cambios menores"
     },
     "Analisis --> Análisis de encuesta de satisfacción y reportes": {
         "No.": 128,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "La encuesta de satisfacción tal como está no funciona. Hay que después modificar funcionalidad para que se mande la encuesta vía WA al paciente."
     },
     "Proyecto consultorios --> Desarrollo": {
         "No.": 129,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "En proceso"
     },
     "Desarrollo --> Implementación modulo de seguridad": {
         "No.": 130,
@@ -933,33 +933,33 @@ followup_dev_activities = {
     },
     "Botones --> Lista de médicos registrados.": {
         "No.": 157,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Botones --> Impresión": {
         "No.": 158,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de agenda --> Asignación de citas": {
         "No.": 159,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Asignación de citas --> Selección del Dr.": {
         "No.": 160,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Asignación de citas --> Selección del día de consulta de disponibilidad": {
         "No.": 161,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Asignación de citas --> Mostrar disponibilidad y seleccionar un horario": {
         "No.": 162,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Asignación de citas --> Actualizar la agenda y Google Calendar": {
         "No.": 163,
@@ -971,293 +971,295 @@ followup_dev_activities = {
     },
     "Asignación de citas --> Ingresar datos del paciente": {
         "No.": 164,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de agenda --> Alta de un nuevo paciente": {
         "No.": 165,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "\
+- [ ] Se vio un pequeño error cuando, en detalles de cita, se crea un nuevo paciente, después se selecciona un almacenado (al que le quieres agendar), el sistema guarda el pasado.\
+        "
     },
     "Desarrollo --> Implementación servicio ambulatorio": {
         "No.": 166,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Desarrollo --> Implementación de notas médicas": {
         "No.": 167,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Implementación de notas médicas --> Nueva nota": {
         "No.": 168,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Problemas activos": {
         "No.": 169,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Historial médico": {
         "No.": 170,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Historial quirúrgico": {
         "No.": 171,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Historial psiquiátrico": {
         "No.": 172,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Historial Gineco-Obstétrico": {
         "No.": 173,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Medicamentos activos": {
         "No.": 174,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Alergias e intolerancias": {
         "No.": 175,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Hábitos sociales": {
         "No.": 176,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Alertas y necesidades especiales": {
         "No.": 177,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Inmunizaciones": {
         "No.": 178,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Antecedentes familiares": {
         "No.": 179,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas médicas --> Comentarios de Historia Clínica (para todos)": {
         "No.": 180,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrian. Parece que estas no serán de mucha utilidad según el Dr. Said."
     },
     "Comentarios de Historia Clínica (para todos) --> Historial médico": {
         "No.": 181,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comentarios de Historia Clínica (para todos) --> Historial quirúrgico": {
         "No.": 182,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comentarios de Historia Clínica (para todos) --> Historial psiquiátrico": {
         "No.": 183,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comentarios de Historia Clínica (para todos) --> Historial Gineco-Obstétrico": {
         "No.": 184,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comentarios de Historia Clínica (para todos) --> Medicamentos activos": {
         "No.": 185,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comentarios de Historia Clínica (para todos) --> Alergias e intolerancias": {
         "No.": 186,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comentarios de Historia Clínica (para todos) --> Hábitos sociales": {
         "No.": 187,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comentarios de Historia Clínica (para todos) --> Alertas y necesidades especiales": {
         "No.": 188,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comentarios de Historia Clínica (para todos) --> Inmunizaciones": {
         "No.": 189,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comentarios de Historia Clínica (para todos) --> Antecedentes familiares": {
         "No.": 190,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Desarrollo --> Implementación de notas clinicas": {
         "No.": 191,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de notas clinicas --> Notas de evolución": {
         "No.": 192,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Notas de evolución --> Motivo de consulta": {
         "No.": 193,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se revisó pero está fallando ahorita."
     },
     "Notas de evolución --> Signos vitales": {
         "No.": 194,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrian."
     },
     "Notas de evolución --> Exploración": {
         "No.": 195,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se revisó pero está fallando ahorita."
     },
     "Notas de evolución --> Notas manuscritas": {
         "No.": 196,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se revisó pero está fallando ahorita."
     },
     "Notas de evolución --> Laboratorio": {
         "No.": 197,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se revisó pero está fallando ahorita."
     },
     "Notas de evolución --> Imágenes": {
         "No.": 198,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se revisó pero está fallando ahorita."
     },
     "Notas de evolución --> Otras notas e intervenciones": {
         "No.": 199,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se revisó pero está fallando ahorita."
     },
     "Notas de evolución --> Evaluación": {
         "No.": 200,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se revisó pero está fallando ahorita."
     },
     "Evaluación --> Problemas activos": {
         "No.": 201,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Notas de evolución --> Receta": {
         "No.": 202,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se revisó pero está fallando ahorita."
     },
     "Notas de evolución --> Solicitud de examen": {
         "No.": 203,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se revisó pero está fallando ahorita."
     },
     "Notas de evolución --> Seguimiento y plan": {
         "No.": 204,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se revisó pero está fallando ahorita."
     },
     "Notas de evolución --> Comunicaciones": {
         "No.": 205,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comunicaciones --> Recordatorio": {
         "No.": 206,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comunicaciones --> Mensaje": {
         "No.": 207,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comunicaciones --> Tarea": {
         "No.": 208,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Comunicaciones --> Buzón de comunicaciones": {
         "No.": 209,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Notas de evolución --> Cargos": {
         "No.": 210,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Desarrollo --> Implementación de expedientes de documentos": {
         "No.": 211,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de expedientes de documentos --> Capturar el archivo que contiene el docto": {
         "No.": 212,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrian."
     },
     "Implementación de expedientes de documentos --> Vista y consulta en:": {
         "No.": 213,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "No estamos seguros cual es."
     },
     "Vista y consulta en: --> Repositorio": {
         "No.": 214,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "No estamos seguros cual es."
     },
     "Vista y consulta en: --> Historia clínica": {
         "No.": 215,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "No estamos seguros cual es."
     },
     "Desarrollo --> Implementación de politicas de descuento": {
         "No.": 216,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Desarrollo --> Implementación de orden de servicio": {
         "No.": 217,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Esta actividad no se consideró necesaria."
     },
     "Desarrollo --> Implementación de generación de venta": {
         "No.": 218,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Desarrollo --> Implementación de facturación": {
         "No.": 219,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Implementación de facturación --> Diseño de la factura": {
         "No.": 220,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Implementación de facturación --> Creación de los catálogos del SAT": {
         "No.": 221,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Implementación de facturación --> Prueba de comunicaciones con proveedor": {
         "No.": 222,
@@ -1266,23 +1268,23 @@ followup_dev_activities = {
     },
     "Implementación de facturación --> Armado de la cadena a timbrar": {
         "No.": 223,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Implementación de facturación --> Interpretación de la cadena recibida del timbrado": {
         "No.": 224,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Implementación de facturación --> Prueba de timbrado": {
         "No.": 225,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Implementación de facturación --> Creación de las estructuras del PDF y XML": {
         "No.": 226,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Implementación de facturación --> Pruebas de redondeo": {
         "No.": 227,
@@ -1291,18 +1293,18 @@ followup_dev_activities = {
     },
     "Implementación de facturación --> Pruebas de factura global": {
         "No.": 228,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Pruebas de factura global --> Con descuentos": {
         "No.": 229,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Pruebas de factura global --> Sin descuentos": {
         "No.": 230,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Implementación de notas clinicas --> Cancelación de facturas": {
         "No.": 231,
@@ -1316,8 +1318,8 @@ followup_dev_activities = {
     },
     "Implementación de notas clinicas --> Restitución y envío de facturas por mail": {
         "No.": 233,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Desarrollo --> Implementación de cuentas por cobrar": {
         "No.": 234,
@@ -1326,172 +1328,172 @@ followup_dev_activities = {
     },
     "Desarrollo --> Implementación de turnos": {
         "No.": 235,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Actualmente se tiene implementado 1 solo turno, el del todo el día."
     },
     "Desarrollo --> Implementación de cajeros": {
         "No.": 236,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Desarrollo --> Implementación de Cajas": {
         "No.": 237,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de Cajas --> Definición": {
         "No.": 238,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de Cajas --> Apertura": {
         "No.": 239,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de Cajas --> Asignación": {
         "No.": 240,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián"
     },
     "Implementación de Cajas --> Movimientos de cobro": {
         "No.": 241,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisón en reunión con todos"
     },
     "Implementación de Cajas --> Retiros de efectivo": {
         "No.": 242,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Esta funcionalidad presentó problemas menores"
     },
     "Implementación de Cajas --> Corte de caja": {
         "No.": 243,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Esta funcionalidad presentó problemas menores"
     },
     "Desarrollo --> Implementación de cotizaciones": {
         "No.": 244,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Implementación de cotizaciones --> Lista de precios": {
         "No.": 245,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Implementación de cotizaciones --> Cotizaciones": {
         "No.": 246,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisó con Adrián."
     },
     "Implementación de cotizaciones --> Creación de paquetes": {
         "No.": 247,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Creo que habíamos visto temas con los paquetes."
     },
     "Desarrollo --> Implementacion de teleconsultas": {
         "No.": 248,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Habíamos sugerido unas mejoras menores (que el médico pudiera ir anotando cosas)."
     },
     "Desarrollo --> Implementación de reportes": {
         "No.": 249,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "Se está buscando la posibilidad de hacer más ejecutivos los reportes."
     },
     "Implementación de reportes --> Productividad": {
         "No.": 250,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisaron en reunión con todos."
     },
     "Implementación de reportes --> Pagos": {
         "No.": 251,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisaron en reunión con todos."
     },
     "Implementación de reportes --> Auditoria": {
         "No.": 252,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisaron en reunión con todos."
     },
     "Implementación de reportes --> Ingresos": {
         "No.": 253,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisaron en reunión con todos."
     },
     "Desarrollo --> Integración de encuentas de satisfacción": {
         "No.": 254,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 1.0,
+        "Notas_Rob": "Se revisaron en reunión con todos."
     },
     "Desarrollo --> Integracion de modulos": {
         "No.": 255,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "En proceso."
     },
     "Proyecto consultorios --> Pruebas": {
         "No.": 256,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "En proceso."
     },
     "Pruebas --> Generación de casos de uso y pruebas unitarias": {
         "No.": 257,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "En proceso."
     },
     "Pruebas --> Revisión interna": {
         "No.": 258,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "En proceso."
     },
     "Pruebas --> Integración y despliegue": {
         "No.": 259,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "En proceso."
     },
     "Pruebas --> Pruebas Integrales": {
         "No.": 260,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "En proceso."
     },
     "Pruebas --> Matriz de pruebas": {
         "No.": 261,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "En proceso."
     },
     "Pruebas --> Ajustes": {
         "No.": 262,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "En proceso."
     },
     "Pruebas --> Hoja de Implementación": {
         "No.": 263,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "En proceso."
     },
     "Proyecto consultorios --> Liberación": {
         "No.": 264,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "En proceso."
     },
     "Liberación --> Generar solicitud de migración": {
         "No.": 265,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "En proceso."
     },
     "Liberación --> Liberación": {
         "No.": 266,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "En proceso."
     },
     "Liberación --> Validación productiva": {
         "No.": 267,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "En proceso."
     },
     "Proyecto consultorios --> Fin": {
         "No.": 268,
-        "RevRob": 0.0,
-        "Notas_Rob": "-"
+        "RevRob": 0.5,
+        "Notas_Rob": "En proceso."
     }
 }
