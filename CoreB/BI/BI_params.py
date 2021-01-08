@@ -15,7 +15,7 @@
 ## Data
 
 #### Myle
-data_loc = 'Data/20201111'
+data_loc = 'Data/20210108'
 sales_data = 'GenerateBillingCSVRequest.csv'
 appointment_data = 'LISTADETALLADADELASCITAS.csv'
 
