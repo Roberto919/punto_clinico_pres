@@ -1,7 +1,6 @@
 ## SELECTION OF FILES THAT WILL BE IGNORED BY GIT
 
 
-
 ## OS
 .DS_Store
 
@@ -17,3 +16,7 @@ __pycache__/
 ## Spreadsheets
 *.xlsx
 *.csv
+
+
+## Pycharm
+.idea/
