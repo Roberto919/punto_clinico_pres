@@ -2,27 +2,36 @@
 
 ## Planteamiento general de la presentación
 1. **Introducción**
-    - Puntos a tocar:
-        - Objetivo de la presentación
-            - `Sop: imagen de nuestra plataforma con otras plataformas al rededor`
-        - Proyecto de PC desarrollando la plataforma
-            - Principales razones para desarrollar plataforma
-            - `Sop: línea de tiempo con hitos importantes del desarrollo`
+    - [ ] Situación de PC antes
+        - Contar una historia de como estábamos antes y como decidimos emprender viaje
+            - Trabajábamos muy a gusto con nuestra plataforma
+            - Empezamos a crecer y las cosas se empezaron a complicar
+            - Estábamos muy limitados
+            - La plataforma es más para una clínica tradicional
+            - Estábamos pensando a largo plazo
+    - [X] Objetivo de la presentación
+        - `Sop: imagen de nuestra plataforma con otras plataformas alrededor`
+    - [X] Motivaciones para desarrollar la plataforma
+        - Lista de razones
+    - [ ] Principales hitos desarrollando la plataforma
+        - `Sop: línea de tiempo con hitos importantes del desarrollo`
+    
 1. **Metodología**
-    - Puntos a tocar:
-        - Número de plataformas evaluadas
-        - Características principales tomadas en cuenta y descripción
-        - Metodología de evaluación
+    - [ ] Atributos para la evaluación
+    - [ ] Número de plataformas evaluadas
+    - [ ] Metodología de evaluación
+    
 1. **Comparativo**
-    - Puntos a tocar:
-        - Listado de todas las plataformas evaluadas
-            - `Sop: tabla resumen (Nombre, origen, logotipo)`
-        - Perfil de cada una de las compañías
-            - Nombre de la compañía
-            - País de origen
-            - Logotipo
-            - Desempeño en los rubros
-            - Precio
-            - Conclusión final
-        - Resumen de todos los hallazgos
+    - [ ] Listado de todas las plataformas evaluadas
+        - `Sop: tabla resumen (Nombre, origen, logotipo)`
+    - [ ] Perfil de cada una de las compañías
+        - Nombre de la compañía
+        - País de origen
+        - Logotipo
+        - Desempeño en los rubros
+        - Precio
+        - Conclusión final
+    - [ ] Resumen de todos los hallazgos
+      - Fortalezas observadas en el mercado
+      - Principales fortalezas de nuestra plataforma sobre las otras
 
