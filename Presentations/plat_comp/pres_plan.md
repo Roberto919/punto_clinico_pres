@@ -17,14 +17,15 @@
         - `Sop: línea de tiempo con hitos importantes del desarrollo`
     
 1. **Metodología**
-    - [ ] Atributos para la evaluación
+    - [X] Atributos para la evaluación
+         - Lista de los 8 atributos
     - [ ] Número de plataformas evaluadas
     - [ ] Metodología de evaluación
     
 1. **Comparativo**
     - [ ] Listado de todas las plataformas evaluadas
         - `Sop: tabla resumen (Nombre, origen, logotipo)`
-    - [ ] Perfil de cada una de las compañías
+    - [ ] Perfil de las compañías más interesantes
         - Nombre de la compañía
         - País de origen
         - Logotipo
@@ -35,3 +36,4 @@
       - Fortalezas observadas en el mercado
       - Principales fortalezas de nuestra plataforma sobre las otras
 
+®
