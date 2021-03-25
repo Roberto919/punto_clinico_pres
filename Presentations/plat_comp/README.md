@@ -35,5 +35,3 @@
     - [ ] Resumen de todos los hallazgos
       - Fortalezas observadas en el mercado
       - Principales fortalezas de nuestra plataforma sobre las otras
-
-®
