@@ -11,4 +11,4 @@
 
 
 ## External data
-ext_data_dir_name = "ext_data/"
+data_dir_name = "data/"
