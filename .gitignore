@@ -13,10 +13,5 @@
 __pycache__/
 
 
-## Spreadsheets
-*.xlsx
-*.csv
-
-
 ## Pycharm
 .idea/
